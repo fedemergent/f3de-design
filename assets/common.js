@@ -6,7 +6,10 @@
    ===================================================================== */
 (() => {
   const cv = document.getElementById('bg'), ctx = cv.getContext('2d');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches && !/motion/.test(location.search);   // ?motion fuerza la animación (pruebas)
+  // Si el sistema pide menos movimiento, el fondo no se apaga: se mueve a media velocidad. Quien quiera pararlo del todo usa el botón del pie.
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let off = false; try { off = localStorage.getItem('f3de-motion') === 'off'; } catch (e) {}
+  const speed = calm ? .5 : 1;
   const ACC = [255, 74, 20];
   const F = { dim: 1, target: 1, t: 2.2, grow: 0, ripples: [], px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9, last: 0 };
   let W, H, DPR, S = [], amp, G, gcols, grows, grid = [];
@@ -102,15 +105,16 @@
   F.pulse = (x, y, k = .9) => F.ripples.push({ t0: F.t, x, y, k });
   window.__field = F;
 
-  let prev = performance.now();
+  let prev = performance.now(), raf = 0;
   function frame(now) {
-    const dt = Math.min(.05, (now - prev) / 1000); prev = now;
+    if (off) return;
+    const rdt = Math.min(.05, (now - prev) / 1000), dt = rdt * speed; prev = now;
     F.t += dt; F.grow = Math.min(1, F.grow + dt / 2.2);
     F.dim += (F.target - F.dim) * (1 - Math.exp(-dt * 1.6));
-    const k = 1 - Math.exp(-dt * 9); F.px += (F.tx - F.px) * k; F.py += (F.ty - F.py) * k;
-    F.act += ((F.t - F.seen < 1.8 ? 1 : 0) - F.act) * (1 - Math.exp(-dt * 3));
+    const k = 1 - Math.exp(-rdt * 9); F.px += (F.tx - F.px) * k; F.py += (F.ty - F.py) * k;
+    F.act += ((F.t - F.seen < 1.8 ? 1 : 0) - F.act) * (1 - Math.exp(-rdt * 3));
     build(F.t); draw(F.t);
-    requestAnimationFrame(frame);
+    raf = requestAnimationFrame(frame);
   }
 
   function point(x, y) { F.tx = x; F.ty = y; F.seen = F.t; }
@@ -121,7 +125,17 @@
   document.addEventListener('mouseleave', () => { F.seen = -9; });
   addEventListener('resize', () => { init(); });
   init();
-  if (reduce) { F.grow = 1; F.t = 3; build(F.t); draw(F.t); } else requestAnimationFrame(frame);
+  function still() { F.grow = 1; if (F.t < 3) F.t = 3; build(F.t); draw(F.t); }
+  window.__setMotion = on => {
+    off = !on; try { localStorage.setItem('f3de-motion', on ? 'on' : 'off'); } catch (e) {}
+    cancelAnimationFrame(raf);
+    if (on) { prev = performance.now(); raf = requestAnimationFrame(frame); } else still();
+    syncBtn();
+  };
+  function syncBtn() { const b = document.getElementById('motionBtn'); if (b) { b.setAttribute('aria-pressed', String(!off)); b.textContent = off ? 'Fondo animado: no' : 'Fondo animado: sí'; } }
+  const mb = document.getElementById('motionBtn'); if (mb) mb.addEventListener('click', () => window.__setMotion(off));
+  syncBtn();
+  if (off) still(); else raf = requestAnimationFrame(frame);
 })();
 
 /* ============================ nav ============================ */

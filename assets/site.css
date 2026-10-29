@@ -252,7 +252,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
-  .intro-logo{animation:none;clip-path:none}.intro-line{animation:none;transform:none}.skip{animation:none;opacity:1}
+  .intro-logo{animation:none;clip-path:none}.skip{animation:none;opacity:1}
 }
 
 /* ---- certificados destacados / pagina de certificados ---- */
@@ -292,7 +292,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   22%{opacity:.4;transform:translate(-14%,-50%) scale(.92)}
   34%{opacity:.78;transform:translate(-14%,-50%) scale(1.02)}
   55%{opacity:.18;transform:translate(-14%,-50%) scale(.82)}}
-@media(prefers-reduced-motion:reduce){.intro-glow{display:none}.intro-line{animation:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.intro-line{animation:beatline 2.2s 1.05s infinite;transform:none}.intro-glow{animation-duration:2.2s}}
 
 /* ---- fotos con pie ---- */
 .gal .frame{overflow:hidden}
@@ -356,3 +356,6 @@ footer .wrap{align-items:center}
 .err{color:#ff8b7b}
 .modal ol{padding-left:20px;margin:12px 0 0;color:#c4c4cb;font-size:13.5px}
 .modal ol li{margin:6px 0}
+
+.motion-toggle{font:600 12px var(--body);color:#cfcfd6;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+.motion-toggle:hover{border-color:var(--acc);color:var(--acc)}
