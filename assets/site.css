@@ -399,3 +399,14 @@ nav{order:2}
 .certs .cgrid.three .cap{font-size:12.5px}
 .cnt{position:absolute;right:10px;top:10px;font:600 11px var(--body);background:rgba(6,6,7,.72);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:#fff;pointer-events:none}
 .slide .pimg.land img{height:auto;width:clamp(240px,38vw,460px)}
+
+
+/* ---- carrusel: fundido suave (las noticias se apilan y se cruzan) ---- */
+.track{display:grid;overflow:hidden;scroll-snap-type:none;gap:0;touch-action:pan-y}
+.slide{grid-area:1/1;flex:none;opacity:0;visibility:hidden;transition:opacity 0s linear 1.4s,visibility 0s linear 1.4s}   /* la saliente espera, tapada por la entrante */
+.slide.on{opacity:1;visibility:visible;z-index:2;transition:opacity 1.3s ease-in-out,visibility 0s}
+.slide .txt{transform:translateY(12px);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.slide.on .txt{transform:none}
+.slide .pimg{transform:scale(.97);transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.slide.on .pimg{transform:none}
+@media(prefers-reduced-motion:reduce){.slide,.slide.on{transition-duration:.6s}.slide .txt,.slide .pimg{transform:none;transition:none}}

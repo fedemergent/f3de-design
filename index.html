@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=7">
+<link rel="stylesheet" href="assets/site.css?v=9">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -492,10 +492,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=7"></script>
-<script src="assets/leads.js?v=7"></script>
-<script src="assets/counters.js?v=7"></script>
-<script src="assets/common.js?v=7"></script>
+<script src="assets/config.js?v=9"></script>
+<script src="assets/leads.js?v=9"></script>
+<script src="assets/counters.js?v=9"></script>
+<script src="assets/common.js?v=9"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -540,29 +540,30 @@
   addEventListener('keydown', e => { if (!done && (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ')) enter(); });
 })();
 
-/* ========================= carrusel ========================= */
+/* ========================= carrusel (fundido suave entre noticias) ========================= */
 (() => {
   const car = document.getElementById('car'), tr = document.getElementById('track'), dots = document.getElementById('dots');
-  const slides = [...tr.children], DUR = 6500; let cur = 0, timer = null, lock = 0;
-  slides.forEach((_, i) => { const b = document.createElement('button'); b.setAttribute('aria-label', 'Noticia ' + (i + 1)); b.style.setProperty('--dur', DUR + 'ms'); b.onclick = () => go(i, true); dots.appendChild(b); });
+  const slides = [...tr.children], DUR = 4500; let cur = 0, timer = null;
+  slides.forEach((_, i) => { const b = document.createElement('button'); b.setAttribute('aria-label', 'Noticia ' + (i + 1)); b.style.setProperty('--dur', DUR + 'ms'); b.onclick = () => go(i); dots.appendChild(b); });
   const mark = () => [...dots.children].forEach((b, i) => { b.classList.remove('on'); if (i === cur) { void b.offsetWidth; b.classList.add('on'); } });
-  function go(i, user) {
-    cur = (i + slides.length) % slides.length; lock = performance.now();
-    tr.scrollTo({ left: slides[cur].offsetLeft - tr.offsetLeft, behavior: 'smooth' }); mark(); arm();
+  function show() {
+    slides.forEach((s, k) => {
+      const on = k === cur; s.classList.toggle('on', on); s.setAttribute('aria-hidden', String(!on));
+      s.querySelectorAll('video').forEach(v => { if (on) v.play().catch(() => {}); else v.pause(); });
+      s.querySelectorAll('a,button').forEach(el => { el.tabIndex = on ? 0 : -1; });
+    });
   }
+  function go(i) { cur = (i + slides.length) % slides.length; show(); mark(); arm(); }
   function arm() { clearTimeout(timer); if (!car.classList.contains('paused')) timer = setTimeout(() => go(cur + 1), DUR); }
-  tr.addEventListener('scroll', () => {
-    if (performance.now() - lock < 700) return;
-    const i = Math.round(tr.scrollLeft / (slides[0].offsetWidth + 18));
-    if (i !== cur && i >= 0 && i < slides.length) { cur = i; mark(); arm(); }
-  }, { passive: true });
   document.getElementById('prev').onclick = () => go(cur - 1);
   document.getElementById('next').onclick = () => go(cur + 1);
   const pause = p => { car.classList.toggle('paused', p); if (p) clearTimeout(timer); else { mark(); arm(); } };
   car.addEventListener('mouseenter', () => pause(true)); car.addEventListener('mouseleave', () => pause(false));
   car.addEventListener('focusin', () => pause(true)); car.addEventListener('focusout', () => pause(false));
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) car.classList.add('paused');
-  mark(); arm();
+  let x0 = null;   // deslizar con el dedo
+  tr.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  tr.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 45) go(cur + (dx < 0 ? 1 : -1)); }, { passive: true });
+  show(); mark(); arm();
 })();
 
 /* ============================ modelos 3D ============================
@@ -687,6 +688,6 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=7"></script>
+<script src="assets/i18n.js?v=9"></script>
 </body>
 </html>
