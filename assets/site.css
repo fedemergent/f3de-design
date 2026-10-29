@@ -382,3 +382,9 @@ footer .wrap{align-items:center}
 .lang button:not([aria-pressed=true]):hover{color:var(--txt)}
 nav{order:2}
 @media(max-width:1240px){.lang{order:2;margin-left:auto;margin-right:10px}.burger{order:3}}
+
+
+/* ---- intro: la luz solo parpadea cuando el cursor pasa por la franja (ver script de la pagina) ---- */
+.intro-line{animation:draw .9s .15s cubic-bezier(.5,0,.1,1) forwards}
+.intro-glow{animation:none;opacity:.18;transform:translate(-14%,-50%) scale(.82)}
+@media(prefers-reduced-motion:reduce){.intro-line{animation:none;transform:none}}

@@ -11,7 +11,7 @@
   let off = false; try { off = localStorage.getItem('f3de-motion') === 'off'; } catch (e) {}
   const speed = calm ? .6 : 1;
   const ACC = [255, 74, 20];
-  const F = { dim: .7, target: .7, t: 2.2, grow: 0, ripples: [], beacons: [], next: 1.6, px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9 };
+  const F = { dim: .9, target: .9, t: 2.2, grow: 0, ripples: [], beacons: [], next: 1.6, px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9 };
   let W, H, DPR, S = [], amp, G, gcols, grows, grid = [];
   const A = [], B = [];
 
@@ -26,7 +26,7 @@
       S.push({ bx: (i + .5 + (r() - .5) * .9) * cw, by: (j + .5 + (r() - .5) * .9) * ch, a: .03 + r() * .06, b: .03 + r() * .06, p: r() * 6.28, q: r() * 6.28, z: r() * 6.28, sz: .7 + r() * .3, inf: 0, x: 0, y: 0, poly: null, cx: 0, cy: 0 });
     amp = Math.min(cw, ch) * .38; G = Math.max(cw, ch); gcols = Math.ceil(W / G) + 1; grows = Math.ceil(H / G) + 1;
     grid = Array.from({ length: gcols * grows }, () => []);
-    F.px = F.tx = W / 2; F.py = F.ty = H / 2;
+    F.px = F.tx = W / 2; F.py = F.ty = H / 2; F.cells = S;
   }
 
   function clip(src, nx, ny, d, out) {
@@ -74,35 +74,35 @@
 
   // Atractores al azar: aparecen, crecen despacio, emiten una ola suave y se desvanecen
   function spawn(x, y, life) {
-    F.beacons.push({ x: x == null ? W * (.12 + Math.random() * .76) : x, y: y == null ? H * (.12 + Math.random() * .76) : y, t0: F.t, life: life || 11 });
+    F.beacons.push({ x: x == null ? W * (.12 + Math.random() * .76) : x, y: y == null ? H * (.12 + Math.random() * .76) : y, t0: F.t, life: life || 12 });
   }
 
   function draw(t, dt) {
     ctx.clearRect(0, 0, W, H);
-    const R = .15 * W + 60, Rp = Math.max(.1 * W, 120), dim = F.dim, grow = ease(F.grow);
+    const R = .15 * W + 60, Rp = Math.max(.15 * W, 190), dim = F.dim, grow = ease(F.grow);
     F.beacons = F.beacons.filter(b => t - b.t0 < b.life);
     F.ripples = F.ripples.filter(r => t - r.t0 < r.life);
     ctx.lineJoin = 'round';
     // dos atractores errantes muy lentos (siempre presentes, su fuerza respira)
-    const wand = [[W * (.5 + .36 * Math.sin(.07 * t)), H * (.5 + .32 * Math.sin(.11 * t + 1)), .22 + .18 * Math.sin(.22 * t)],
-                  [W * (.5 + .3 * Math.sin(.05 * t + 2.3)), H * (.5 + .34 * Math.cos(.09 * t)), .22 + .18 * Math.sin(.19 * t + 2)]];
-    const kUp = 1 - Math.exp(-dt / 1.1), kDn = 1 - Math.exp(-dt / 2.2);   // llegar despacio, irse más despacio aún
+    const wand = [[W * (.5 + .36 * Math.sin(.07 * t)), H * (.5 + .32 * Math.sin(.11 * t + 1)), .13 + .08 * Math.sin(.22 * t)],
+                  [W * (.5 + .3 * Math.sin(.05 * t + 2.3)), H * (.5 + .34 * Math.cos(.09 * t)), .13 + .08 * Math.sin(.19 * t + 2)]];
+    const kUp = 1 - Math.exp(-dt / .65), kDn = 1 - Math.exp(-dt / 2.4);   // llegar despacio, irse más despacio aún
     for (const s of S) {
       if (!s.poly) continue;
       let target = 0;
       for (const [ax, ay, w] of wand) target += w * Math.exp(-((Math.hypot(s.cx - ax, s.cy - ay) / R) ** 2));
       for (const b of F.beacons) {
         const age = t - b.t0, env = bell(age / b.life), d = Math.hypot(s.cx - b.x, s.cy - b.y);
-        target += .8 * env * Math.exp(-((d / (R * 1.1)) ** 2));
+        target += .45 * env * Math.exp(-((d / (R * .8)) ** 2));
         const ring = (age * .06 * W + 20), wd = .1 * W + 40;                  // ola ancha y lenta alrededor del punto
-        target += .32 * env * Math.exp(-(((d - ring) / wd) ** 2));
+        target += .2 * env * Math.exp(-(((d - ring) / wd) ** 2));
       }
       for (const r of F.ripples) { const age = t - r.t0, d = Math.hypot(s.cx - r.x, s.cy - r.y); target += r.k * (1 - age / r.life) * Math.exp(-(((d - age * .1 * W) / (.12 * W)) ** 2)); }
-      if (F.act > .01) target += .5 * F.act * Math.exp(-((Math.hypot(s.cx - F.px, s.cy - F.py) / Rp) ** 2));   // cursor / dedo: campo leve
+      if (F.act > .01) target += 1.2 * F.act * Math.exp(-((Math.hypot(s.cx - F.px, s.cy - F.py) / Rp) ** 2));   // cursor / dedo: campo leve
       target = Math.min(target, 1.1);
       s.inf += (target - s.inf) * (target > s.inf ? kUp : kDn);
-      const i1 = Math.min(s.inf, 1);
-      const sc = (.2 + .62 * i1 * s.sz + .015 * Math.sin(.5 * t + s.z)) * grow;
+      const i1 = Math.pow(Math.min(s.inf, 1), 1.4);
+      const sc = (.3 + .55 * i1 * s.sz + .015 * Math.sin(.5 * t + s.z)) * grow;
       if (sc < .02) continue;
       const P = s.poly, n = P.length / 2, pts = new Array(P.length);
       for (let k = 0; k < n; k++) {      // contorno que se ondula muy despacio, como una membrana
@@ -113,8 +113,8 @@
       ctx.moveTo((pts[2 * n - 2] + pts[0]) / 2, (pts[2 * n - 1] + pts[1]) / 2);
       for (let k = 0; k < n; k++) { const k2 = (k + 1) % n; ctx.quadraticCurveTo(pts[2 * k], pts[2 * k + 1], (pts[2 * k] + pts[2 * k2]) / 2, (pts[2 * k + 1] + pts[2 * k2 + 1]) / 2); }
       ctx.closePath();
-      ctx.fillStyle = `rgba(${ACC[0]},${ACC[1]},${ACC[2]},${(.01 + .17 * i1) * dim})`; ctx.fill();
-      ctx.strokeStyle = `rgba(255,${Math.round(90 + 70 * i1)},${Math.round(50 + 60 * i1)},${(.06 + .38 * i1) * dim})`;
+      ctx.fillStyle = `rgba(${ACC[0]},${ACC[1]},${ACC[2]},${(.035 + .2 * i1) * dim})`; ctx.fill();
+      ctx.strokeStyle = `rgba(255,${Math.round(90 + 70 * i1)},${Math.round(50 + 60 * i1)},${(.13 + .42 * i1) * dim})`;
       ctx.lineWidth = 1 + i1 * .6; ctx.stroke();
     }
   }
@@ -129,9 +129,9 @@
     const rdt = Math.min(.05, (now - prev) / 1000), dt = rdt * speed; prev = now;
     F.t += dt; F.grow = Math.min(1, F.grow + dt / 3);
     F.dim += (F.target - F.dim) * (1 - Math.exp(-dt * 1.2));
-    const k = 1 - Math.exp(-rdt * 4); F.px += (F.tx - F.px) * k; F.py += (F.ty - F.py) * k;
-    F.act += ((F.t - F.seen < 2.2 ? 1 : 0) - F.act) * (1 - Math.exp(-rdt * 1.6));
-    if (F.t > F.next) { spawn(); F.next = F.t + 7 + Math.random() * 5; }
+    const k = 1 - Math.exp(-rdt * 7); F.px += (F.tx - F.px) * k; F.py += (F.ty - F.py) * k;
+    { const on = F.t - F.seen < 2.4; F.act += ((on ? 1 : 0) - F.act) * (1 - Math.exp(-rdt * (on ? 6 : 1.1))); }
+    if (F.t > F.next) { spawn(); F.next = F.t + 6 + Math.random() * 4; }
     bacc += rdt; if (bacc > 1 / 24) { build(F.t); bacc = 0; }
     draw(F.t, dt);
     raf = requestAnimationFrame(frame);

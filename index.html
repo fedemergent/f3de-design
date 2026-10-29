@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=4">
+<link rel="stylesheet" href="assets/site.css?v=6">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -537,10 +537,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=4"></script>
-<script src="assets/leads.js?v=4"></script>
-<script src="assets/counters.js?v=4"></script>
-<script src="assets/common.js?v=4"></script>
+<script src="assets/config.js?v=6"></script>
+<script src="assets/leads.js?v=6"></script>
+<script src="assets/counters.js?v=6"></script>
+<script src="assets/common.js?v=6"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -550,13 +550,37 @@
   function enter() {
     if (done) return; done = true;
     intro.classList.add('off'); body.classList.remove('intro');
-    F.target = .4; F.spawn(innerWidth * .5, innerHeight * .45, 10);
+    F.target = .75; F.spawn(innerWidth * .5, innerHeight * .45, 12);
     try { sessionStorage.setItem('f3de-intro', '1'); } catch (e) {}
     setTimeout(() => intro.remove(), 1200);
   }
-  if (seen || /nointro/.test(location.search)) { F.dim = .4; F.target = .4; intro.remove(); body.classList.remove('intro'); return; }
+  if (seen || /nointro/.test(location.search)) { F.dim = .75; F.target = .75; intro.remove(); body.classList.remove('intro'); return; }
   setTimeout(() => F.spawn(innerWidth * .22, innerHeight * .5, 12), 600);
-  if (!/hold/.test(location.search)) setTimeout(enter, 6500);   // ?hold deja la intro quieta (pruebas)
+  if (!/hold/.test(location.search)) setTimeout(enter, 9500);   // ?hold deja la intro quieta (pruebas)
+  // La luz naranja del logo late cuando el cursor (o el dedo) pasa por la franja luminosa; una vez sola al inicio para mostrar el truco.
+  const line = document.querySelector('.intro-line'), glow = document.querySelector('.intro-glow');
+  let beating = false;
+  function flare() {
+    if (beating || done) return; beating = true;
+    const opts = { duration: 1500, iterations: 2, easing: 'ease-in-out' };
+    const a = line.animate([
+      { filter: 'brightness(1)', boxShadow: '0 0 14px 3px rgba(255,74,20,.55),0 0 46px 10px rgba(255,74,20,.25)', offset: 0 },
+      { filter: 'brightness(1.8)', boxShadow: '0 0 30px 9px rgba(255,130,70,.95),0 0 110px 32px rgba(255,74,20,.65)', offset: .22 },
+      { filter: 'brightness(1.1)', boxShadow: '0 0 18px 4px rgba(255,74,20,.7),0 0 60px 14px rgba(255,74,20,.35)', offset: .45 },
+      { filter: 'brightness(1.5)', boxShadow: '0 0 26px 7px rgba(255,120,60,.85),0 0 90px 24px rgba(255,74,20,.5)', offset: .65 },
+      { filter: 'brightness(1)', boxShadow: '0 0 14px 3px rgba(255,74,20,.55),0 0 46px 10px rgba(255,74,20,.25)', offset: 1 }], opts);
+    glow.animate([
+      { opacity: .18, transform: 'translate(-14%,-50%) scale(.82)', offset: 0 }, { opacity: 1, transform: 'translate(-14%,-50%) scale(1.08)', offset: .22 },
+      { opacity: .4, transform: 'translate(-14%,-50%) scale(.92)', offset: .45 }, { opacity: .8, transform: 'translate(-14%,-50%) scale(1.02)', offset: .65 },
+      { opacity: .18, transform: 'translate(-14%,-50%) scale(.82)', offset: 1 }], opts);
+    const r = line.getBoundingClientRect();
+    if (F.spawn) F.spawn(r.left, r.top + r.height / 2, 9);
+    a.onfinish = () => { beating = false; };
+  }
+  const nearLine = (x, y) => { const r = line.getBoundingClientRect(); return x > r.left - 50 && x < r.right + 50 && y > r.top - 30 && y < r.bottom + 30; };
+  addEventListener('mousemove', e => { if (!done && nearLine(e.clientX, e.clientY)) flare(); }, { passive: true });
+  addEventListener('touchstart', e => { const t = e.touches[0]; if (!done && nearLine(t.clientX, t.clientY)) flare(); }, { passive: true });
+  setTimeout(flare, 2300);
   intro.addEventListener('click', enter);
   addEventListener('keydown', e => { if (!done && (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ')) enter(); });
 })();
@@ -708,6 +732,6 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=4"></script>
+<script src="assets/i18n.js?v=6"></script>
 </body>
 </html>
