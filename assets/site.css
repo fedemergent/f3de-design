@@ -422,3 +422,10 @@ nav{order:2}
 .tset .frame{aspect-ratio:4/5;padding:0;border-style:solid;border-color:var(--line);background:#0b0b0e}
 .tset .frame img{object-fit:cover;object-position:50% 30%}
 @media(max-width:560px){.tset{gap:8px}.tset .frame{aspect-ratio:3/4}}
+
+
+/* ---- contacto unificado: brillo naranja del antiguo newsletter ---- */
+.contact-join{position:relative;overflow:hidden}
+.contact-join::before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);pointer-events:none}
+.contact-join>*{position:relative}
+.cform .chips{margin-top:2px}

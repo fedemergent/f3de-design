@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=10">
+<link rel="stylesheet" href="assets/site.css?v=11">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -46,11 +46,11 @@
       <ul>
         <li><a class="l" href="#inicio">Inicio</a></li>
         <li><a class="l" href="#modelos">Modelos 3D</a></li>
-        <li><a class="l" href="#servicios">Servicios</a></li>
-        <li><a class="l" href="#foodtrucks">Food trucks</a></li>
         <li><a class="l" href="#plugins">Plugins</a></li>
+        <li><a class="l" href="#foodtrucks">Food trucks</a></li>
         <li><a class="l" href="#tutoriales">Tutoriales</a></li>
         <li><a class="l" href="#cursos">Cursos</a></li>
+        <li><a class="l" href="#servicios">Servicios</a></li>
         <li><a class="l" href="#sobre-mi">Perfil</a></li>
         <li><a class="l" href="#contacto">Contacto</a></li>
       </ul>
@@ -154,122 +154,6 @@
   </div>
 </section>
 
-<!-- ================= SUSCRIPCION ================= -->
-<section style="padding-top:20px;padding-bottom:40px">
-  <div class="wrap">
-    <div class="panel news-band reveal">
-      <div>
-        <p class="eyebrow">Newsletter</p>
-        <h2>Entérate primero de cursos, plugins y novedades</h2>
-        <p class="lead">Un correo ocasional. Sin spam, y te das de baja cuando quieras.</p>
-      </div>
-      <form class="sub" id="subForm" novalidate>
-        <div class="row">
-          <input type="email" id="subMail" placeholder="tu@correo.com" autocomplete="email" aria-label="Correo electrónico" required>
-          <button class="btn pri" type="submit" style="white-space:nowrap;justify-content:center">Suscribirme</button>
-        </div>
-        <div class="chips" role="group" aria-label="Intereses">
-          <label><input type="checkbox" name="i" value="cursos" checked><span>Cursos</span></label>
-          <label><input type="checkbox" name="i" value="plugins" checked><span>Plugins</span></label>
-          <label><input type="checkbox" name="i" value="noticias"><span>Noticias de Rhino</span></label>
-        </div>
-        <p class="fine" id="subHint">Al suscribirte aceptas recibir correos de F3DE Design.</p>
-        <div class="ok" id="subOk" role="status">¡Listo! Quedaste suscrito. Gracias por unirte.</div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICIOS ================= -->
-<section id="servicios">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Servicios</p>
-      <h2>Todo lo que necesitas en torno a Rhino</h2>
-      <p class="lead">Desde aprender la herramienta hasta resolver un proyecto completo: acompañamiento de un instructor autorizado y diseñador industrial.</p>
-    </div>
-    <div class="grid g3">
-      <article class="panel card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5"/><path d="M21 7v6"/></svg></div>
-        <h3>Capacitación y entrenamiento</h3>
-        <p>Cursos para equipos o personas, en línea o presenciales, de nivel básico a avanzado.</p>
-        <ul><li>Rhino 8 desde cero</li><li>Superficies y modelado avanzado</li><li>Programas a la medida de tu empresa</li></ul>
-      </article>
-      <article class="panel card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/><path d="M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div>
-        <h3>Consultoría</h3>
-        <p>Optimiza tus flujos de trabajo, bibliotecas y estándares para que tu equipo modele más rápido y con menos errores.</p>
-        <ul><li>Auditoría de procesos</li><li>Bibliotecas y plantillas</li><li>Automatización con plugins</li></ul>
-      </article>
-      <article class="panel card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/></svg></div>
-        <h3>Modelado 3D</h3>
-        <p>Modelos precisos para fabricación, renderizado, prototipado o documentación técnica.</p>
-        <ul><li>Diseño de producto y mobiliario</li><li>Preparación para producción</li><li>Renders y presentaciones</li></ul>
-      </article>
-      <article class="panel card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 15l1.6-5.2A2 2 0 0 1 6.5 8.4h11a2 2 0 0 1 1.9 1.4L21 15"/><path d="M3 15h18v3H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/></svg></div>
-        <h3>Diseño automotriz e industrial</h3>
-        <p>Del concepto a la ficha técnica: carrocerías, componentes y producto, con enfoque en manufactura y experiencia de uso.</p>
-        <ul><li>Diseño y modelado automotriz</li><li>Diseño mecánico y de componentes</li><li>Millwork y packaging para producción</li></ul>
-      </article>
-      <article class="panel card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M10 8l4 2-4 2V8z"/></svg></div>
-        <h3>Plugins y herramientas a la medida</h3>
-        <p>Desarrollo de plugins, barras de herramientas y automatizaciones para tu operación.</p>
-        <ul><li>Plugins para Rhino</li><li>Instaladores y actualizaciones</li><li>Soporte y mantenimiento</li></ul>
-      </article>
-      <article class="panel card soon reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/></svg></div>
-        <span class="tag" style="margin-bottom:12px">Próximamente</span>
-        <h3>Venta de licencias de Rhino</h3>
-        <p>Estamos trabajando para ofrecer licencias y soporte como distribuidor autorizado en el país.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOD TRUCKS ================= -->
-<section id="foodtrucks">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Food trucks</p>
-      <h2>Unidades móviles de comida, de la idea a la calle</h2>
-      <p class="lead">Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos: estructura, identidad y puesta en obra. Toca un proyecto para ver todas sus fotos.</p>
-    </div>
-    <div class="ft reveal">
-      <figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon.jpg" alt="Food truck Hamburgon" loading="lazy"><span class="gcap">Hamburgon</span><span class="cnt">8 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/02.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/03.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/04.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/05.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/06.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/07.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/08.jpg" alt="Food truck Hamburgon" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="640" height="480" src="assets/foodtrucks/omoya.jpg" alt="Food truck Omoya" loading="lazy"><span class="gcap">Omoya</span><span class="cnt">10 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="640" height="480" src="assets/foodtrucks/omoya/02.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/03.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/04.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/05.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/06.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/07.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/08.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/09.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/10.jpg" alt="Food truck Omoya" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels.jpg" alt="Food truck Waffles on Wheels" loading="lazy"><span class="gcap">Waffles on Wheels</span><span class="cnt">10 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/02.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/03.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/04.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/05.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/06.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/07.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/08.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/09.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="750" height="1000" src="assets/foodtrucks/waffles-on-wheels/10.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan.jpg" alt="Food truck Yucatán" loading="lazy"><span class="gcap">Yucatán</span><span class="cnt">10 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan/02.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan/03.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="475" height="755" src="assets/foodtrucks/yucatan/04.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="629" height="755" src="assets/foodtrucks/yucatan/05.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="1000" height="642" src="assets/foodtrucks/yucatan/06.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="758" height="580" src="assets/foodtrucks/yucatan/07.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="870" height="580" src="assets/foodtrucks/yucatan/08.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="951" height="580" src="assets/foodtrucks/yucatan/09.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="514" height="580" src="assets/foodtrucks/yucatan/10.jpg" alt="Food truck Yucatán" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="787" height="800" src="assets/foodtrucks/pipofast.jpg" alt="Food truck Pipofast" loading="lazy"><span class="gcap">Pipofast</span><span class="cnt">3 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="800" height="726" src="assets/foodtrucks/pipofast/02.jpg" alt="Food truck Pipofast" loading="lazy"></figure><figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="787" height="800" src="assets/foodtrucks/pipofast/03.jpg" alt="Food truck Pipofast" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie.jpg" alt="Food truck Foodie Vuggie" loading="lazy"><span class="gcap">Foodie Vuggie</span><span class="cnt">10 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/02.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/03.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/04.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/05.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/06.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/07.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/08.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/09.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/10.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Jipi Ais" data-group="ft-jipi-ais"><img width="874" height="516" src="assets/foodtrucks/jipi-ais.jpg" alt="Food truck Jipi Ais" loading="lazy"><span class="gcap">Jipi Ais</span><span class="cnt">2 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Jipi Ais" data-group="ft-jipi-ais"><img width="455" height="614" src="assets/foodtrucks/jipi-ais/02.jpg" alt="Food truck Jipi Ais" loading="lazy"></figure></div>
-      <figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"><span class="gcap">La Verdad de la Milanés</span><span class="cnt">10 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/02.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/03.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/04.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="750" height="1000" src="assets/foodtrucks/la-verdad-de-la-milanes/05.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="750" height="1000" src="assets/foodtrucks/la-verdad-de-la-milanes/06.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="750" src="assets/foodtrucks/la-verdad-de-la-milanes/07.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="750" src="assets/foodtrucks/la-verdad-de-la-milanes/08.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/09.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/10.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="563" src="assets/foodtrucks/lomitop.jpg" alt="Food truck Lomitop" loading="lazy"><span class="gcap">Lomitop</span><span class="cnt">3 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="750" src="assets/foodtrucks/lomitop/02.jpg" alt="Food truck Lomitop" loading="lazy"></figure><figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="750" src="assets/foodtrucks/lomitop/03.jpg" alt="Food truck Lomitop" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Kombi Retro" data-group="ft-kombi-retro"><img width="1000" height="750" src="assets/foodtrucks/kombi-retro.jpg" alt="Food truck Kombi Retro" loading="lazy"><span class="gcap">Kombi Retro</span><span class="cnt">2 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Kombi Retro" data-group="ft-kombi-retro"><img width="1000" height="750" src="assets/foodtrucks/kombi-retro/02.jpg" alt="Food truck Kombi Retro" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="1000" height="563" src="assets/foodtrucks/fatima-panchitos.jpg" alt="Food truck Fatima Panchitos" loading="lazy"><span class="gcap">Fatima Panchitos</span><span class="cnt">5 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="1000" height="563" src="assets/foodtrucks/fatima-panchitos/02.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/03.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/04.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/05.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="1000" height="562" src="assets/foodtrucks/tienda.jpg" alt="Food truck Tienda móvil" loading="lazy"><span class="gcap">Tienda móvil</span><span class="cnt">5 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/02.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/03.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="1000" height="750" src="assets/foodtrucks/tienda/04.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/05.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo.jpg" alt="Food truck Lomobongo" loading="lazy"><span class="gcap">Lomobongo</span><span class="cnt">3 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo/02.jpg" alt="Food truck Lomobongo" loading="lazy"></figure><figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo/03.jpg" alt="Food truck Lomobongo" loading="lazy"></figure></div>
-      <figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="750" height="1000" src="assets/foodtrucks/vincenti-cafe.jpg" alt="Food truck Vincenti Café" loading="lazy"><span class="gcap">Vincenti Café</span><span class="cnt">9 fotos</span></figure>
-      <div hidden><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="1000" height="750" src="assets/foodtrucks/vincenti-cafe/02.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="1000" height="750" src="assets/foodtrucks/vincenti-cafe/03.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/04.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/05.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/06.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/07.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/08.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/09.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure></div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= PLUGINS ================= -->
 <section id="plugins">
   <div class="wrap">
@@ -318,6 +202,47 @@
     <div class="grid g2" style="margin-top:18px">
       <article class="panel card soon reveal"><span class="tag" style="margin-bottom:12px">Próximamente</span><h3>TATU para AutoCAD</h3><p>La misma experiencia de grabación de tutoriales dentro de AutoCAD.</p></article>
       <article class="panel card soon reveal"><span class="tag" style="margin-bottom:12px">Próximamente</span><h3>TATU para SketchUp</h3><p>Grabación y resúmenes verticales también para tus modelos de SketchUp.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOD TRUCKS ================= -->
+<section id="foodtrucks">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Food trucks</p>
+      <h2>Unidades móviles de comida, de la idea a la calle</h2>
+      <p class="lead">Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos: estructura, identidad y puesta en obra. Toca un proyecto para ver todas sus fotos.</p>
+    </div>
+    <div class="ft reveal">
+      <figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon.jpg" alt="Food truck Hamburgon" loading="lazy"><span class="gcap">Hamburgon</span><span class="cnt">8 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/02.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/03.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/04.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/05.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/06.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/07.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/08.jpg" alt="Food truck Hamburgon" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="640" height="480" src="assets/foodtrucks/omoya.jpg" alt="Food truck Omoya" loading="lazy"><span class="gcap">Omoya</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="640" height="480" src="assets/foodtrucks/omoya/02.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/03.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/04.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/05.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/06.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/07.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/08.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/09.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/10.jpg" alt="Food truck Omoya" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels.jpg" alt="Food truck Waffles on Wheels" loading="lazy"><span class="gcap">Waffles on Wheels</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/02.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/03.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/04.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/05.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/06.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/07.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/08.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/09.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="750" height="1000" src="assets/foodtrucks/waffles-on-wheels/10.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan.jpg" alt="Food truck Yucatán" loading="lazy"><span class="gcap">Yucatán</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan/02.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan/03.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="475" height="755" src="assets/foodtrucks/yucatan/04.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="629" height="755" src="assets/foodtrucks/yucatan/05.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="1000" height="642" src="assets/foodtrucks/yucatan/06.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="758" height="580" src="assets/foodtrucks/yucatan/07.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="870" height="580" src="assets/foodtrucks/yucatan/08.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="951" height="580" src="assets/foodtrucks/yucatan/09.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="514" height="580" src="assets/foodtrucks/yucatan/10.jpg" alt="Food truck Yucatán" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="787" height="800" src="assets/foodtrucks/pipofast.jpg" alt="Food truck Pipofast" loading="lazy"><span class="gcap">Pipofast</span><span class="cnt">3 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="800" height="726" src="assets/foodtrucks/pipofast/02.jpg" alt="Food truck Pipofast" loading="lazy"></figure><figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="787" height="800" src="assets/foodtrucks/pipofast/03.jpg" alt="Food truck Pipofast" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie.jpg" alt="Food truck Foodie Vuggie" loading="lazy"><span class="gcap">Foodie Vuggie</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/02.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/03.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/04.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/05.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/06.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/07.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/08.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/09.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/10.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Jipi Ais" data-group="ft-jipi-ais"><img width="874" height="516" src="assets/foodtrucks/jipi-ais.jpg" alt="Food truck Jipi Ais" loading="lazy"><span class="gcap">Jipi Ais</span><span class="cnt">2 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Jipi Ais" data-group="ft-jipi-ais"><img width="455" height="614" src="assets/foodtrucks/jipi-ais/02.jpg" alt="Food truck Jipi Ais" loading="lazy"></figure></div>
+      <figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"><span class="gcap">La Verdad de la Milanés</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/02.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/03.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/04.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="750" height="1000" src="assets/foodtrucks/la-verdad-de-la-milanes/05.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="750" height="1000" src="assets/foodtrucks/la-verdad-de-la-milanes/06.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="750" src="assets/foodtrucks/la-verdad-de-la-milanes/07.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="750" src="assets/foodtrucks/la-verdad-de-la-milanes/08.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/09.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/10.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="563" src="assets/foodtrucks/lomitop.jpg" alt="Food truck Lomitop" loading="lazy"><span class="gcap">Lomitop</span><span class="cnt">3 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="750" src="assets/foodtrucks/lomitop/02.jpg" alt="Food truck Lomitop" loading="lazy"></figure><figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="750" src="assets/foodtrucks/lomitop/03.jpg" alt="Food truck Lomitop" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Kombi Retro" data-group="ft-kombi-retro"><img width="1000" height="750" src="assets/foodtrucks/kombi-retro.jpg" alt="Food truck Kombi Retro" loading="lazy"><span class="gcap">Kombi Retro</span><span class="cnt">2 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Kombi Retro" data-group="ft-kombi-retro"><img width="1000" height="750" src="assets/foodtrucks/kombi-retro/02.jpg" alt="Food truck Kombi Retro" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="1000" height="563" src="assets/foodtrucks/fatima-panchitos.jpg" alt="Food truck Fatima Panchitos" loading="lazy"><span class="gcap">Fatima Panchitos</span><span class="cnt">5 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="1000" height="563" src="assets/foodtrucks/fatima-panchitos/02.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/03.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/04.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/05.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="1000" height="562" src="assets/foodtrucks/tienda.jpg" alt="Food truck Tienda móvil" loading="lazy"><span class="gcap">Tienda móvil</span><span class="cnt">5 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/02.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/03.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="1000" height="750" src="assets/foodtrucks/tienda/04.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/05.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo.jpg" alt="Food truck Lomobongo" loading="lazy"><span class="gcap">Lomobongo</span><span class="cnt">3 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo/02.jpg" alt="Food truck Lomobongo" loading="lazy"></figure><figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo/03.jpg" alt="Food truck Lomobongo" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="750" height="1000" src="assets/foodtrucks/vincenti-cafe.jpg" alt="Food truck Vincenti Café" loading="lazy"><span class="gcap">Vincenti Café</span><span class="cnt">9 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="1000" height="750" src="assets/foodtrucks/vincenti-cafe/02.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="1000" height="750" src="assets/foodtrucks/vincenti-cafe/03.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/04.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/05.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/06.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/07.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/08.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/09.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure></div>
     </div>
   </div>
 </section>
@@ -394,6 +319,55 @@
   </div>
 </section>
 
+<!-- ================= SERVICIOS ================= -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Servicios</p>
+      <h2>Todo lo que necesitas en torno a Rhino</h2>
+      <p class="lead">Desde aprender la herramienta hasta resolver un proyecto completo: acompañamiento de un instructor autorizado y diseñador industrial.</p>
+    </div>
+    <div class="grid g3">
+      <article class="panel card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5"/><path d="M21 7v6"/></svg></div>
+        <h3>Capacitación y entrenamiento</h3>
+        <p>Cursos para equipos o personas, en línea o presenciales, de nivel básico a avanzado.</p>
+        <ul><li>Rhino 8 desde cero</li><li>Superficies y modelado avanzado</li><li>Programas a la medida de tu empresa</li></ul>
+      </article>
+      <article class="panel card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/><path d="M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div>
+        <h3>Consultoría</h3>
+        <p>Optimiza tus flujos de trabajo, bibliotecas y estándares para que tu equipo modele más rápido y con menos errores.</p>
+        <ul><li>Auditoría de procesos</li><li>Bibliotecas y plantillas</li><li>Automatización con plugins</li></ul>
+      </article>
+      <article class="panel card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/></svg></div>
+        <h3>Modelado 3D</h3>
+        <p>Modelos precisos para fabricación, renderizado, prototipado o documentación técnica.</p>
+        <ul><li>Diseño de producto y mobiliario</li><li>Preparación para producción</li><li>Renders y presentaciones</li></ul>
+      </article>
+      <article class="panel card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 15l1.6-5.2A2 2 0 0 1 6.5 8.4h11a2 2 0 0 1 1.9 1.4L21 15"/><path d="M3 15h18v3H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/></svg></div>
+        <h3>Diseño automotriz e industrial</h3>
+        <p>Del concepto a la ficha técnica: carrocerías, componentes y producto, con enfoque en manufactura y experiencia de uso.</p>
+        <ul><li>Diseño y modelado automotriz</li><li>Diseño mecánico y de componentes</li><li>Millwork y packaging para producción</li></ul>
+      </article>
+      <article class="panel card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M10 8l4 2-4 2V8z"/></svg></div>
+        <h3>Plugins y herramientas a la medida</h3>
+        <p>Desarrollo de plugins, barras de herramientas y automatizaciones para tu operación.</p>
+        <ul><li>Plugins para Rhino</li><li>Instaladores y actualizaciones</li><li>Soporte y mantenimiento</li></ul>
+      </article>
+      <article class="panel card soon reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/></svg></div>
+        <span class="tag" style="margin-bottom:12px">Próximamente</span>
+        <h3>Venta de licencias de Rhino</h3>
+        <p>Estamos trabajando para ofrecer licencias y soporte como distribuidor autorizado en el país.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PERFIL ================= -->
 <section id="sobre-mi">
   <div class="wrap">
@@ -431,11 +405,11 @@
 <!-- ================= CONTACTO ================= -->
 <section id="contacto" style="padding-bottom:30px">
   <div class="wrap">
-    <div class="panel contact reveal">
+    <div class="panel contact contact-join reveal">
       <div>
         <p class="eyebrow">Contacto</p>
-        <h2>Tu proyecto, de la idea a la fabricación</h2>
-        <p class="lead">Escribe para cotizar un servicio, inscribirte a un curso o proponer una colaboración.</p>
+        <h2>Sé parte de lo que viene</h2>
+        <p class="lead">Entérate primero de cursos, plugins y novedades de Rhino. Escribe también para cotizar un servicio, inscribirte a un curso o proponer una colaboración.</p>
         <ul class="links">
           <li><a href="mailto:di.fedemergent@gmail.com">✉ di.fedemergent@gmail.com</a></li>
           <li><a href="https://www.instagram.com/di.fedemergent/" target="_blank" rel="noopener">◎ Instagram · @di.fedemergent</a></li>
@@ -445,15 +419,22 @@
           <li><a href="https://github.com/fedemergent" target="_blank" rel="noopener">⌥ GitHub · fedemergent</a></li>
         </ul>
       </div>
-      <form class="cform" id="cForm">
-        <div class="two"><input name="n" placeholder="Nombre" autocomplete="name" aria-label="Nombre" required><input name="e" type="email" placeholder="Correo" autocomplete="email" aria-label="Correo" required></div>
+      <form class="cform" id="cForm" novalidate>
+        <div class="two"><input name="n" placeholder="Nombre" autocomplete="name" aria-label="Nombre"><input name="e" id="cMail" type="email" placeholder="Correo" autocomplete="email" aria-label="Correo" required></div>
         <select name="t" id="cTopic" aria-label="Tema">
-          <option value="Consultoría">Consultoría</option><option value="Capacitación / entrenamiento">Capacitación / entrenamiento</option><option value="Modelado 3D">Modelado 3D</option>
+          <option value="Novedades">Solo quiero recibir novedades</option><option value="Consultoría">Consultoría</option><option value="Capacitación / entrenamiento">Capacitación / entrenamiento</option><option value="Modelado 3D">Modelado 3D</option>
           <option value="Diseño industrial">Diseño industrial</option><option value="Plugins a la medida">Plugins a la medida</option><option value="Licencias de Rhino">Licencias de Rhino</option><option value="Otro">Otro</option>
         </select>
-        <textarea name="m" placeholder="Describe brevemente tu proyecto o consulta" aria-label="Mensaje" required></textarea>
-        <button class="btn pri" type="submit" style="justify-content:center">Enviar mensaje</button>
-        <p class="fine" id="cHint">Al enviar, el mensaje se abre en tu aplicación de correo, listo para enviarse.</p>
+        <textarea name="m" placeholder="Mensaje (opcional): describe brevemente tu proyecto o consulta" aria-label="Mensaje"></textarea>
+        <p class="fine" style="margin:2px 0 -4px">Quiero recibir novedades de</p>
+        <div class="chips" role="group" aria-label="Intereses">
+          <label><input type="checkbox" name="i" value="cursos" checked><span>Cursos</span></label>
+          <label><input type="checkbox" name="i" value="plugins" checked><span>Plugins</span></label>
+          <label><input type="checkbox" name="i" value="noticias"><span>Noticias de Rhino</span></label>
+        </div>
+        <button class="btn pri" type="submit" style="justify-content:center">Quiero ser parte</button>
+        <p class="fine" id="cHint">Un correo ocasional. Sin spam, y te das de baja cuando quieras. Al enviar aceptas recibir correos de F3DE Design.</p>
+        <div class="ok" id="cOk" role="status"><span data-s="sent">¡Listo! Gracias por ser parte. Te mantendremos al día.</span><span data-s="mail" hidden>Se abrió tu aplicación de correo con el mensaje: solo falta enviarlo.</span></div>
       </form>
     </div>
   </div>
@@ -500,10 +481,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=10"></script>
-<script src="assets/leads.js?v=10"></script>
-<script src="assets/counters.js?v=10"></script>
-<script src="assets/common.js?v=10"></script>
+<script src="assets/config.js?v=11"></script>
+<script src="assets/leads.js?v=11"></script>
+<script src="assets/counters.js?v=11"></script>
+<script src="assets/common.js?v=11"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -641,18 +622,6 @@
 })();
 
 (() => {
-  // Suscripción: se guarda con el servicio configurado en assets/config.js
-  const sf = document.getElementById('subForm'), mail = document.getElementById('subMail');
-  sf.addEventListener('submit', async e => {
-    e.preventDefault();
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail.value.trim())) { mail.focus(); mail.style.borderColor = '#ff6b6b'; return; }
-    mail.style.borderColor = '';
-    const intereses = [...sf.querySelectorAll('input[name=i]:checked')].map(i => i.value).join(', ');
-    window.sendLead({ email: mail.value.trim(), tipo: 'newsletter', intereses });
-    sf.querySelector('.row').style.display = 'none'; document.getElementById('subHint').style.display = 'none';
-    document.getElementById('subOk').style.display = 'block';
-  });
-
   // Descarga de TATU: pide el correo y luego entrega el instalador
   const C = window.F3DE_CONFIG || {}, dl = document.getElementById('dl'), dlF = document.getElementById('dlF'), dlMail = document.getElementById('dlMail');
   const dlOk = document.getElementById('dlOk'), dlErr = document.getElementById('dlErr'), dlLink = document.getElementById('dlLink');
@@ -695,12 +664,22 @@
   const vio = new IntersectionObserver(es => es.forEach(en => { const v = en.target; if (still) return; if (en.isIntersecting) v.play().catch(() => {}); else v.pause(); }), { threshold: .5 });
   document.querySelectorAll('video[data-teaser]').forEach(v => { if (!still) vio.observe(v); else v.controls = true; });
 
-  // Contacto: abre el correo con el mensaje (hasta conectar un servicio de formularios).
-  const cf = document.getElementById('cForm');
-  cf.addEventListener('submit', e => {
-    e.preventDefault(); const f = new FormData(cf);
-    location.href = 'mailto:di.fedemergent@gmail.com?subject=' + encodeURIComponent('[' + f.get('t') + '] ' + f.get('n')) +
-      '&body=' + encodeURIComponent(f.get('m') + '\n\n— ' + f.get('n') + ' (' + f.get('e') + ')');
+  // Contacto + novedades en un solo formulario
+  const cf = document.getElementById('cForm'), cOk = document.getElementById('cOk'), cMail = document.getElementById('cMail');
+  cf.addEventListener('submit', async e => {
+    e.preventDefault();
+    const f = new FormData(cf), em = String(f.get('e') || '').trim(), msg = String(f.get('m') || '').trim(), nombre = String(f.get('n') || '').trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { cMail.focus(); cMail.style.borderColor = '#ff6b6b'; return; }
+    cMail.style.borderColor = '';
+    const btn = cf.querySelector('button[type=submit]'); btn.disabled = true;
+    const intereses = [...cf.querySelectorAll('input[name=i]:checked')].map(i => i.value).join(', ');
+    const sent = await window.sendLead({ email: em, nombre, tema: f.get('t'), mensaje: msg, intereses, tipo: msg ? 'contacto' : 'novedades' });
+    if (!sent) {   // si el servicio no confirma, se abre el correo con el mensaje para no perderlo
+      location.href = 'mailto:di.fedemergent@gmail.com?subject=' + encodeURIComponent('[' + f.get('t') + '] ' + (nombre || em)) +
+        '&body=' + encodeURIComponent((msg || 'Quiero recibir novedades de F3DE Design.') + '\n\n— ' + nombre + ' (' + em + ')\nIntereses: ' + intereses);
+    }
+    cOk.querySelector('[data-s=sent]').hidden = !sent; cOk.querySelector('[data-s=mail]').hidden = sent;
+    cOk.style.display = 'block'; cf.querySelectorAll('input,select,textarea,button,.fine,.chips').forEach(el => { if (!el.closest('#cOk')) el.style.display = 'none'; });
   });
   document.querySelectorAll('[data-topic]').forEach(a => a.addEventListener('click', () => {
     const sel = document.getElementById('cTopic'), t = a.dataset.topic;
@@ -709,6 +688,6 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=10"></script>
+<script src="assets/i18n.js?v=11"></script>
 </body>
 </html>
