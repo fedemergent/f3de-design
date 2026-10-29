@@ -388,3 +388,14 @@ nav{order:2}
 .intro-line{animation:draw .9s .15s cubic-bezier(.5,0,.1,1) forwards}
 .intro-glow{animation:none;opacity:.18;transform:translate(-14%,-50%) scale(.82)}
 @media(prefers-reduced-motion:reduce){.intro-line{animation:none;transform:none}}
+
+
+/* ---- perfil compacto / trayectoria ---- */
+.about.compact{grid-template-columns:.62fr 1.38fr}
+.about.compact .portrait{aspect-ratio:4/5}
+@media(max-width:860px){.about.compact{grid-template-columns:1fr}.about.compact .portrait{max-width:300px}}
+.ctas{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.trayectoria-bio{margin-top:6px}
+.certs .cgrid.three .cap{font-size:12.5px}
+.cnt{position:absolute;right:10px;top:10px;font:600 11px var(--body);background:rgba(6,6,7,.72);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:#fff;pointer-events:none}
+.slide .pimg.land img{height:auto;width:clamp(240px,38vw,460px)}

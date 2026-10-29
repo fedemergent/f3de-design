@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=6">
+<link rel="stylesheet" href="assets/site.css?v=7">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -26,7 +26,7 @@
   <div class="intro-stage">
     <div class="intro-glow"></div>
     <div class="intro-line"></div>
-    <img class="intro-logo" src="assets/logo-f3de.png" alt="F3DE Design — Diseño industrial">
+    <img width="1600" height="533" class="intro-logo" src="assets/logo-f3de.png" alt="F3DE Design — Diseño industrial">
   </div>
   <div class="visits" id="visitsIntro">Visitas · <b data-count="visitas">—</b></div>
   <div class="skip">Toca para entrar</div>
@@ -52,7 +52,6 @@
         <li><a class="l" href="#tutoriales">Tutoriales</a></li>
         <li><a class="l" href="#cursos">Cursos</a></li>
         <li><a class="l" href="#sobre-mi">Perfil</a></li>
-        <li><a class="l" href="#charlas">Trayectoria</a></li>
         <li><a class="l" href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -65,13 +64,13 @@
   <div class="wrap">
     <div class="hello reveal">
       <h1>Rhino, <em>diseño</em><br>y formación.</h1>
-      <span class="badge"><img src="assets/art-badge.png" alt="Authorized Rhino Trainer"> Instructor autorizado de Rhino</span>
+      <span class="badge"><img width="231" height="371" src="assets/art-badge.png" alt="Authorized Rhino Trainer"> Instructor autorizado de Rhino</span>
     </div>
 
     <div class="car" id="car" aria-roledescription="carrusel" aria-label="Últimas noticias">
       <div class="track" id="track">
         <article class="slide has-p" style="--a:radial-gradient(circle at 80% 25%,rgba(255,74,20,.5),transparent 55%),linear-gradient(135deg,#150b08,#08080a)">
-          <div class="art"><img src="assets/video/poster-juicy-salif.jpg" alt="" onerror="this.remove()"></div><span class="num">01</span>
+          <div class="art"><img width="1280" height="720" src="assets/video/poster-juicy-salif.jpg" alt="" onerror="this.remove()"></div><span class="num">01</span>
           <div class="pimg vid"><video muted loop playsinline preload="metadata" poster="assets/video/teaser-poster.jpg" data-teaser aria-label="Resumen vertical del tutorial del Juicy Salif"><source src="assets/video/teaser-juicy-salif.mp4" type="video/mp4"></video></div>
           <div class="txt"><span class="tag">Último tutorial</span><time>Hecho con TATU</time>
             <h3>Modelando el Juicy Salif en Rhino, paso a paso</h3>
@@ -79,46 +78,60 @@
             <a class="btn pri" href="#tutoriales">Ver el tutorial →</a></div>
         </article>
         <article class="slide" style="--a:radial-gradient(circle at 78% 20%,rgba(255,74,20,.55),transparent 55%),linear-gradient(135deg,#1a0d09,#08080a)">
-          <div class="art"></div><span class="num">02</span><div class="pimg sq"><img src="assets/tatu_dark_rounded_1024.png" alt="Icono de TATU"></div>
+          <div class="art"></div><span class="num">02</span><div class="pimg sq"><img width="1024" height="1024" src="assets/tatu_dark_rounded_1024.png" alt="Icono de TATU"></div>
           <div class="txt"><span class="tag">Plugin</span><time>28 oct 2026</time>
             <h3>TATU 1.1.4: graba tutoriales de Rhino y edítalos antes de exportar</h3>
             <p>Cursor resaltado, tarjetas de comandos, subtítulos, voz con IA, resumen vertical y, ahora, recorte y edición básica antes de exportar.</p>
             <a class="btn pri" href="#plugins">Conocer TATU →</a></div>
         </article>
+        <article class="slide has-p" style="--a:radial-gradient(circle at 80% 30%,rgba(255,200,40,.3),transparent 55%),linear-gradient(135deg,#14110a,#08080a)">
+          <div class="art"><img width="1000" height="693" src="assets/foodtrucks/hamburgon.jpg" alt="" onerror="this.remove()"></div><span class="num">03</span><div class="pimg land"><img width="1000" height="693" src="assets/foodtrucks/hamburgon.jpg" alt="Food truck Hamburgon"></div>
+          <div class="txt"><span class="tag">Proyectos</span><time>Food trucks</time>
+            <h3>Food trucks y unidades móviles de comida</h3>
+            <p>Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos.</p>
+            <a class="btn pri" href="#foodtrucks">Ver proyectos →</a></div>
+        </article>
         <article class="slide has-p" style="--a:radial-gradient(circle at 20% 15%,rgba(255,74,20,.4),transparent 55%),linear-gradient(135deg,#120c14,#08080a)">
-          <div class="art"><img src="assets/cursos/muebles-oscuro.jpg" alt="" onerror="this.remove()"></div><span class="num">03</span><div class="pimg"><img src="assets/cursos/muebles-oscuro.jpg" alt="Afiche del curso de diseño paramétrico de muebles"></div>
+          <div class="art"><img width="1054" height="1492" src="assets/cursos/muebles-oscuro.jpg" alt="" onerror="this.remove()"></div><span class="num">04</span><div class="pimg"><img width="1054" height="1492" src="assets/cursos/muebles-oscuro.jpg" alt="Afiche del curso de diseño paramétrico de muebles"></div>
           <div class="txt"><span class="tag">Curso</span><time>Online · 1 a 1</time>
             <h3>Diseño paramétrico de muebles con Rhino y Grasshopper</h3>
             <p>Curso personalizado para la industria del Architectural Millwork: del modelo paramétrico al taller. 12 horas.</p>
             <a class="btn pri" href="#cursos">Ver cursos →</a></div>
         </article>
+        <article class="slide has-p" style="--a:radial-gradient(circle at 20% 20%,rgba(120,140,255,.3),transparent 55%),linear-gradient(135deg,#0b0d16,#08080a)">
+          <div class="art"><img width="844" height="1500" src="assets/charlas/expofadupsa-2026-2.jpg" alt="" onerror="this.remove()"></div><span class="num">05</span><div class="pimg"><img width="844" height="1500" src="assets/charlas/expofadupsa-2026-2.jpg" alt="Conferencia en el Museo Altillo Beni, EXPOFADUPSA 2026"></div>
+          <div class="txt"><span class="tag">Conferencia</span><time>EXPOFADUPSA 2026</time>
+            <h3>Conferencia de diseño industrial en el Museo Altillo Beni</h3>
+            <p>Charla sobre diseño de producto y envases dentro de la EXPOFADUPSA 2026.</p>
+            <a class="btn pri" href="trayectoria.html#charlas">Ver trayectoria →</a></div>
+        </article>
         <article class="slide has-p" style="--a:radial-gradient(circle at 85% 80%,rgba(80,140,255,.35),transparent 55%),linear-gradient(135deg,#0d1114,#08080a)">
-          <div class="art"><img src="assets/cursos/arquitectura-parametrica.jpg" alt="" onerror="this.remove()"></div><span class="num">04</span><div class="pimg"><img src="assets/cursos/arquitectura-parametrica.jpg" alt="Afiche del curso de arquitectura paramétrica"></div>
+          <div class="art"><img width="1080" height="1920" src="assets/cursos/arquitectura-parametrica.jpg" alt="" onerror="this.remove()"></div><span class="num">06</span><div class="pimg"><img width="1080" height="1920" src="assets/cursos/arquitectura-parametrica.jpg" alt="Afiche del curso de arquitectura paramétrica"></div>
           <div class="txt"><span class="tag">Curso</span><time>CENACE – UPSA</time>
             <h3>Arquitectura paramétrica con Rhino y Grasshopper</h3>
             <p>Modelado 3D, formas orgánicas y pieles para estudiantes, docentes, profesionales y estudios de arquitectura.</p>
             <a class="btn pri" href="#cursos">Ver cursos →</a></div>
         </article>
         <article class="slide has-p" style="--a:radial-gradient(circle at 30% 85%,rgba(255,74,20,.35),transparent 55%),linear-gradient(135deg,#14100a,#08080a)">
-          <div class="art"><img src="assets/cursos/joyeria.jpg" alt="" onerror="this.remove()"></div><span class="num">05</span><div class="pimg"><img src="assets/cursos/joyeria.jpg" alt="Afiche del curso de diseño 3D de objetos, accesorios y joyería"></div>
+          <div class="art"><img width="1080" height="1920" src="assets/cursos/joyeria.jpg" alt="" onerror="this.remove()"></div><span class="num">07</span><div class="pimg"><img width="1080" height="1920" src="assets/cursos/joyeria.jpg" alt="Afiche del curso de diseño 3D de objetos, accesorios y joyería"></div>
           <div class="txt"><span class="tag">Curso</span><time>CENACE – UPSA</time>
             <h3>Diseño 3D de objetos, accesorios y joyería</h3>
             <p>Rhino y KeyShot: de objetos simples a accesorios de moda, avíos e indumentaria. Nivel básico, 12 horas.</p>
             <a class="btn pri" href="#cursos">Ver cursos →</a></div>
         </article>
+        <article class="slide has-p" style="--a:radial-gradient(circle at 75% 70%,rgba(230,40,40,.35),transparent 55%),linear-gradient(135deg,#150a0a,#08080a)">
+          <div class="art"><img width="1080" height="1080" src="assets/charlas/tedx-federico-escobar.jpg" alt="" onerror="this.remove()"></div><span class="num">08</span><div class="pimg"><img width="1080" height="1080" src="assets/charlas/tedx-federico-escobar.jpg" alt="Federico Escobar en TEDxSantaCruzdelaSierra"></div>
+          <div class="txt"><span class="tag">Conferencia</span><time>TEDx</time>
+            <h3>Conferencista en TEDxSantaCruzdelaSierra</h3>
+            <p>Una charla sobre diseño, tecnología y futuro en el escenario de TEDxSantaCruzdelaSierra.</p>
+            <a class="btn pri" href="trayectoria.html#charlas">Ver trayectoria →</a></div>
+        </article>
         <article class="slide has-p" style="--a:radial-gradient(circle at 70% 30%,rgba(230,30,120,.35),transparent 55%),linear-gradient(135deg,#140a10,#08080a)">
-          <div class="art"><img src="assets/cursos/packaging.jpg" alt="" onerror="this.remove()"></div><span class="num">06</span><div class="pimg"><img src="assets/cursos/packaging.jpg" alt="Afiche del curso de diseño 3D de packaging"></div>
+          <div class="art"><img width="1080" height="1920" src="assets/cursos/packaging.jpg" alt="" onerror="this.remove()"></div><span class="num">09</span><div class="pimg"><img width="1080" height="1920" src="assets/cursos/packaging.jpg" alt="Afiche del curso de diseño 3D de packaging"></div>
           <div class="txt"><span class="tag">Curso</span><time>CENACE – UPSA</time>
             <h3>Diseño 3D de packaging: modelado y branding de envases</h3>
             <p>Envases de plástico, cajas de cartón, botellas de vidrio y bolsas de PVC. Nivel básico, 12 horas.</p>
             <a class="btn pri" href="#cursos">Ver cursos →</a></div>
-        </article>
-        <article class="slide has-p" style="--a:radial-gradient(circle at 15% 80%,rgba(255,74,20,.4),transparent 55%),linear-gradient(135deg,#0e0f14,#08080a)">
-          <div class="art"><img src="assets/cursos/cert-alumno.jpg" alt="" onerror="this.remove()"></div><span class="num">07</span><div class="pimg land"><img src="assets/cursos/cert-alumno.jpg" alt="Certificado de finalización de una alumna"></div>
-          <div class="txt"><span class="tag">Comunidad</span><time>Alumnos</time>
-            <h3>Certificados y logros de los alumnos</h3>
-            <p>Un espacio para celebrar los avances de quienes se forman con F3DE Design en el ecosistema de Rhino.</p>
-            <a class="btn pri" href="#galeria">Ver galería →</a></div>
         </article>
       </div>
       <div class="ctrl">
@@ -222,23 +235,38 @@
     <div class="reveal">
       <p class="eyebrow">Food trucks</p>
       <h2>Unidades móviles de comida, de la idea a la calle</h2>
-      <p class="lead">Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos: estructura, identidad y puesta en obra. Una selección de proyectos del catálogo digital.</p>
+      <p class="lead">Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos: estructura, identidad y puesta en obra. Toca un proyecto para ver todas sus fotos.</p>
     </div>
     <div class="ft reveal">
-      <figure class="frame" data-label="Hamburgon" data-group="foodtrucks"><img src="assets/foodtrucks/hamburgon.jpg" alt="Food truck Hamburgon" loading="lazy"><span class="gcap">Hamburgon</span></figure>
-      <figure class="frame" data-label="Omoya" data-group="foodtrucks"><img src="assets/foodtrucks/omoya.jpg" alt="Food truck Omoya" loading="lazy"><span class="gcap">Omoya</span></figure>
-      <figure class="frame" data-label="Waffles on Wheels" data-group="foodtrucks"><img src="assets/foodtrucks/waffles-on-wheels.jpg" alt="Food truck Waffles on Wheels" loading="lazy"><span class="gcap">Waffles on Wheels</span></figure>
-      <figure class="frame" data-label="Yucatán" data-group="foodtrucks"><img src="assets/foodtrucks/yucatan.jpg" alt="Food truck Yucatán" loading="lazy"><span class="gcap">Yucatán</span></figure>
-      <figure class="frame" data-label="Pipofast" data-group="foodtrucks"><img src="assets/foodtrucks/pipofast.jpg" alt="Food truck Pipofast" loading="lazy"><span class="gcap">Pipofast</span></figure>
-      <figure class="frame" data-label="Foodie Vuggie" data-group="foodtrucks"><img src="assets/foodtrucks/foodie-vuggie.jpg" alt="Food truck Foodie Vuggie" loading="lazy"><span class="gcap">Foodie Vuggie</span></figure>
-      <figure class="frame" data-label="Jipi Ais" data-group="foodtrucks"><img src="assets/foodtrucks/jipi-ais.jpg" alt="Food truck Jipi Ais" loading="lazy"><span class="gcap">Jipi Ais</span></figure>
-      <figure class="frame" data-label="La Verdad de la Milanés" data-group="foodtrucks"><img src="assets/foodtrucks/la-verdad-de-la-milanes.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"><span class="gcap">La Verdad de la Milanés</span></figure>
-      <figure class="frame" data-label="Lomitop" data-group="foodtrucks"><img src="assets/foodtrucks/lomitop.jpg" alt="Food truck Lomitop" loading="lazy"><span class="gcap">Lomitop</span></figure>
-      <figure class="frame" data-label="Kombi Retro" data-group="foodtrucks"><img src="assets/foodtrucks/kombi-retro.jpg" alt="Food truck Kombi Retro" loading="lazy"><span class="gcap">Kombi Retro</span></figure>
-      <figure class="frame" data-label="Fatima Panchitos" data-group="foodtrucks"><img src="assets/foodtrucks/fatima-panchitos.jpg" alt="Food truck Fatima Panchitos" loading="lazy"><span class="gcap">Fatima Panchitos</span></figure>
-      <figure class="frame" data-label="Tienda móvil" data-group="foodtrucks"><img src="assets/foodtrucks/tienda.jpg" alt="Food truck Tienda móvil" loading="lazy"><span class="gcap">Tienda móvil</span></figure>
+      <figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon.jpg" alt="Food truck Hamburgon" loading="lazy"><span class="gcap">Hamburgon</span><span class="cnt">8 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/02.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/03.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="693" src="assets/foodtrucks/hamburgon/04.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/05.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/06.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/07.jpg" alt="Food truck Hamburgon" loading="lazy"></figure><figure class="frame" data-label="Hamburgon" data-group="ft-hamburgon"><img width="1000" height="750" src="assets/foodtrucks/hamburgon/08.jpg" alt="Food truck Hamburgon" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="640" height="480" src="assets/foodtrucks/omoya.jpg" alt="Food truck Omoya" loading="lazy"><span class="gcap">Omoya</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="640" height="480" src="assets/foodtrucks/omoya/02.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/03.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/04.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/05.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/06.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/07.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/08.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/09.jpg" alt="Food truck Omoya" loading="lazy"></figure><figure class="frame" data-label="Omoya" data-group="ft-omoya"><img width="800" height="600" src="assets/foodtrucks/omoya/10.jpg" alt="Food truck Omoya" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels.jpg" alt="Food truck Waffles on Wheels" loading="lazy"><span class="gcap">Waffles on Wheels</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/02.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/03.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/04.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/05.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/06.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/07.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/08.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="800" height="600" src="assets/foodtrucks/waffles-on-wheels/09.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure><figure class="frame" data-label="Waffles on Wheels" data-group="ft-waffles-on-wheels"><img width="750" height="1000" src="assets/foodtrucks/waffles-on-wheels/10.jpg" alt="Food truck Waffles on Wheels" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan.jpg" alt="Food truck Yucatán" loading="lazy"><span class="gcap">Yucatán</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan/02.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="731" height="567" src="assets/foodtrucks/yucatan/03.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="475" height="755" src="assets/foodtrucks/yucatan/04.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="629" height="755" src="assets/foodtrucks/yucatan/05.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="1000" height="642" src="assets/foodtrucks/yucatan/06.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="758" height="580" src="assets/foodtrucks/yucatan/07.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="870" height="580" src="assets/foodtrucks/yucatan/08.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="951" height="580" src="assets/foodtrucks/yucatan/09.jpg" alt="Food truck Yucatán" loading="lazy"></figure><figure class="frame" data-label="Yucatán" data-group="ft-yucatan"><img width="514" height="580" src="assets/foodtrucks/yucatan/10.jpg" alt="Food truck Yucatán" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="787" height="800" src="assets/foodtrucks/pipofast.jpg" alt="Food truck Pipofast" loading="lazy"><span class="gcap">Pipofast</span><span class="cnt">3 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="800" height="726" src="assets/foodtrucks/pipofast/02.jpg" alt="Food truck Pipofast" loading="lazy"></figure><figure class="frame" data-label="Pipofast" data-group="ft-pipofast"><img width="787" height="800" src="assets/foodtrucks/pipofast/03.jpg" alt="Food truck Pipofast" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie.jpg" alt="Food truck Foodie Vuggie" loading="lazy"><span class="gcap">Foodie Vuggie</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/02.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/03.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/04.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/05.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/06.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="935" height="748" src="assets/foodtrucks/foodie-vuggie/07.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/08.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/09.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure><figure class="frame" data-label="Foodie Vuggie" data-group="ft-foodie-vuggie"><img width="899" height="709" src="assets/foodtrucks/foodie-vuggie/10.jpg" alt="Food truck Foodie Vuggie" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Jipi Ais" data-group="ft-jipi-ais"><img width="874" height="516" src="assets/foodtrucks/jipi-ais.jpg" alt="Food truck Jipi Ais" loading="lazy"><span class="gcap">Jipi Ais</span><span class="cnt">2 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Jipi Ais" data-group="ft-jipi-ais"><img width="455" height="614" src="assets/foodtrucks/jipi-ais/02.jpg" alt="Food truck Jipi Ais" loading="lazy"></figure></div>
+      <figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"><span class="gcap">La Verdad de la Milanés</span><span class="cnt">10 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/02.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/03.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/04.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="750" height="1000" src="assets/foodtrucks/la-verdad-de-la-milanes/05.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="750" height="1000" src="assets/foodtrucks/la-verdad-de-la-milanes/06.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="750" src="assets/foodtrucks/la-verdad-de-la-milanes/07.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="750" src="assets/foodtrucks/la-verdad-de-la-milanes/08.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/09.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure><figure class="frame" data-label="La Verdad de la Milanés" data-group="ft-la-verdad-de-la-milanes"><img width="1000" height="459" src="assets/foodtrucks/la-verdad-de-la-milanes/10.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="563" src="assets/foodtrucks/lomitop.jpg" alt="Food truck Lomitop" loading="lazy"><span class="gcap">Lomitop</span><span class="cnt">3 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="750" src="assets/foodtrucks/lomitop/02.jpg" alt="Food truck Lomitop" loading="lazy"></figure><figure class="frame" data-label="Lomitop" data-group="ft-lomitop"><img width="1000" height="750" src="assets/foodtrucks/lomitop/03.jpg" alt="Food truck Lomitop" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Kombi Retro" data-group="ft-kombi-retro"><img width="1000" height="750" src="assets/foodtrucks/kombi-retro.jpg" alt="Food truck Kombi Retro" loading="lazy"><span class="gcap">Kombi Retro</span><span class="cnt">2 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Kombi Retro" data-group="ft-kombi-retro"><img width="1000" height="750" src="assets/foodtrucks/kombi-retro/02.jpg" alt="Food truck Kombi Retro" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="1000" height="563" src="assets/foodtrucks/fatima-panchitos.jpg" alt="Food truck Fatima Panchitos" loading="lazy"><span class="gcap">Fatima Panchitos</span><span class="cnt">5 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="1000" height="563" src="assets/foodtrucks/fatima-panchitos/02.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/03.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/04.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure><figure class="frame" data-label="Fatima Panchitos" data-group="ft-fatima-panchitos"><img width="878" height="861" src="assets/foodtrucks/fatima-panchitos/05.jpg" alt="Food truck Fatima Panchitos" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="1000" height="562" src="assets/foodtrucks/tienda.jpg" alt="Food truck Tienda móvil" loading="lazy"><span class="gcap">Tienda móvil</span><span class="cnt">5 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/02.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/03.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="1000" height="750" src="assets/foodtrucks/tienda/04.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure><figure class="frame" data-label="Tienda móvil" data-group="ft-tienda"><img width="750" height="1000" src="assets/foodtrucks/tienda/05.jpg" alt="Food truck Tienda móvil" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo.jpg" alt="Food truck Lomobongo" loading="lazy"><span class="gcap">Lomobongo</span><span class="cnt">3 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo/02.jpg" alt="Food truck Lomobongo" loading="lazy"></figure><figure class="frame" data-label="Lomobongo" data-group="ft-lomobongo"><img width="562" height="1000" src="assets/foodtrucks/lomobongo/03.jpg" alt="Food truck Lomobongo" loading="lazy"></figure></div>
+      <figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="750" height="1000" src="assets/foodtrucks/vincenti-cafe.jpg" alt="Food truck Vincenti Café" loading="lazy"><span class="gcap">Vincenti Café</span><span class="cnt">9 fotos</span></figure>
+      <div hidden><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="1000" height="750" src="assets/foodtrucks/vincenti-cafe/02.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="1000" height="750" src="assets/foodtrucks/vincenti-cafe/03.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/04.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/05.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/06.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/07.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/08.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure><figure class="frame" data-label="Vincenti Café" data-group="ft-vincenti-cafe"><img width="640" height="480" src="assets/foodtrucks/vincenti-cafe/09.jpg" alt="Food truck Vincenti Café" loading="lazy"></figure></div>
     </div>
-    <p class="more-ft reveal"><a class="btn pri" href="https://fedemergent.github.io/f3de-catalogo/" target="_blank" rel="noopener">Ver el catálogo completo ↗</a><span>Todos los proyectos, por cliente, con más fotos y video.</span></p>
   </div>
 </section>
 
@@ -253,7 +281,7 @@
     <article class="panel plug reveal">
       <div class="shot">
         <span class="tag ver">v1.1.4</span>
-        <img src="assets/tatu_dark_rounded_1024.png" alt="Icono de TATU">
+        <img width="1024" height="1024" src="assets/tatu_dark_rounded_1024.png" alt="Icono de TATU">
       </div>
       <div class="body">
         <h3>TATU</h3>
@@ -274,8 +302,8 @@
     <article class="panel plug reveal" style="display:none">
       <div class="shot tms">
         <span class="tag ver">WIP 0.3</span>
-        <figure class="cthumb wide" data-label="TMS Library Manager · pantalla de inicio" data-group="tms"><img src="assets/plugins/tms-inicio.jpg" alt="TMS Library Manager: pantalla de inicio" loading="lazy"></figure>
-        <figure class="cthumb wide" data-label="TMS Library Manager · interfaz principal" data-group="tms"><img src="assets/plugins/tms-interfaz.jpg" alt="TMS Library Manager: interfaz principal" loading="lazy"></figure>
+        <figure class="cthumb wide" data-label="TMS Library Manager · pantalla de inicio" data-group="tms"><img width="1400" height="788" src="assets/plugins/tms-inicio.jpg" alt="TMS Library Manager: pantalla de inicio" loading="lazy"></figure>
+        <figure class="cthumb wide" data-label="TMS Library Manager · interfaz principal" data-group="tms"><img width="1400" height="788" src="assets/plugins/tms-interfaz.jpg" alt="TMS Library Manager: interfaz principal" loading="lazy"></figure>
       </div>
       <div class="body">
         <h3>TMS Library Manager</h3>
@@ -305,7 +333,7 @@
     <article class="panel tut reveal">
       <div class="tvid" id="tvid">
         <button class="yt" id="ytBtn" type="button" aria-label="Reproducir el tutorial del Juicy Salif">
-          <img src="assets/video/poster-juicy-salif.jpg" alt="Juicy Salif modelado en Rhino" loading="lazy"><span class="play"></span>
+          <img width="1280" height="720" src="assets/video/poster-juicy-salif.jpg" alt="Juicy Salif modelado en Rhino" loading="lazy"><span class="play"></span>
         </button>
       </div>
       <div class="tbody">
@@ -335,25 +363,25 @@
     </div>
     <div class="courses">
       <article class="panel course reveal">
-        <figure class="cthumb" data-label="Diseño paramétrico de muebles" data-group="cursos"><img src="assets/cursos/muebles-oscuro.jpg" alt="Afiche: Diseño paramétrico de muebles" loading="lazy"></figure>
+        <figure class="cthumb" data-label="Diseño paramétrico de muebles" data-group="cursos"><img width="1054" height="1492" src="assets/cursos/muebles-oscuro.jpg" alt="Afiche: Diseño paramétrico de muebles" loading="lazy"></figure>
         <div><h3>Diseño paramétrico de muebles</h3><p>Rhino + Grasshopper aplicados a Architectural Millwork y cabinetry: diseño, parametrización, construcción y optimización.</p>
           <div class="meta"><span>Personalizado</span><span>Online · 1 a 1</span><span>12 horas</span></div></div>
         <a class="btn" href="#contacto" data-topic="Curso: Diseño paramétrico de muebles">Consultar fechas</a>
       </article>
       <article class="panel course reveal">
-        <figure class="cthumb" data-label="Arquitectura paramétrica" data-group="cursos"><img src="assets/cursos/arquitectura-parametrica.jpg" alt="Afiche: Arquitectura paramétrica" loading="lazy"></figure>
+        <figure class="cthumb" data-label="Arquitectura paramétrica" data-group="cursos"><img width="1080" height="1920" src="assets/cursos/arquitectura-parametrica.jpg" alt="Afiche: Arquitectura paramétrica" loading="lazy"></figure>
         <div><h3>Arquitectura paramétrica</h3><p>Modelado 3D, formas orgánicas y pieles con Rhino y Grasshopper.</p>
           <div class="meta"><span>Estudiantes y profesionales</span><span>CENACE – UPSA</span><span>Cupos limitados</span></div></div>
         <a class="btn" href="#contacto" data-topic="Curso: Arquitectura paramétrica">Consultar fechas</a>
       </article>
       <article class="panel course reveal">
-        <figure class="cthumb" data-label="Diseño 3D de objetos, accesorios y joyería" data-group="cursos"><img src="assets/cursos/joyeria.jpg" alt="Afiche: Diseño 3D de objetos, accesorios y joyería" loading="lazy"></figure>
+        <figure class="cthumb" data-label="Diseño 3D de objetos, accesorios y joyería" data-group="cursos"><img width="1080" height="1920" src="assets/cursos/joyeria.jpg" alt="Afiche: Diseño 3D de objetos, accesorios y joyería" loading="lazy"></figure>
         <div><h3>Diseño 3D de objetos, accesorios y joyería</h3><p>Con Rhino y KeyShot: objetos simples, accesorios de moda, avíos e indumentaria.</p>
           <div class="meta"><span>Nivel básico</span><span>12 horas</span><span>CENACE – UPSA</span></div></div>
         <a class="btn" href="#contacto" data-topic="Curso: Diseño 3D de objetos, accesorios y joyería">Consultar fechas</a>
       </article>
       <article class="panel course reveal">
-        <figure class="cthumb" data-label="Diseño 3D de packaging" data-group="cursos"><img src="assets/cursos/packaging.jpg" alt="Afiche: Diseño 3D de packaging" loading="lazy"></figure>
+        <figure class="cthumb" data-label="Diseño 3D de packaging" data-group="cursos"><img width="1080" height="1920" src="assets/cursos/packaging.jpg" alt="Afiche: Diseño 3D de packaging" loading="lazy"></figure>
         <div><h3>Diseño 3D de packaging</h3><p>Modelado y branding de envases y empaques: plástico, cartón, vidrio y bolsas de PVC.</p>
           <div class="meta"><span>Nivel básico</span><span>12 horas</span><span>CENACE – UPSA</span></div></div>
         <a class="btn" href="#contacto" data-topic="Curso: Diseño 3D de packaging">Consultar fechas</a>
@@ -366,101 +394,28 @@
   </div>
 </section>
 
-<!-- ================= SOBRE MI ================= -->
+<!-- ================= PERFIL ================= -->
 <section id="sobre-mi">
   <div class="wrap">
-    <div class="about">
-      <div class="portrait reveal"><img src="assets/retrato.jpg" alt="Retrato de Federico Escobar" onerror="this.remove()"><span>assets/retrato.jpg</span></div>
+    <div class="about compact">
+      <div class="portrait reveal"><img width="800" height="1200" src="assets/retrato.jpg" alt="Retrato de Federico Escobar" onerror="this.remove()"></div>
       <div class="reveal">
         <p class="eyebrow">Perfil</p>
-        <h2>Diseñador industrial e instructor autorizado de Rhino</h2>
-        <p class="lead" style="color:#c4c4cb">Federico Escobar es Licenciado en Diseño Industrial (UPSA, 2011). Su área principal es el <b style="color:var(--txt)">diseño automotriz</b>, complementada con Architectural Millwork, packaging y diseño mecánico.</p>
-        <p>Formado en Rhino y Grasshopper desde 2010 junto a McNeel Latin America, es instructor en CENACE – UPSA y en programas personalizados, y coautor del libro MTDI, Metodología de Diseño Industrial. F3DE Design combina el diseño de producto con el desarrollo de herramientas propias (plugins, bibliotecas y cursos) pensadas desde la práctica del taller y del estudio.</p>
-        <ul class="skills"><li>Diseño automotriz</li><li>Diseño mecánico</li><li>Millwork</li><li>Packaging</li><li>Rhino</li><li>Grasshopper</li><li>KeyShot</li><li>Desarrollo de plugins</li></ul>
-        <div class="trainer"><img src="assets/art-badge.png" alt="Authorized Rhino Trainer"><span>Instructor autorizado de Rhino (Authorized Rhino Trainer).</span></div>
-        <p style="margin-top:26px"><a class="btn pri" href="#contacto">Solicitar una propuesta →</a></p>
+        <h2>¿Quién está detrás de F3DE Design?</h2>
+        <p class="lead" style="color:#c4c4cb">Federico Escobar es Licenciado en Diseño Industrial (UPSA, 2011), con el <b style="color:var(--txt)">diseño automotriz</b> como área principal, junto a Architectural Millwork, packaging y diseño mecánico.</p>
+        <p>Instructor autorizado de Rhino, formado con McNeel Latin America desde 2010, y coautor del libro MTDI, Metodología de Diseño Industrial.</p>
+        <ul class="skills"><li>Diseño automotriz</li><li>Diseño mecánico</li><li>Millwork</li><li>Packaging</li><li>Rhino</li><li>Grasshopper</li></ul>
+        <div class="trainer"><img width="231" height="371" src="assets/art-badge.png" alt="Authorized Rhino Trainer"><span>Instructor autorizado de Rhino (Authorized Rhino Trainer).</span></div>
+        <p class="ctas"><a class="btn pri" href="trayectoria.html">Ver trayectoria completa →</a><a class="btn" href="certificados.html">Ver certificados</a></p>
       </div>
     </div>
     <div class="certs reveal">
-      <h3>Certificaciones destacadas · Rhino y diseño paramétrico</h3>
-      <div class="cgrid big">
-        <figure><div class="frame" data-label="Workshop Grasshopper (24 h) · McNeel Latin America · 2010" data-group="feat"><img src="assets/certs/grasshopper-mcneel-2010.jpg" alt="Workshop Grasshopper (24 h)" loading="lazy"></div><span class="cap">Workshop Grasshopper (24 h)<small>McNeel Latin America · 2010</small></span></figure>
-        <figure><div class="frame" data-label="Algomad 2014 · Taller de Fabricación digital · Facultad de Arquitectura, UMSA · 2014" data-group="feat"><img src="assets/certs/algomad-2014.jpg" alt="Algomad 2014 · Taller de Fabricación digital" loading="lazy"></div><span class="cap">Algomad 2014 · Taller de Fabricación digital<small>Facultad de Arquitectura, UMSA · 2014</small></span></figure>
-        <figure><div class="frame" data-label="Certificado de docencia · Joyas con Rhinoceros · Arcana Academia Gráfica · 2025" data-group="feat"><img src="assets/certs/arcana-docencia-2025.jpg" alt="Certificado de docencia · Joyas con Rhinoceros" loading="lazy"></div><span class="cap">Certificado de docencia · Joyas con Rhinoceros<small>Arcana Academia Gráfica · 2025</small></span></figure>
-        <figure><div class="frame" data-label="Instructor · Modelado 3D y Renderizado Básico con Rhinoceros · CENACE – UPSA · 2018" data-group="feat"><img src="assets/certs/cenace-instructor-modelado-2018.jpg" alt="Instructor · Modelado 3D y Renderizado Básico con Rhinoceros" loading="lazy"></div><span class="cap">Instructor · Modelado 3D y Renderizado Básico con Rhinoceros<small>CENACE – UPSA · 2018</small></span></figure>
+      <h3>Credenciales destacadas</h3>
+      <div class="cgrid three">
+<figure><div class="frame" data-label="Workshop Grasshopper (24 h) · McNeel Latin America · 2010" data-group="feat"><img width="1500" height="1100" src="assets/certs/grasshopper-mcneel-2010.jpg" alt="Workshop Grasshopper (24 h)" loading="lazy"></div><span class="cap">Workshop Grasshopper (24 h)<small>McNeel Latin America · 2010</small></span></figure>
+<figure><div class="frame" data-label="Algomad 2014 · Taller de Fabricación digital · Facultad de Arquitectura, UMSA · 2014" data-group="feat"><img width="853" height="639" src="assets/certs/algomad-2014.jpg" alt="Algomad 2014 · Taller de Fabricación digital" loading="lazy"></div><span class="cap">Algomad 2014 · Taller de Fabricación digital<small>Facultad de Arquitectura, UMSA · 2014</small></span></figure>
+<figure><div class="frame" data-label="Certificado de docencia · Joyas con Rhinoceros · Arcana Academia Gráfica · 2025" data-group="feat"><img width="1500" height="1061" src="assets/certs/arcana-docencia-2025.jpg" alt="Certificado de docencia · Joyas con Rhinoceros" loading="lazy"></div><span class="cap">Certificado de docencia · Joyas con Rhinoceros<small>Arcana Academia Gráfica · 2025</small></span></figure>
       </div>
-      <p class="more"><a class="btn pri" href="certificados.html">Ver los 21 certificados →</a><span>Rhino, Grasshopper, fabricación digital, mecánica y formación académica, en detalle.</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CHARLAS ================= -->
-<section id="charlas">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Charlas y conferencias</p>
-      <h2>Diseño, tecnología y educación en el escenario</h2>
-      <p class="lead">Conferencias, disertaciones y conversatorios sobre diseño, tecnología y educación. Toca una foto para ampliarla.</p>
-    </div>
-    <div class="gal reveal">
-      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-1.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
-      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-2.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
-      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-3.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
-      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-4.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
-      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-5.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
-      <figure class="frame" data-label="Conversatorio «Mi profesión, mi pasión» · Diseño Industrial" data-group="charlas"><img src="assets/charlas/conversatorio-lua.jpg" alt="Conversatorio «Mi profesión, mi pasión» · Diseño Industrial" loading="lazy"><span class="gcap">Conversatorio «Mi profesión, mi pasión» · Diseño Industrial</span></figure>
-      <figure class="frame" data-label="TEDxSantaCruzdelaSierra · Conferencista" data-group="charlas"><img src="assets/charlas/tedx-federico-escobar.jpg" alt="TEDxSantaCruzdelaSierra · Conferencista" loading="lazy"><span class="gcap">TEDxSantaCruzdelaSierra · Conferencista</span></figure>
-      <figure class="frame" data-label="Disertación" data-group="charlas"><img src="assets/charlas/disertacion.jpg" alt="Disertación" loading="lazy"><span class="gcap">Disertación</span></figure>
-      <figure class="frame" data-label="TEDxSantaCruzdelaSierra" data-group="charlas"><img src="assets/charlas/tedx-escenario-wikipedia.jpg" alt="TEDxSantaCruzdelaSierra" loading="lazy"><span class="gcap">TEDxSantaCruzdelaSierra</span></figure>
-      <figure class="frame" data-label="Charla sobre código abierto" data-group="charlas"><img src="assets/charlas/codigo-abierto.jpg" alt="Charla sobre código abierto" loading="lazy"><span class="gcap">Charla sobre código abierto</span></figure>
-      <figure class="frame" data-label="TEDxSantaCruzdelaSierra" data-group="charlas"><img src="assets/charlas/tedx-escenario-robot.jpg" alt="TEDxSantaCruzdelaSierra" loading="lazy"><span class="gcap">TEDxSantaCruzdelaSierra</span></figure>
-      <figure class="frame" data-label="Disertación en la UPSA" data-group="charlas"><img src="assets/charlas/upsa-disertacion.jpg" alt="Disertación en la UPSA" loading="lazy"><span class="gcap">Disertación en la UPSA</span></figure>
-      <figure class="frame" data-label="Charla sobre realidad aumentada" data-group="charlas"><img src="assets/charlas/realidad-aumentada.jpg" alt="Charla sobre realidad aumentada" loading="lazy"><span class="gcap">Charla sobre realidad aumentada</span></figure>
-      <figure class="frame" data-label="TEDxSantaCruzdelaSierra" data-group="charlas"><img src="assets/charlas/tedx-escenario-luces.jpg" alt="TEDxSantaCruzdelaSierra" loading="lazy"><span class="gcap">TEDxSantaCruzdelaSierra</span></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PUBLICACIONES ================= -->
-<section id="publicaciones">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Publicaciones y congresos</p>
-      <h2>MTDI · Metodología de Diseño Industrial</h2>
-      <p class="lead">Libro coescrito con Néstor Damián Ortega (UPSA, 2018) y su presentación en los Congresos Latinoamericanos de Enseñanza del Diseño de la Universidad de Palermo, incluida en Actas de Diseño N.º 33.</p>
-    </div>
-    <div class="gal reveal">
-      <figure class="frame" data-label="Lanzamiento del libro MTDI · UPSA · 2018, con Néstor Damián Ortega" data-group="pub"><img src="assets/publicaciones/lanzamiento-mtdi-2018.jpg" alt="Lanzamiento del libro MTDI · UPSA · 2018, con Néstor Damián Ortega" loading="lazy"><span class="gcap">Lanzamiento del libro MTDI · UPSA · 2018, con Néstor Damián Ortega</span></figure>
-      <figure class="frame" data-label="MTDI disponible en eLibro" data-group="pub"><img src="assets/publicaciones/elibro-mtdi.jpg" alt="MTDI disponible en eLibro" loading="lazy"><span class="gcap">MTDI disponible en eLibro</span></figure>
-      <figure class="frame" data-label="Actas de Diseño N.º 33 · Universidad de Palermo" data-group="pub"><img src="assets/publicaciones/actas-de-diseno-33.jpg" alt="Actas de Diseño N.º 33 · Universidad de Palermo" loading="lazy"><span class="gcap">Actas de Diseño N.º 33 · Universidad de Palermo</span></figure>
-      <figure class="frame" data-label="XI Congreso Virtual Latinoamericano de Enseñanza del Diseño" data-group="pub"><img src="assets/publicaciones/congreso-xi-2020-cita.jpg" alt="XI Congreso Virtual Latinoamericano de Enseñanza del Diseño" loading="lazy"><span class="gcap">XI Congreso Virtual Latinoamericano de Enseñanza del Diseño</span></figure>
-      <figure class="frame" data-label="Expositor · XI Congreso Latinoamericano de Enseñanza del Diseño · 2020" data-group="pub"><img src="assets/publicaciones/congreso-xi-2020-expositor.jpg" alt="Expositor · XI Congreso Latinoamericano de Enseñanza del Diseño · 2020" loading="lazy"><span class="gcap">Expositor · XI Congreso Latinoamericano de Enseñanza del Diseño · 2020</span></figure>
-      <figure class="frame" data-label="XI Congreso · Comisión A6 Metodologías de Diseño · julio 2020" data-group="pub"><img src="assets/publicaciones/congreso-xi-2020-comision.jpg" alt="XI Congreso · Comisión A6 Metodologías de Diseño · julio 2020" loading="lazy"><span class="gcap">XI Congreso · Comisión A6 Metodologías de Diseño · julio 2020</span></figure>
-      <figure class="frame" data-label="Expositores · XII Congreso Latinoamericano de Enseñanza del Diseño" data-group="pub"><img src="assets/publicaciones/congreso-xii-2022-expositores.jpg" alt="Expositores · XII Congreso Latinoamericano de Enseñanza del Diseño" loading="lazy"><span class="gcap">Expositores · XII Congreso Latinoamericano de Enseñanza del Diseño</span></figure>
-      <figure class="frame" data-label="XII Congreso · Comisión A13-1 Metodologías de Diseño · julio 2022" data-group="pub"><img src="assets/publicaciones/congreso-xii-2022-comision.jpg" alt="XII Congreso · Comisión A13-1 Metodologías de Diseño · julio 2022" loading="lazy"><span class="gcap">XII Congreso · Comisión A13-1 Metodologías de Diseño · julio 2022</span></figure>
-      <figure class="frame" data-label="XII Congreso · MTDI, resultados obtenidos en los primeros años" data-group="pub"><img src="assets/publicaciones/congreso-xii-resultados.jpg" alt="XII Congreso · MTDI, resultados obtenidos en los primeros años" loading="lazy"><span class="gcap">XII Congreso · MTDI, resultados obtenidos en los primeros años</span></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALERIA ================= -->
-<section id="galeria">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Talleres y alumnos</p>
-      <h2>Clases, talleres y logros</h2>
-      <p class="lead">Momentos de los cursos y talleres, y los logros de quienes se forman con F3DE Design.</p>
-    </div>
-    <div class="gal reveal">
-      <figure class="frame" data-label="Taller de fabricación digital · grupo de participantes" data-group="galeria"><img src="assets/talleres/taller-fabricacion-digital-grupo.jpg" alt="Taller de fabricación digital · grupo de participantes" loading="lazy"><span class="gcap">Taller de fabricación digital · grupo de participantes</span></figure>
-      <figure class="frame" data-label="Clase de Rhino" data-group="galeria"><img src="assets/talleres/clase-rhino.jpg" alt="Clase de Rhino" loading="lazy"><span class="gcap">Clase de Rhino</span></figure>
-      <figure class="frame" data-label="Taller de Rhino" data-group="galeria"><img src="assets/talleres/taller-rhino.jpg" alt="Taller de Rhino" loading="lazy"><span class="gcap">Taller de Rhino</span></figure>
-      <figure class="frame" data-label="Algomad 2014 · participantes" data-group="galeria"><img src="assets/talleres/algomad-2014-participantes.jpg" alt="Algomad 2014 · participantes" loading="lazy"><span class="gcap">Algomad 2014 · participantes</span></figure>
-      <figure class="frame" data-label="Clase de fabricación digital" data-group="galeria"><img src="assets/talleres/clase-fabricacion-digital.jpg" alt="Clase de fabricación digital" loading="lazy"><span class="gcap">Clase de fabricación digital</span></figure>
-      <figure class="frame" data-label="Laboratorio de cómputo" data-group="galeria"><img src="assets/talleres/laboratorio-computo.jpg" alt="Laboratorio de cómputo" loading="lazy"><span class="gcap">Laboratorio de cómputo</span></figure>
-      <figure class="frame" data-label="Comunidad de diseño y tecnología" data-group="galeria"><img src="assets/talleres/comunidad-1.jpg" alt="Comunidad de diseño y tecnología" loading="lazy"><span class="gcap">Comunidad de diseño y tecnología</span></figure>
-      <figure class="frame" data-label="Comunidad de diseño y tecnología" data-group="galeria"><img src="assets/talleres/comunidad-2.jpg" alt="Comunidad de diseño y tecnología" loading="lazy"><span class="gcap">Comunidad de diseño y tecnología</span></figure>
-      <figure class="frame" data-label="Certificado de finalización · Diseño paramétrico de cabinets (alumna)" data-group="galeria"><img src="assets/cursos/cert-alumno.jpg" alt="Certificado de finalización · Diseño paramétrico de cabinets (alumna)" loading="lazy"><span class="gcap">Certificado de finalización · Diseño paramétrico de cabinets (alumna)</span></figure>
     </div>
   </div>
 </section>
@@ -537,10 +492,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=6"></script>
-<script src="assets/leads.js?v=6"></script>
-<script src="assets/counters.js?v=6"></script>
-<script src="assets/common.js?v=6"></script>
+<script src="assets/config.js?v=7"></script>
+<script src="assets/leads.js?v=7"></script>
+<script src="assets/counters.js?v=7"></script>
+<script src="assets/common.js?v=7"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -550,11 +505,11 @@
   function enter() {
     if (done) return; done = true;
     intro.classList.add('off'); body.classList.remove('intro');
-    F.target = .75; F.spawn(innerWidth * .5, innerHeight * .45, 12);
+    F.target = .5; F.spawn(innerWidth * .5, innerHeight * .45, 12);
     try { sessionStorage.setItem('f3de-intro', '1'); } catch (e) {}
     setTimeout(() => intro.remove(), 1200);
   }
-  if (seen || /nointro/.test(location.search)) { F.dim = .75; F.target = .75; intro.remove(); body.classList.remove('intro'); return; }
+  if (seen || /nointro/.test(location.search)) { F.dim = .5; F.target = .5; intro.remove(); body.classList.remove('intro'); return; }
   setTimeout(() => F.spawn(innerWidth * .22, innerHeight * .5, 12), 600);
   if (!/hold/.test(location.search)) setTimeout(enter, 9500);   // ?hold deja la intro quieta (pruebas)
   // La luz naranja del logo late cuando el cursor (o el dedo) pasa por la franja luminosa; una vez sola al inicio para mostrar el truco.
@@ -732,6 +687,6 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=6"></script>
+<script src="assets/i18n.js?v=7"></script>
 </body>
 </html>

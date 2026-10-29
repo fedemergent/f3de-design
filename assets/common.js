@@ -11,7 +11,7 @@
   let off = false; try { off = localStorage.getItem('f3de-motion') === 'off'; } catch (e) {}
   const speed = calm ? .6 : 1;
   const ACC = [255, 74, 20];
-  const F = { dim: .9, target: .9, t: 2.2, grow: 0, ripples: [], beacons: [], next: 1.6, px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9 };
+  const F = { dim: .62, target: .62, t: 2.2, grow: 0, ripples: [], beacons: [], next: 1.6, px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9 };
   let W, H, DPR, S = [], amp, G, gcols, grows, grid = [];
   const A = [], B = [];
 
@@ -113,8 +113,8 @@
       ctx.moveTo((pts[2 * n - 2] + pts[0]) / 2, (pts[2 * n - 1] + pts[1]) / 2);
       for (let k = 0; k < n; k++) { const k2 = (k + 1) % n; ctx.quadraticCurveTo(pts[2 * k], pts[2 * k + 1], (pts[2 * k] + pts[2 * k2]) / 2, (pts[2 * k + 1] + pts[2 * k2 + 1]) / 2); }
       ctx.closePath();
-      ctx.fillStyle = `rgba(${ACC[0]},${ACC[1]},${ACC[2]},${(.035 + .2 * i1) * dim})`; ctx.fill();
-      ctx.strokeStyle = `rgba(255,${Math.round(90 + 70 * i1)},${Math.round(50 + 60 * i1)},${(.13 + .42 * i1) * dim})`;
+      ctx.fillStyle = `rgba(${ACC[0]},${ACC[1]},${ACC[2]},${(.025 + .15 * i1) * dim})`; ctx.fill();
+      ctx.strokeStyle = `rgba(255,${Math.round(90 + 70 * i1)},${Math.round(50 + 60 * i1)},${(.08 + .28 * i1) * dim})`;
       ctx.lineWidth = 1 + i1 * .6; ctx.stroke();
     }
   }

@@ -316,6 +316,28 @@
 "Idioma": "Language",
 "Curso: ": "Course: ",
 "Entrenamiento para equipos": "Team training",
+"Proyectos": "Projects",
+"Food trucks y unidades móviles de comida": "Food trucks and mobile food units",
+"Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos.": "Design and development of food trucks, tricycles, carts and kiosks for food businesses.",
+"Ver proyectos →": "See projects →",
+"Conferencia en el Museo Altillo Beni, EXPOFADUPSA 2026": "Conference at the Museo Altillo Beni, EXPOFADUPSA 2026",
+"Conferencia": "Conference",
+"Conferencia de diseño industrial en el Museo Altillo Beni": "Industrial design conference at the Museo Altillo Beni",
+"Charla sobre diseño de producto y envases dentro de la EXPOFADUPSA 2026.": "Talk on product and packaging design at EXPOFADUPSA 2026.",
+"Ver trayectoria →": "See track record →",
+"Federico Escobar en TEDxSantaCruzdelaSierra": "Federico Escobar at TEDxSantaCruzdelaSierra",
+"Conferencista en TEDxSantaCruzdelaSierra": "Speaker at TEDxSantaCruzdelaSierra",
+"Una charla sobre diseño, tecnología y futuro en el escenario de TEDxSantaCruzdelaSierra.": "A talk on design, technology and the future on the TEDxSantaCruzdelaSierra stage.",
+"Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos: estructura, identidad y puesta en obra. Toca un proyecto para ver todas sus fotos.": "Design and development of food trucks, tricycles, carts and kiosks for food businesses: structure, identity and build-out. Tap a project to see all its photos.",
+"¿Quién está detrás de F3DE Design?": "Who is behind F3DE Design?",
+"Federico Escobar es Licenciado en Diseño Industrial (UPSA, 2011), con el": "Federico Escobar holds a degree in Industrial Design (UPSA, 2011), with",
+"como área principal, junto a Architectural Millwork, packaging y diseño mecánico.": "as the main area, along with Architectural Millwork, packaging and mechanical design.",
+"Instructor autorizado de Rhino, formado con McNeel Latin America desde 2010, y coautor del libro MTDI, Metodología de Diseño Industrial.": "Authorized Rhino instructor, trained with McNeel Latin America since 2010, and co-author of the book MTDI, Industrial Design Methodology.",
+"Ver trayectoria completa →": "See the full track record →",
+"Ver certificados": "View certificates",
+"Credenciales destacadas": "Featured credentials",
+"Trayectoria de Federico Escobar: conferencias, publicaciones, congresos, talleres y formación en diseño industrial y Rhino.": "Track record of Federico Escobar: talks, publications, congresses, workshops and education in industrial design and Rhino.",
+"Credenciales y trayectoria": "Credentials and track record",
 "Quiero información": "More information",
 "Solicitar propuesta": "Request a proposal",
 "Diseño industrial e instructor de Rhino": "Industrial design and Rhino instructor",
@@ -381,6 +403,7 @@
   function lookup(s) {
     if (EN[s] != null) return EN[s];
     var m = /^Noticia (\d+)$/.exec(s); if (m) return 'News ' + m[1];
+    var m2 = /^(\d+) fotos$/.exec(s); if (m2) return m2[1] + ' photos';
     if (s.indexOf(' · ') > 0) { var p = s.split(' · '), ok = false; var o = p.map(function (x) { if (EN[x] != null) { ok = true; return EN[x]; } return x; }); if (ok) return o.join(' · '); }
     return null;
   }
