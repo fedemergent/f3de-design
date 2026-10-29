@@ -48,11 +48,11 @@ header.nav.solid{background:rgba(6,6,7,.78);backdrop-filter:blur(16px);-webkit-b
 .brand .bar{width:3px;height:26px;border-radius:3px;background:linear-gradient(#ffb48c,var(--acc));box-shadow:0 0 14px var(--glow)}
 .brand small{display:block;font:400 8px var(--disp);font-style:normal;letter-spacing:.42em;color:var(--mut);margin-top:3px}
 nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0}
-nav a.l{display:block;white-space:nowrap;padding:10px 11px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-radius:999px;transition:color .2s,background .2s}
+nav a.l{display:block;white-space:nowrap;padding:10px 9px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-radius:999px;transition:color .2s,background .2s}
 nav a.l:hover,nav a.l.on{color:var(--txt);background:rgba(255,255,255,.06)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;color:var(--txt);cursor:pointer}
 .burger span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;transition:transform .25s,opacity .25s}
-@media(max-width:1140px){
+@media(max-width:1240px){
   .burger{display:block}
   nav{position:fixed;top:68px;left:0;right:0;background:rgba(6,6,7,.96);backdrop-filter:blur(16px);padding:10px var(--pad) 22px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s}
   nav.open{transform:none}
@@ -359,3 +359,17 @@ footer .wrap{align-items:center}
 
 .motion-toggle{font:600 12px var(--body);color:#cfcfd6;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
 .motion-toggle:hover{border-color:var(--acc);color:var(--acc)}
+
+
+/* ---- food trucks ---- */
+.ft{margin-top:34px;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--acc) transparent;-webkit-overflow-scrolling:touch}
+.ft::-webkit-scrollbar{height:6px}.ft::-webkit-scrollbar-thumb{background:rgba(255,74,20,.6);border-radius:6px}
+.ft .frame{flex:0 0 min(78vw,320px);aspect-ratio:4/3;scroll-snap-align:start;padding:0;border-style:solid;border-color:var(--line);background:#0b0b0e}
+.ft .frame img{transition:transform .5s}.ft .frame:hover img{transform:scale(1.04)}
+.more-ft{margin-top:22px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;color:var(--mut);font-size:14px}
+
+/* ---- contadores ---- */
+.visits{position:absolute;bottom:68px;left:50%;transform:translateX(-50%);font:500 11px var(--disp);letter-spacing:.28em;text-transform:uppercase;color:var(--mut);opacity:0;transition:opacity 1s;white-space:nowrap}
+.visits.on{opacity:1}.visits b,.stats b,.dlcount b{color:var(--acc);font-weight:500}
+.stats{font-size:12.5px;color:var(--mut)}
+.dlcount{margin-top:10px}

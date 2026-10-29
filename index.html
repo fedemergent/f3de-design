@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=2">
+<link rel="stylesheet" href="assets/site.css?v=3">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -28,6 +28,7 @@
     <div class="intro-line"></div>
     <img class="intro-logo" src="assets/logo-f3de.png" alt="F3DE Design — Diseño industrial">
   </div>
+  <div class="visits" id="visitsIntro">Visitas · <b data-count="visitas">—</b></div>
   <div class="skip">Toca para entrar</div>
 </div>
 
@@ -45,12 +46,12 @@
         <li><a class="l" href="#inicio">Inicio</a></li>
         <li><a class="l" href="#modelos">Modelos 3D</a></li>
         <li><a class="l" href="#servicios">Servicios</a></li>
+        <li><a class="l" href="#foodtrucks">Food trucks</a></li>
         <li><a class="l" href="#plugins">Plugins</a></li>
         <li><a class="l" href="#tutoriales">Tutoriales</a></li>
         <li><a class="l" href="#cursos">Cursos</a></li>
-        <li><a class="l" href="#sobre-mi">Sobre mí</a></li>
-        <li><a class="l" href="#charlas">Charlas</a></li>
-        <li><a class="l" href="#galeria">Talleres</a></li>
+        <li><a class="l" href="#sobre-mi">Perfil</a></li>
+        <li><a class="l" href="#charlas">Trayectoria</a></li>
         <li><a class="l" href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -114,8 +115,8 @@
         <article class="slide has-p" style="--a:radial-gradient(circle at 15% 80%,rgba(255,74,20,.4),transparent 55%),linear-gradient(135deg,#0e0f14,#08080a)">
           <div class="art"><img src="assets/cursos/cert-alumno.jpg" alt="" onerror="this.remove()"></div><span class="num">07</span><div class="pimg land"><img src="assets/cursos/cert-alumno.jpg" alt="Certificado de finalización de una alumna"></div>
           <div class="txt"><span class="tag">Comunidad</span><time>Alumnos</time>
-            <h3>Certificados y logros de mis alumnos</h3>
-            <p>Un espacio para celebrar los avances de quienes se forman conmigo en el ecosistema de Rhino.</p>
+            <h3>Certificados y logros de los alumnos</h3>
+            <p>Un espacio para celebrar los avances de quienes se forman con F3DE Design en el ecosistema de Rhino.</p>
             <a class="btn pri" href="#galeria">Ver galería →</a></div>
         </article>
       </div>
@@ -133,7 +134,7 @@
     <div class="reveal">
       <p class="eyebrow">Modelos 3D</p>
       <h2>Últimos modelos 3D diseñados</h2>
-      <p class="lead">Lo más reciente de mi trabajo, para explorarlo directamente en la página. Arrastra para girar, pellizca o usa la rueda para acercarte.</p>
+      <p class="lead">Lo más reciente del estudio, para explorarlo directamente en la página. Arrastra para girar, pellizca o usa la rueda para acercarte.</p>
     </div>
     <div class="mgrid" id="mgrid"></div>
   </div>
@@ -193,10 +194,10 @@
         <ul><li>Diseño de producto y mobiliario</li><li>Preparación para producción</li><li>Renders y presentaciones</li></ul>
       </article>
       <article class="panel card reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11a2.1 2.1 0 0 0-3-3L5 16l-1 4z"/><path d="M14 7l3 3"/></svg></div>
-        <h3>Diseño industrial</h3>
-        <p>Del concepto a la ficha técnica: desarrollo de producto con enfoque en manufactura y experiencia de uso.</p>
-        <ul><li>Desarrollo de concepto</li><li>Ergonomía y detalle</li><li>Documentación para fabricar</li></ul>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 15l1.6-5.2A2 2 0 0 1 6.5 8.4h11a2 2 0 0 1 1.9 1.4L21 15"/><path d="M3 15h18v3H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/></svg></div>
+        <h3>Diseño automotriz e industrial</h3>
+        <p>Del concepto a la ficha técnica: carrocerías, componentes y producto, con enfoque en manufactura y experiencia de uso.</p>
+        <ul><li>Diseño y modelado automotriz</li><li>Diseño mecánico y de componentes</li><li>Millwork y packaging para producción</li></ul>
       </article>
       <article class="panel card reveal">
         <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M10 8l4 2-4 2V8z"/></svg></div>
@@ -214,12 +215,38 @@
   </div>
 </section>
 
+<!-- ================= FOOD TRUCKS ================= -->
+<section id="foodtrucks">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Food trucks</p>
+      <h2>Unidades móviles de comida, de la idea a la calle</h2>
+      <p class="lead">Diseño y desarrollo de food trucks, triciclos, carritos y kioscos para emprendimientos gastronómicos: estructura, identidad y puesta en obra. Una selección de proyectos del catálogo digital.</p>
+    </div>
+    <div class="ft reveal">
+      <figure class="frame" data-label="Hamburgon" data-group="foodtrucks"><img src="assets/foodtrucks/hamburgon.jpg" alt="Food truck Hamburgon" loading="lazy"><span class="gcap">Hamburgon</span></figure>
+      <figure class="frame" data-label="Omoya" data-group="foodtrucks"><img src="assets/foodtrucks/omoya.jpg" alt="Food truck Omoya" loading="lazy"><span class="gcap">Omoya</span></figure>
+      <figure class="frame" data-label="Waffles on Wheels" data-group="foodtrucks"><img src="assets/foodtrucks/waffles-on-wheels.jpg" alt="Food truck Waffles on Wheels" loading="lazy"><span class="gcap">Waffles on Wheels</span></figure>
+      <figure class="frame" data-label="Yucatán" data-group="foodtrucks"><img src="assets/foodtrucks/yucatan.jpg" alt="Food truck Yucatán" loading="lazy"><span class="gcap">Yucatán</span></figure>
+      <figure class="frame" data-label="Pipofast" data-group="foodtrucks"><img src="assets/foodtrucks/pipofast.jpg" alt="Food truck Pipofast" loading="lazy"><span class="gcap">Pipofast</span></figure>
+      <figure class="frame" data-label="Foodie Vuggie" data-group="foodtrucks"><img src="assets/foodtrucks/foodie-vuggie.jpg" alt="Food truck Foodie Vuggie" loading="lazy"><span class="gcap">Foodie Vuggie</span></figure>
+      <figure class="frame" data-label="Jipi Ais" data-group="foodtrucks"><img src="assets/foodtrucks/jipi-ais.jpg" alt="Food truck Jipi Ais" loading="lazy"><span class="gcap">Jipi Ais</span></figure>
+      <figure class="frame" data-label="La Verdad de la Milanés" data-group="foodtrucks"><img src="assets/foodtrucks/la-verdad-de-la-milanes.jpg" alt="Food truck La Verdad de la Milanés" loading="lazy"><span class="gcap">La Verdad de la Milanés</span></figure>
+      <figure class="frame" data-label="Lomitop" data-group="foodtrucks"><img src="assets/foodtrucks/lomitop.jpg" alt="Food truck Lomitop" loading="lazy"><span class="gcap">Lomitop</span></figure>
+      <figure class="frame" data-label="Kombi Retro" data-group="foodtrucks"><img src="assets/foodtrucks/kombi-retro.jpg" alt="Food truck Kombi Retro" loading="lazy"><span class="gcap">Kombi Retro</span></figure>
+      <figure class="frame" data-label="Fatima Panchitos" data-group="foodtrucks"><img src="assets/foodtrucks/fatima-panchitos.jpg" alt="Food truck Fatima Panchitos" loading="lazy"><span class="gcap">Fatima Panchitos</span></figure>
+      <figure class="frame" data-label="Tienda móvil" data-group="foodtrucks"><img src="assets/foodtrucks/tienda.jpg" alt="Food truck Tienda móvil" loading="lazy"><span class="gcap">Tienda móvil</span></figure>
+    </div>
+    <p class="more-ft reveal"><a class="btn pri" href="https://fedemergent.github.io/f3de-catalogo/" target="_blank" rel="noopener">Ver el catálogo completo ↗</a><span>Todos los proyectos, por cliente, con más fotos y video.</span></p>
+  </div>
+</section>
+
 <!-- ================= PLUGINS ================= -->
 <section id="plugins">
   <div class="wrap">
     <div class="reveal">
       <p class="eyebrow">Plugins</p>
-      <h2>Herramientas que diseño para Rhino</h2>
+      <h2>Herramientas desarrolladas para Rhino</h2>
       <p class="lead">Software gratuito para la comunidad, con instalación en un clic y actualizaciones.</p>
     </div>
     <article class="panel plug reveal">
@@ -238,7 +265,8 @@
           <button class="btn pri" type="button" data-download>⬇ Descargar versión preliminar</button>
           <a class="btn" href="https://github.com/fedemergent/tatu-rhino" target="_blank" rel="noopener">Ver en GitHub</a>
         </div>
-        <p class="fine" style="margin-top:16px">Versión preliminar · uso gratuito no comercial · licencia CC BY-NC-ND 4.0 · requiere Windows 10/11 y Rhino 8.</p>
+        <p class="fine dlcount" style="margin-top:16px" id="dlCount" hidden><b data-count="descargas">—</b> descargas hasta hoy</p>
+        <p class="fine" style="margin-top:6px">Versión preliminar · uso gratuito no comercial · licencia CC BY-NC-ND 4.0 · requiere Windows 10/11 y Rhino 8.</p>
       </div>
     </article>
     <!-- TMS Library Manager: oculto en la web publica hasta confirmar con The Millwork Studio. Para mostrarlo, quita style="display:none" -->
@@ -301,8 +329,8 @@
   <div class="wrap">
     <div class="reveal">
       <p class="eyebrow">Cursos</p>
-      <h2>Cursos que dicto</h2>
-      <p class="lead">Programas personalizados 1 a 1 y cursos en CENACE – UPSA. Escríbeme para conocer las próximas fechas y cupos.</p>
+      <h2>Cursos, diplomados y talleres</h2>
+      <p class="lead">Programas personalizados 1 a 1 y cursos en CENACE – UPSA. Consulta las próximas fechas y cupos disponibles.</p>
     </div>
     <div class="courses">
       <article class="panel course reveal">
@@ -343,13 +371,13 @@
     <div class="about">
       <div class="portrait reveal"><img src="assets/retrato.jpg" alt="Retrato de Federico Escobar" onerror="this.remove()"><span>assets/retrato.jpg</span></div>
       <div class="reveal">
-        <p class="eyebrow">Sobre mí</p>
+        <p class="eyebrow">Perfil</p>
         <h2>Diseñador industrial e instructor autorizado de Rhino</h2>
-        <p class="lead" style="color:#c4c4cb">Licenciado en Diseño Industrial (UPSA, 2011), con formación en Rhino y Grasshopper desde 2010 junto a McNeel Latin America, y años dedicado a enseñar la herramienta en CENACE – UPSA y en programas personalizados.</p>
-        <p>Combino el diseño de producto con el desarrollo de herramientas propias para que otros diseñadores trabajen mejor: plugins, bibliotecas y cursos pensados desde la práctica del taller y del estudio. Hoy trabajo en Architectural Millwork, joyería, packaging y arquitectura paramétrica.</p>
-        <ul class="skills"><li>Rhino</li><li>Grasshopper</li><li>KeyShot</li><li>Diseño industrial</li><li>Millwork</li><li>Desarrollo de plugins</li></ul>
+        <p class="lead" style="color:#c4c4cb">Federico Escobar es Licenciado en Diseño Industrial (UPSA, 2011). Su área principal es el <b style="color:var(--txt)">diseño automotriz</b>, complementada con Architectural Millwork, packaging y diseño mecánico.</p>
+        <p>Formado en Rhino y Grasshopper desde 2010 junto a McNeel Latin America, es instructor en CENACE – UPSA y en programas personalizados, y coautor del libro MTDI, Metodología de Diseño Industrial. F3DE Design combina el diseño de producto con el desarrollo de herramientas propias (plugins, bibliotecas y cursos) pensadas desde la práctica del taller y del estudio.</p>
+        <ul class="skills"><li>Diseño automotriz</li><li>Diseño mecánico</li><li>Millwork</li><li>Packaging</li><li>Rhino</li><li>Grasshopper</li><li>KeyShot</li><li>Desarrollo de plugins</li></ul>
         <div class="trainer"><img src="assets/art-badge.png" alt="Authorized Rhino Trainer"><span>Instructor autorizado de Rhino (Authorized Rhino Trainer).</span></div>
-        <p style="margin-top:26px"><a class="btn pri" href="#contacto">Trabajemos juntos →</a></p>
+        <p style="margin-top:26px"><a class="btn pri" href="#contacto">Solicitar una propuesta →</a></p>
       </div>
     </div>
     <div class="certs reveal">
@@ -370,10 +398,16 @@
   <div class="wrap">
     <div class="reveal">
       <p class="eyebrow">Charlas y conferencias</p>
-      <h2>Compartiendo lo que aprendo</h2>
-      <p class="lead">Conferencias, disertaciones y charlas sobre diseño, tecnología y educación. Toca una foto para verla ampliada.</p>
+      <h2>Diseño, tecnología y educación en el escenario</h2>
+      <p class="lead">Conferencias, disertaciones y conversatorios sobre diseño, tecnología y educación. Toca una foto para ampliarla.</p>
     </div>
     <div class="gal reveal">
+      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-1.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
+      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-2.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
+      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-3.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
+      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-4.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
+      <figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas"><img src="assets/charlas/expofadupsa-2026-5.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"><span class="gcap">EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni</span></figure>
+      <figure class="frame" data-label="Conversatorio «Mi profesión, mi pasión» · Diseño Industrial" data-group="charlas"><img src="assets/charlas/conversatorio-lua.jpg" alt="Conversatorio «Mi profesión, mi pasión» · Diseño Industrial" loading="lazy"><span class="gcap">Conversatorio «Mi profesión, mi pasión» · Diseño Industrial</span></figure>
       <figure class="frame" data-label="TEDxSantaCruzdelaSierra · Conferencista" data-group="charlas"><img src="assets/charlas/tedx-federico-escobar.jpg" alt="TEDxSantaCruzdelaSierra · Conferencista" loading="lazy"><span class="gcap">TEDxSantaCruzdelaSierra · Conferencista</span></figure>
       <figure class="frame" data-label="Disertación" data-group="charlas"><img src="assets/charlas/disertacion.jpg" alt="Disertación" loading="lazy"><span class="gcap">Disertación</span></figure>
       <figure class="frame" data-label="TEDxSantaCruzdelaSierra" data-group="charlas"><img src="assets/charlas/tedx-escenario-wikipedia.jpg" alt="TEDxSantaCruzdelaSierra" loading="lazy"><span class="gcap">TEDxSantaCruzdelaSierra</span></figure>
@@ -386,13 +420,35 @@
   </div>
 </section>
 
+<!-- ================= PUBLICACIONES ================= -->
+<section id="publicaciones">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Publicaciones y congresos</p>
+      <h2>MTDI · Metodología de Diseño Industrial</h2>
+      <p class="lead">Libro coescrito con Néstor Damián Ortega (UPSA, 2018) y su presentación en los Congresos Latinoamericanos de Enseñanza del Diseño de la Universidad de Palermo, incluida en Actas de Diseño N.º 33.</p>
+    </div>
+    <div class="gal reveal">
+      <figure class="frame" data-label="Lanzamiento del libro MTDI · UPSA · 2018, con Néstor Damián Ortega" data-group="pub"><img src="assets/publicaciones/lanzamiento-mtdi-2018.jpg" alt="Lanzamiento del libro MTDI · UPSA · 2018, con Néstor Damián Ortega" loading="lazy"><span class="gcap">Lanzamiento del libro MTDI · UPSA · 2018, con Néstor Damián Ortega</span></figure>
+      <figure class="frame" data-label="MTDI disponible en eLibro" data-group="pub"><img src="assets/publicaciones/elibro-mtdi.jpg" alt="MTDI disponible en eLibro" loading="lazy"><span class="gcap">MTDI disponible en eLibro</span></figure>
+      <figure class="frame" data-label="Actas de Diseño N.º 33 · Universidad de Palermo" data-group="pub"><img src="assets/publicaciones/actas-de-diseno-33.jpg" alt="Actas de Diseño N.º 33 · Universidad de Palermo" loading="lazy"><span class="gcap">Actas de Diseño N.º 33 · Universidad de Palermo</span></figure>
+      <figure class="frame" data-label="XI Congreso Virtual Latinoamericano de Enseñanza del Diseño" data-group="pub"><img src="assets/publicaciones/congreso-xi-2020-cita.jpg" alt="XI Congreso Virtual Latinoamericano de Enseñanza del Diseño" loading="lazy"><span class="gcap">XI Congreso Virtual Latinoamericano de Enseñanza del Diseño</span></figure>
+      <figure class="frame" data-label="Expositor · XI Congreso Latinoamericano de Enseñanza del Diseño · 2020" data-group="pub"><img src="assets/publicaciones/congreso-xi-2020-expositor.jpg" alt="Expositor · XI Congreso Latinoamericano de Enseñanza del Diseño · 2020" loading="lazy"><span class="gcap">Expositor · XI Congreso Latinoamericano de Enseñanza del Diseño · 2020</span></figure>
+      <figure class="frame" data-label="XI Congreso · Comisión A6 Metodologías de Diseño · julio 2020" data-group="pub"><img src="assets/publicaciones/congreso-xi-2020-comision.jpg" alt="XI Congreso · Comisión A6 Metodologías de Diseño · julio 2020" loading="lazy"><span class="gcap">XI Congreso · Comisión A6 Metodologías de Diseño · julio 2020</span></figure>
+      <figure class="frame" data-label="Expositores · XII Congreso Latinoamericano de Enseñanza del Diseño" data-group="pub"><img src="assets/publicaciones/congreso-xii-2022-expositores.jpg" alt="Expositores · XII Congreso Latinoamericano de Enseñanza del Diseño" loading="lazy"><span class="gcap">Expositores · XII Congreso Latinoamericano de Enseñanza del Diseño</span></figure>
+      <figure class="frame" data-label="XII Congreso · Comisión A13-1 Metodologías de Diseño · julio 2022" data-group="pub"><img src="assets/publicaciones/congreso-xii-2022-comision.jpg" alt="XII Congreso · Comisión A13-1 Metodologías de Diseño · julio 2022" loading="lazy"><span class="gcap">XII Congreso · Comisión A13-1 Metodologías de Diseño · julio 2022</span></figure>
+      <figure class="frame" data-label="XII Congreso · MTDI, resultados obtenidos en los primeros años" data-group="pub"><img src="assets/publicaciones/congreso-xii-resultados.jpg" alt="XII Congreso · MTDI, resultados obtenidos en los primeros años" loading="lazy"><span class="gcap">XII Congreso · MTDI, resultados obtenidos en los primeros años</span></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ================= GALERIA ================= -->
 <section id="galeria">
   <div class="wrap">
     <div class="reveal">
       <p class="eyebrow">Talleres y alumnos</p>
       <h2>Clases, talleres y logros</h2>
-      <p class="lead">Momentos de los cursos y talleres, y los logros de quienes se forman conmigo.</p>
+      <p class="lead">Momentos de los cursos y talleres, y los logros de quienes se forman con F3DE Design.</p>
     </div>
     <div class="gal reveal">
       <figure class="frame" data-label="Taller de fabricación digital · grupo de participantes" data-group="galeria"><img src="assets/talleres/taller-fabricacion-digital-grupo.jpg" alt="Taller de fabricación digital · grupo de participantes" loading="lazy"><span class="gcap">Taller de fabricación digital · grupo de participantes</span></figure>
@@ -414,13 +470,14 @@
     <div class="panel contact reveal">
       <div>
         <p class="eyebrow">Contacto</p>
-        <h2>Cuéntame tu proyecto</h2>
+        <h2>Tu proyecto, de la idea a la fabricación</h2>
         <p class="lead">Escribe para cotizar un servicio, inscribirte a un curso o proponer una colaboración.</p>
         <ul class="links">
           <li><a href="mailto:di.fedemergent@gmail.com">✉ di.fedemergent@gmail.com</a></li>
           <li><a href="https://www.instagram.com/di.fedemergent/" target="_blank" rel="noopener">◎ Instagram · @di.fedemergent</a></li>
           <li><a href="https://www.youtube.com/@F3DE.Design" target="_blank" rel="noopener">▶ YouTube · @F3DE.Design</a></li>
           <li><a href="https://www.linkedin.com/in/fedemergent" target="_blank" rel="noopener">in LinkedIn · fedemergent</a></li>
+          <li><a href="https://fedemergent.blogspot.com" target="_blank" rel="noopener">✎ Blog · fedemergent.blogspot.com</a></li>
           <li><a href="https://github.com/fedemergent" target="_blank" rel="noopener">⌥ GitHub · fedemergent</a></li>
         </ul>
       </div>
@@ -430,9 +487,9 @@
           <option>Consultoría</option><option>Capacitación / entrenamiento</option><option>Modelado 3D</option>
           <option>Diseño industrial</option><option>Plugins a la medida</option><option>Licencias de Rhino</option><option>Otro</option>
         </select>
-        <textarea name="m" placeholder="Cuéntame en qué puedo ayudarte" aria-label="Mensaje" required></textarea>
+        <textarea name="m" placeholder="Describe brevemente tu proyecto o consulta" aria-label="Mensaje" required></textarea>
         <button class="btn pri" type="submit" style="justify-content:center">Enviar mensaje</button>
-        <p class="fine" id="cHint">En esta maqueta el mensaje se abre en tu correo. Más adelante se conecta a un servicio de formularios.</p>
+        <p class="fine" id="cHint">Al enviar, el mensaje se abre en tu aplicación de correo, listo para enviarse.</p>
       </form>
     </div>
   </div>
@@ -444,8 +501,9 @@
       <a href="https://www.instagram.com/di.fedemergent/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg></a>
       <a href="https://www.youtube.com/@F3DE.Design" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg></a>
       <a href="https://www.linkedin.com/in/fedemergent" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://fedemergent.blogspot.com" target="_blank" rel="noopener" aria-label="Blog"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11a2.1 2.1 0 0 0-3-3L5 16l-1 4z"/><path d="M14 7l3 3"/></svg></a>
       <a href="https://github.com/fedemergent" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></a>
-    </div><button class="motion-toggle" id="motionBtn" type="button" aria-pressed="true">Fondo animado: sí</button><span>Rhino® es marca de Robert McNeel &amp; Associates.</span></div>
+    </div><button class="motion-toggle" id="motionBtn" type="button" aria-pressed="true">Fondo animado: sí</button><span class="stats" id="footStats">Visitas · <b data-count="visitas">—</b></span><span>Rhino® es marca de Robert McNeel &amp; Associates.</span></div>
 </footer>
 </div>
 
@@ -455,7 +513,7 @@
     <div id="dlForm">
       <p class="eyebrow">Descarga preliminar</p>
       <h3 id="dlT">TATU para Rhino · v1.1.4</h3>
-      <p class="lead">Déjame tu correo para descargar el instalador (Windows, <span id="dlSize"></span>). Te avisaré cuando haya nuevas versiones.</p>
+      <p class="lead">Ingresa tu correo para descargar el instalador (Windows, <span id="dlSize"></span>). Recibirás un aviso cuando haya nuevas versiones.</p>
       <form id="dlF" novalidate>
         <input type="email" id="dlMail" placeholder="tu@correo.com" autocomplete="email" aria-label="Correo electrónico" required>
         <label class="chk"><input type="checkbox" id="dlOk"> <span>Acepto que guarden mi correo para avisarme de actualizaciones de TATU. Puedo pedir que lo borren cuando quiera.</span></label>
@@ -478,9 +536,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=2"></script>
-<script src="assets/leads.js?v=2"></script>
-<script src="assets/common.js?v=2"></script>
+<script src="assets/config.js?v=3"></script>
+<script src="assets/leads.js?v=3"></script>
+<script src="assets/counters.js?v=3"></script>
+<script src="assets/common.js?v=3"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -605,7 +664,8 @@
   dlLink.href = C.TATU_URL || '#';
   let opener = null;
   const stored = () => { try { return localStorage.getItem('f3de-dl'); } catch (e) { return null; } };
-  const startDownload = () => { const a = document.createElement('a'); a.href = C.TATU_URL; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove(); };
+  const startDownload = () => { if (window.countDownload) window.countDownload();
+     const a = document.createElement('a'); a.href = C.TATU_URL; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove(); };
   const showDone = () => { document.getElementById('dlForm').hidden = true; document.getElementById('dlDone').hidden = false; };
   function openDl(btn) {
     opener = btn; dl.classList.add('on'); dlErr.textContent = '';
