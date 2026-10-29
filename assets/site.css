@@ -429,3 +429,12 @@ nav{order:2}
 .contact-join::before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);pointer-events:none}
 .contact-join>*{position:relative}
 .cform .chips{margin-top:2px}
+
+
+/* ---- seccion automotriz ---- */
+.auto{margin-top:34px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:22px;align-items:start}
+.autovid{position:sticky;top:90px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#000}
+.autovid video{width:100%;height:auto;aspect-ratio:9/16;display:block;object-fit:cover}
+.auto .gal{margin-top:0;column-count:2}
+@media(max-width:900px){.auto{grid-template-columns:1fr}.autovid{position:static;max-width:320px;margin:0 auto}}
+@media(max-width:480px){.auto .gal{column-count:1}}
