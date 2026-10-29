@@ -373,3 +373,12 @@ footer .wrap{align-items:center}
 .visits.on{opacity:1}.visits b,.stats b,.dlcount b{color:var(--acc);font-weight:500}
 .stats{font-size:12.5px;color:var(--mut)}
 .dlcount{margin-top:10px}
+
+
+/* ---- selector de idioma ---- */
+.lang{display:flex;gap:2px;margin-left:10px;padding:3px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);order:4}
+.lang button{font:600 12px var(--body);color:var(--mut);background:none;border:0;border-radius:999px;padding:7px 11px;cursor:pointer;min-width:38px}
+.lang button[aria-pressed=true]{background:var(--acc);color:#120600}
+.lang button:not([aria-pressed=true]):hover{color:var(--txt)}
+nav{order:2}
+@media(max-width:1240px){.lang{order:2;margin-left:auto;margin-right:10px}.burger{order:3}}

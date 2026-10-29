@@ -1,17 +1,17 @@
 /* =====================================================================
-   Campo de atractores Voronoi (fondo). Misma idea que el de TATU:
-   celdas cuyas semillas derivan lentamente y que se hinchan y se
-   encienden cerca de atractores: dos autónomos, el cursor / el dedo y
-   las ondas que dejan los clics y toques.
+   Campo de celdas Voronoi (fondo), con comportamiento de moho mucilaginoso:
+   las celdas derivan muy despacio y se hinchan y se encienden de forma
+   gradual alrededor de puntos atractores que aparecen al azar y emiten una
+   ola suave. El cursor / el dedo crea un campo más leve a su alrededor.
    ===================================================================== */
 (() => {
   const cv = document.getElementById('bg'), ctx = cv.getContext('2d');
-  // Si el sistema pide menos movimiento, el fondo no se apaga: se mueve a media velocidad. Quien quiera pararlo del todo usa el botón del pie.
+  // Si el sistema pide menos movimiento, el fondo no se apaga: se mueve a menor velocidad. Quien quiera pararlo del todo usa el botón del pie.
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let off = false; try { off = localStorage.getItem('f3de-motion') === 'off'; } catch (e) {}
-  const speed = calm ? .5 : 1;
+  const speed = calm ? .6 : 1;
   const ACC = [255, 74, 20];
-  const F = { dim: 1, target: 1, t: 2.2, grow: 0, ripples: [], px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9, last: 0 };
+  const F = { dim: .7, target: .7, t: 2.2, grow: 0, ripples: [], beacons: [], next: 1.6, px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9 };
   let W, H, DPR, S = [], amp, G, gcols, grows, grid = [];
   const A = [], B = [];
 
@@ -20,11 +20,11 @@
   function init() {
     W = innerWidth; H = innerHeight; DPR = Math.min(devicePixelRatio || 1, 1.5);
     cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    const cols = Math.max(6, Math.min(15, Math.round(W / 118))), cw = W / cols, rows = Math.max(4, Math.round(H / cw)), ch = H / rows, r = rng(7);
+    const cols = Math.max(8, Math.min(22, Math.round(W / 88))), cw = W / cols, rows = Math.max(5, Math.round(H / cw)), ch = H / rows, r = rng(7);
     S = [];
     for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++)
-      S.push({ bx: (i + .5 + (r() - .5) * .9) * cw, by: (j + .5 + (r() - .5) * .9) * ch, a: .1 + r() * .2, b: .1 + r() * .2, p: r() * 6.28, q: r() * 6.28, z: r() * 6.28, sz: .72 + r() * .28, x: 0, y: 0, poly: null, cx: 0, cy: 0 });
-    amp = Math.min(cw, ch) * .3; G = Math.max(cw, ch); gcols = Math.ceil(W / G) + 1; grows = Math.ceil(H / G) + 1;
+      S.push({ bx: (i + .5 + (r() - .5) * .9) * cw, by: (j + .5 + (r() - .5) * .9) * ch, a: .03 + r() * .06, b: .03 + r() * .06, p: r() * 6.28, q: r() * 6.28, z: r() * 6.28, sz: .7 + r() * .3, inf: 0, x: 0, y: 0, poly: null, cx: 0, cy: 0 });
+    amp = Math.min(cw, ch) * .38; G = Math.max(cw, ch); gcols = Math.ceil(W / G) + 1; grows = Math.ceil(H / G) + 1;
     grid = Array.from({ length: gcols * grows }, () => []);
     F.px = F.tx = W / 2; F.py = F.ty = H / 2;
   }
@@ -70,69 +70,90 @@
   }
 
   const ease = k => 1 - Math.pow(1 - Math.min(1, Math.max(0, k)), 3);
+  const bell = k => { k = Math.min(1, Math.max(0, k)); const v = Math.sin(Math.PI * k); return v * v; };   // sube y baja sin saltos
 
-  function draw(t) {
+  // Atractores al azar: aparecen, crecen despacio, emiten una ola suave y se desvanecen
+  function spawn(x, y, life) {
+    F.beacons.push({ x: x == null ? W * (.12 + Math.random() * .76) : x, y: y == null ? H * (.12 + Math.random() * .76) : y, t0: F.t, life: life || 11 });
+  }
+
+  function draw(t, dt) {
     ctx.clearRect(0, 0, W, H);
-    const R = .2 * W, Rp = Math.max(.13 * W, 150), dim = F.dim, grow = ease(F.grow);
-    const att = [[W * (.5 + .38 * Math.sin(.55 * t)), H * (.5 + .34 * Math.sin(.83 * t + 1))], [W * (.5 + .3 * Math.sin(.41 * t + 2.3)), H * (.5 + .38 * Math.cos(.67 * t))]];
-    F.ripples = F.ripples.filter(r => t - r.t0 < 2.4);
+    const R = .15 * W + 60, Rp = Math.max(.1 * W, 120), dim = F.dim, grow = ease(F.grow);
+    F.beacons = F.beacons.filter(b => t - b.t0 < b.life);
+    F.ripples = F.ripples.filter(r => t - r.t0 < r.life);
     ctx.lineJoin = 'round';
+    // dos atractores errantes muy lentos (siempre presentes, su fuerza respira)
+    const wand = [[W * (.5 + .36 * Math.sin(.07 * t)), H * (.5 + .32 * Math.sin(.11 * t + 1)), .22 + .18 * Math.sin(.22 * t)],
+                  [W * (.5 + .3 * Math.sin(.05 * t + 2.3)), H * (.5 + .34 * Math.cos(.09 * t)), .22 + .18 * Math.sin(.19 * t + 2)]];
+    const kUp = 1 - Math.exp(-dt / 1.1), kDn = 1 - Math.exp(-dt / 2.2);   // llegar despacio, irse más despacio aún
     for (const s of S) {
       if (!s.poly) continue;
-      let infl = 0;
-      for (const [ax, ay] of att) infl += .55 * Math.exp(-((Math.hypot(s.cx - ax, s.cy - ay) / R) ** 2));
-      if (F.act > .01) infl += 1.1 * F.act * Math.exp(-((Math.hypot(s.cx - F.px, s.cy - F.py) / Rp) ** 2));
-      for (const r of F.ripples) { const age = t - r.t0; infl += r.k * Math.exp(-(((Math.hypot(s.cx - r.x, s.cy - r.y) - age * .42 * W) / (.06 * W)) ** 2)) * (1 - age / 2.4); }
-      infl = Math.min(infl, 1.35);
-      const sc = (.13 + .78 * Math.min(infl, 1) * s.sz + .03 * Math.sin(1.4 * t + s.z)) * grow;
+      let target = 0;
+      for (const [ax, ay, w] of wand) target += w * Math.exp(-((Math.hypot(s.cx - ax, s.cy - ay) / R) ** 2));
+      for (const b of F.beacons) {
+        const age = t - b.t0, env = bell(age / b.life), d = Math.hypot(s.cx - b.x, s.cy - b.y);
+        target += .8 * env * Math.exp(-((d / (R * 1.1)) ** 2));
+        const ring = (age * .06 * W + 20), wd = .1 * W + 40;                  // ola ancha y lenta alrededor del punto
+        target += .32 * env * Math.exp(-(((d - ring) / wd) ** 2));
+      }
+      for (const r of F.ripples) { const age = t - r.t0, d = Math.hypot(s.cx - r.x, s.cy - r.y); target += r.k * (1 - age / r.life) * Math.exp(-(((d - age * .1 * W) / (.12 * W)) ** 2)); }
+      if (F.act > .01) target += .5 * F.act * Math.exp(-((Math.hypot(s.cx - F.px, s.cy - F.py) / Rp) ** 2));   // cursor / dedo: campo leve
+      target = Math.min(target, 1.1);
+      s.inf += (target - s.inf) * (target > s.inf ? kUp : kDn);
+      const i1 = Math.min(s.inf, 1);
+      const sc = (.2 + .62 * i1 * s.sz + .015 * Math.sin(.5 * t + s.z)) * grow;
       if (sc < .02) continue;
       const P = s.poly, n = P.length / 2, pts = new Array(P.length);
-      for (let k = 0; k < n; k++) {
-        pts[2 * k] = s.cx + (P[2 * k] - s.cx) * sc + .9 * sc * Math.sin(2.4 * t + k * 1.9);
-        pts[2 * k + 1] = s.cy + (P[2 * k + 1] - s.cy) * sc + .9 * sc * Math.cos(2.1 * t + k * 2.3);
+      for (let k = 0; k < n; k++) {      // contorno que se ondula muy despacio, como una membrana
+        pts[2 * k] = s.cx + (P[2 * k] - s.cx) * sc + 1.6 * Math.sin(.45 * t + k * 1.9 + s.z);
+        pts[2 * k + 1] = s.cy + (P[2 * k + 1] - s.cy) * sc + 1.6 * Math.cos(.4 * t + k * 2.3 + s.z);
       }
       ctx.beginPath();
       ctx.moveTo((pts[2 * n - 2] + pts[0]) / 2, (pts[2 * n - 1] + pts[1]) / 2);
       for (let k = 0; k < n; k++) { const k2 = (k + 1) % n; ctx.quadraticCurveTo(pts[2 * k], pts[2 * k + 1], (pts[2 * k] + pts[2 * k2]) / 2, (pts[2 * k + 1] + pts[2 * k2 + 1]) / 2); }
       ctx.closePath();
-      const i1 = Math.min(infl, 1);
-      ctx.fillStyle = `rgba(${ACC[0]},${ACC[1]},${ACC[2]},${(.012 + .24 * i1) * dim})`; ctx.fill();
-      ctx.strokeStyle = `rgba(${255},${Math.round(90 + 80 * i1)},${Math.round(50 + 70 * i1)},${(.07 + .55 * i1) * dim})`;
-      ctx.lineWidth = 1 + i1 * .8; ctx.stroke();
+      ctx.fillStyle = `rgba(${ACC[0]},${ACC[1]},${ACC[2]},${(.01 + .17 * i1) * dim})`; ctx.fill();
+      ctx.strokeStyle = `rgba(255,${Math.round(90 + 70 * i1)},${Math.round(50 + 60 * i1)},${(.06 + .38 * i1) * dim})`;
+      ctx.lineWidth = 1 + i1 * .6; ctx.stroke();
     }
   }
 
-  F.pulse = (x, y, k = .9) => F.ripples.push({ t0: F.t, x, y, k });
+  F.pulse = (x, y, k = .5) => F.ripples.push({ t0: F.t, x, y, k: Math.min(k, .6) * .6, life: 6 });
+  F.spawn = spawn;
   window.__field = F;
 
-  let prev = performance.now(), raf = 0;
+  let prev = performance.now(), raf = 0, bacc = 1;
   function frame(now) {
     if (off) return;
     const rdt = Math.min(.05, (now - prev) / 1000), dt = rdt * speed; prev = now;
-    F.t += dt; F.grow = Math.min(1, F.grow + dt / 2.2);
-    F.dim += (F.target - F.dim) * (1 - Math.exp(-dt * 1.6));
-    const k = 1 - Math.exp(-rdt * 9); F.px += (F.tx - F.px) * k; F.py += (F.ty - F.py) * k;
-    F.act += ((F.t - F.seen < 1.8 ? 1 : 0) - F.act) * (1 - Math.exp(-rdt * 3));
-    build(F.t); draw(F.t);
+    F.t += dt; F.grow = Math.min(1, F.grow + dt / 3);
+    F.dim += (F.target - F.dim) * (1 - Math.exp(-dt * 1.2));
+    const k = 1 - Math.exp(-rdt * 4); F.px += (F.tx - F.px) * k; F.py += (F.ty - F.py) * k;
+    F.act += ((F.t - F.seen < 2.2 ? 1 : 0) - F.act) * (1 - Math.exp(-rdt * 1.6));
+    if (F.t > F.next) { spawn(); F.next = F.t + 7 + Math.random() * 5; }
+    bacc += rdt; if (bacc > 1 / 24) { build(F.t); bacc = 0; }
+    draw(F.t, dt);
     raf = requestAnimationFrame(frame);
   }
 
   function point(x, y) { F.tx = x; F.ty = y; F.seen = F.t; }
   addEventListener('mousemove', e => point(e.clientX, e.clientY), { passive: true });
-  addEventListener('touchstart', e => { const t = e.touches[0]; point(t.clientX, t.clientY); F.pulse(t.clientX, t.clientY, .7); }, { passive: true });
+  addEventListener('touchstart', e => { const t = e.touches[0]; point(t.clientX, t.clientY); F.pulse(t.clientX, t.clientY, .45); }, { passive: true });
   addEventListener('touchmove', e => { const t = e.touches[0]; point(t.clientX, t.clientY); }, { passive: true });
-  addEventListener('mousedown', e => { point(e.clientX, e.clientY); F.pulse(e.clientX, e.clientY, .8); });
+  addEventListener('mousedown', e => { point(e.clientX, e.clientY); F.pulse(e.clientX, e.clientY, .5); });
   document.addEventListener('mouseleave', () => { F.seen = -9; });
-  addEventListener('resize', () => { init(); });
+  addEventListener('resize', () => { init(); build(F.t); });
   init();
-  function still() { F.grow = 1; if (F.t < 3) F.t = 3; build(F.t); draw(F.t); }
+  function still() { F.grow = 1; if (F.t < 3) F.t = 3; build(F.t); draw(F.t, 1); }
   window.__setMotion = on => {
     off = !on; try { localStorage.setItem('f3de-motion', on ? 'on' : 'off'); } catch (e) {}
     cancelAnimationFrame(raf);
     if (on) { prev = performance.now(); raf = requestAnimationFrame(frame); } else still();
     syncBtn();
   };
-  function syncBtn() { const b = document.getElementById('motionBtn'); if (b) { b.setAttribute('aria-pressed', String(!off)); b.textContent = off ? 'Fondo animado: no' : 'Fondo animado: sí'; } }
+  function syncBtn() { const b = document.getElementById('motionBtn'); if (b) { b.setAttribute('aria-pressed', String(!off)); b.textContent = (window.t || (x => x))(off ? 'Fondo animado: no' : 'Fondo animado: sí'); } }
+  window.__syncMotionBtn = syncBtn;
   const mb = document.getElementById('motionBtn'); if (mb) mb.addEventListener('click', () => window.__setMotion(off));
   syncBtn();
   if (off) still(); else raf = requestAnimationFrame(frame);
