@@ -421,7 +421,7 @@ nav{order:2}
 .tset.on{opacity:1;visibility:visible;z-index:2;transition:opacity 1.3s ease-in-out}
 .tset .frame{aspect-ratio:4/5;padding:0;border-style:solid;border-color:var(--line);background:#0b0b0e}
 .tset .frame img{object-fit:cover;object-position:50% 30%}
-@media(max-width:560px){.tset{gap:8px}.tset .frame{aspect-ratio:3/4}}
+
 
 
 /* ---- contacto unificado: brillo naranja del antiguo newsletter ---- */
@@ -438,3 +438,14 @@ nav{order:2}
 .auto .gal{margin-top:0;column-count:2}
 @media(max-width:900px){.auto{grid-template-columns:1fr}.autovid{position:static;max-width:320px;margin:0 auto}}
 @media(max-width:480px){.auto .gal{column-count:1}}
+
+
+/* ---- carrusel de charlas: columnas con ancho real (antes se colapsaban en el celular) ---- */
+.tcar{grid-template-columns:minmax(0,1fr)}
+.tset{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tset .frame{width:100%;min-height:0}
+@media(max-width:640px){
+  .tset{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .tset .frame:nth-child(3){display:none}
+  .tset .frame{aspect-ratio:3/4}
+}
