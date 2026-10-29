@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=9">
+<link rel="stylesheet" href="assets/site.css?v=10">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -409,6 +409,14 @@
         <p class="ctas"><a class="btn pri" href="trayectoria.html">Ver trayectoria completa →</a><a class="btn" href="certificados.html">Ver certificados</a></p>
       </div>
     </div>
+    <div class="talks reveal">
+      <div class="talks-head"><h3>Charlas y conferencias</h3><a class="btn" href="trayectoria.html#charlas">Ver más →</a></div>
+      <div class="tcar" id="tcar">
+        <div class="tset on"><figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas-home"><img width="844" height="1500" src="assets/charlas/expofadupsa-2026-1.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"></figure><figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas-home"><img width="844" height="1500" src="assets/charlas/expofadupsa-2026-2.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"></figure><figure class="frame" data-label="TEDxSantaCruzdelaSierra · Conferencista" data-group="charlas-home"><img width="1080" height="1080" src="assets/charlas/tedx-federico-escobar.jpg" alt="TEDxSantaCruzdelaSierra · Conferencista" loading="lazy"></figure></div>
+        <div class="tset"><figure class="frame" data-label="Disertación" data-group="charlas-home"><img width="720" height="480" src="assets/charlas/disertacion.jpg" alt="Disertación" loading="lazy"></figure><figure class="frame" data-label="Disertación en la UPSA" data-group="charlas-home"><img width="872" height="1280" src="assets/charlas/upsa-disertacion.jpg" alt="Disertación en la UPSA" loading="lazy"></figure><figure class="frame" data-label="Charla sobre código abierto" data-group="charlas-home"><img width="720" height="480" src="assets/charlas/codigo-abierto.jpg" alt="Charla sobre código abierto" loading="lazy"></figure></div>
+        <div class="tset"><figure class="frame" data-label="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" data-group="charlas-home"><img width="844" height="1500" src="assets/charlas/expofadupsa-2026-3.jpg" alt="EXPOFADUPSA 2026 · Conferencia en el Museo Altillo Beni" loading="lazy"></figure><figure class="frame" data-label="Charla sobre realidad aumentada" data-group="charlas-home"><img width="720" height="720" src="assets/charlas/realidad-aumentada.jpg" alt="Charla sobre realidad aumentada" loading="lazy"></figure><figure class="frame" data-label="TEDxSantaCruzdelaSierra" data-group="charlas-home"><img width="768" height="1024" src="assets/charlas/tedx-escenario-wikipedia.jpg" alt="TEDxSantaCruzdelaSierra" loading="lazy"></figure></div>
+      </div>
+    </div>
     <div class="certs reveal">
       <h3>Credenciales destacadas</h3>
       <div class="cgrid three">
@@ -492,10 +500,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=9"></script>
-<script src="assets/leads.js?v=9"></script>
-<script src="assets/counters.js?v=9"></script>
-<script src="assets/common.js?v=9"></script>
+<script src="assets/config.js?v=10"></script>
+<script src="assets/leads.js?v=10"></script>
+<script src="assets/counters.js?v=10"></script>
+<script src="assets/common.js?v=10"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -538,6 +546,19 @@
   setTimeout(flare, 2300);
   intro.addEventListener('click', enter);
   addEventListener('keydown', e => { if (!done && (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ')) enter(); });
+})();
+
+/* ===== carrusel de charlas (perfil): grupos de 3 fotos con fundido suave ===== */
+(() => {
+  const box = document.getElementById('tcar'); if (!box) return;
+  const sets = [...box.children]; let cur = 0, timer = null;
+  const go = i => { cur = (i + sets.length) % sets.length; sets.forEach((s, k) => s.classList.toggle('on', k === cur)); };
+  const arm = () => { clearTimeout(timer); timer = setTimeout(() => { go(cur + 1); arm(); }, 4500); };
+  box.addEventListener('mouseenter', () => clearTimeout(timer)); box.addEventListener('mouseleave', arm);
+  let x0 = null;
+  box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; clearTimeout(timer); }, { passive: true });
+  box.addEventListener('touchend', e => { if (x0 != null && Math.abs(e.changedTouches[0].clientX - x0) > 45) go(cur + (e.changedTouches[0].clientX < x0 ? 1 : -1)); x0 = null; arm(); }, { passive: true });
+  arm();
 })();
 
 /* ========================= carrusel (fundido suave entre noticias) ========================= */
@@ -688,6 +709,6 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=9"></script>
+<script src="assets/i18n.js?v=10"></script>
 </body>
 </html>
