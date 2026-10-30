@@ -556,3 +556,5 @@ nav{order:2}
 
 .brand{white-space:nowrap;flex:none}
 @media(max-width:860px){.purpose{grid-template-columns:minmax(0,1fr)}}
+
+.psil{grid-column:1/-1;width:100%;height:auto;display:block;opacity:.9;margin-top:6px}

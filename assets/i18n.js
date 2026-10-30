@@ -341,6 +341,7 @@
 "Clases y talleres": "Classes and workshops",
 "Momentos de los cursos y talleres de F3DE Design.": "Moments from F3DE Design courses and workshops.",
 "Ver más →": "See more →",
+"Siluetas de personas con distintos medios de movilidad": "Silhouettes of people using different means of mobility",
 "Movilidad y autonomía": "Mobility and autonomy",
 "Diseño Social": "Social Design",
 "Inclusivo · Universal · Virtuoso": "Inclusive · Universal · Virtuous",
