@@ -52,7 +52,7 @@ nav a.l{display:block;white-space:nowrap;padding:10px 9px;font-size:13.5px;font-
 nav a.l:hover,nav a.l.on{color:var(--txt);background:rgba(255,255,255,.06)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;color:var(--txt);cursor:pointer}
 .burger span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;transition:transform .25s,opacity .25s}
-@media(max-width:1240px){
+@media(max-width:1330px){
   .burger{display:block}
   nav{position:fixed;top:68px;left:0;right:0;background:rgba(6,6,7,.96);backdrop-filter:blur(16px);padding:10px var(--pad) 22px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s}
   nav.open{transform:none}
@@ -381,7 +381,7 @@ footer .wrap{align-items:center}
 .lang button[aria-pressed=true]{background:var(--acc);color:#120600}
 .lang button:not([aria-pressed=true]):hover{color:var(--txt)}
 nav{order:2}
-@media(max-width:1240px){.lang{order:2;margin-left:auto;margin-right:10px}.burger{order:3}}
+@media(max-width:1330px){.lang{order:2;margin-left:auto;margin-right:10px}.burger{order:3}}
 
 
 /* ---- intro: la luz solo parpadea cuando el cursor pasa por la franja (ver script de la pagina) ---- */
@@ -504,3 +504,41 @@ nav{order:2}
   #plugins .g2 .card p{display:none}
   #plugins .g2 .card h3{font-size:14px}
 }
+
+
+/* ---- v20: video principal a la izquierda + tira de miniaturas en dos filas ---- */
+.showcase{--h:200px;margin-top:26px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start}
+.showcase .big,.showcase .big .vwrap{height:calc(var(--h)*2 + 10px);aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
+.showcase .big .vwrap{border:0;height:100%}
+.showcase .big video{width:100%;height:100%;object-fit:cover;display:block}
+.showcase .sub{display:grid;grid-auto-flow:column;grid-template-rows:repeat(2,var(--h));grid-auto-columns:max-content;gap:10px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--acc) transparent;-webkit-overflow-scrolling:touch}
+.showcase .sub::-webkit-scrollbar{height:6px}.showcase .sub::-webkit-scrollbar-thumb{background:rgba(255,74,20,.6);border-radius:6px}
+.showcase .sub .frame,.showcase .sub .vcard{height:var(--h);aspect-ratio:var(--r,1.4);width:auto;scroll-snap-align:start;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#0b0b0e;padding:0;display:block;margin:0}
+.showcase .sub .frame img{position:static;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.showcase .sub .frame:hover img{transform:scale(1.05)}
+.showcase .sub .vcard video{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.showcase{--h:140px;gap:8px}.showcase .sub{gap:8px}}
+
+/* servicios por areas */
+.svc .st{flex:1;min-width:0}
+.svc .st h3{margin:0}
+.svc .st small{display:block;margin-top:3px;font-size:12px;color:var(--mut);font-weight:500;line-height:1.35}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 14px;padding:0;list-style:none}
+.pills li{font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#d4d4da}
+.pills.big li{font-size:13.5px;padding:8px 15px;border-color:rgba(255,74,20,.4);background:rgba(255,74,20,.08);color:var(--txt)}
+.acts2{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.acts2 .btn{padding:9px 16px;font-size:13px}
+.svc-b ul.pills{margin:0 0 14px}
+
+/* secciones nuevas */
+.gh{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-style:normal;margin:44px 0 0}
+.gh+.gal{margin-top:16px}
+.vfig{break-inside:avoid;margin:0 0 14px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vfig video{display:block;width:100%;height:auto}
+.vcap{display:block;padding:9px 12px;font-size:12.5px;font-weight:600;color:#d4d4da;background:#0b0b0e}
+.purpose{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(22px,4vw,48px);align-items:center;padding:clamp(24px,4vw,44px);position:relative;overflow:hidden}
+.purpose::before{content:"";position:absolute;left:-120px;bottom:-140px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);pointer-events:none}
+.purpose>*{position:relative}
+.pside{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.pside .pills{margin:0}
+@media(max-width:860px){.purpose{grid-template-columns:1fr}}
