@@ -558,3 +558,9 @@ nav{order:2}
 @media(max-width:860px){.purpose{grid-template-columns:minmax(0,1fr)}}
 
 .psil{grid-column:1/-1;width:100%;height:auto;display:block;opacity:.9;margin-top:6px}
+
+/* servicios pegados al encabezado */
+#inicio .hello{margin-bottom:0}
+#servicios{padding-top:clamp(14px,2vw,22px)}
+#servicios .lead{margin-bottom:0}
+#servicios{padding-bottom:clamp(24px,3vw,36px)}
