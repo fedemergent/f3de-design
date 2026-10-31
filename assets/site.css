@@ -668,3 +668,9 @@ nav{order:2}
 .cl img{height:38px;width:auto;display:block;opacity:.6;transition:opacity .25s,transform .25s}
 .cl:hover img{opacity:1;transform:translateY(-2px)}
 @media(max-width:640px){.clogos{gap:18px 26px}.cl img{height:30px}}
+
+/* ---- v35: noticias con dos medios sin superposicion ---- */
+.slide .pimg.duo img,.slide .pimg.duo video{width:15vw;height:auto;max-height:100%;aspect-ratio:3/4;object-fit:cover;max-width:none}
+.slide:has(.pimg.duo) .txt{max-width:44%}
+.ilogo{display:block;background:#fff;border-radius:10px;padding:8px 12px;height:54px;width:auto;margin:12px 0 4px}
+@media(max-width:720px){.slide .pimg.duo img,.slide .pimg.duo video{width:auto;height:170px;aspect-ratio:3/4}.slide:has(.pimg.duo) .txt{max-width:none}}
