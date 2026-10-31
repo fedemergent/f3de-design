@@ -628,3 +628,25 @@ nav{order:2}
 .s3d-more .btn{display:inline-flex;align-items:center;gap:10px}
 .sk-ic{width:22px;height:22px;flex:none}
 #modelos .sub-h{margin-top:34px}
+
+
+/* ---- v33: franjas con pases automaticos (sin barras de desplazamiento) ---- */
+.rot-on{display:block !important;overflow:visible !important;padding-bottom:0 !important}
+.rot-on .rstack{display:grid}
+.rot-on .rpage{grid-area:1/1;display:grid;gap:10px;grid-template-columns:repeat(var(--cols),minmax(0,1fr));grid-template-rows:repeat(var(--rows),var(--h,auto));opacity:0;visibility:hidden;transition:opacity 0s linear 1.1s,visibility 0s linear 1.1s}
+.rot-on .rpage.on{opacity:1;visibility:visible;z-index:2;transition:opacity 1s ease-in-out}
+.rot-on .rpage>*{width:100% !important;min-width:0;max-width:none;margin:0 !important;flex:none !important}
+.showcase .sub.rot-on .frame,.showcase .sub.rot-on .vcard{height:100% !important;aspect-ratio:auto !important}
+.showcase .sub.rot-on .vcard video{height:100%}
+.showcase .sub.rot-on .vcard.feature{height:100% !important}
+.ft.rot-on{--h:220px}
+.ft.rot-on .frame{aspect-ratio:auto !important;height:100%}
+.s3d.rot-on .s3d-card{aspect-ratio:4/3}
+.courses.rot-on .course,.cgrid.rot-on figure{width:100%}
+.rdots{display:flex;justify-content:center;gap:8px;margin:12px 0 0}
+.rdots button{width:26px;height:4px;border-radius:4px;border:0;padding:0;background:rgba(255,255,255,.2);cursor:pointer;transition:background .3s,width .3s}
+.rdots button.on{background:var(--acc);width:40px}
+@media(max-width:640px){.ft.rot-on{--h:170px}}
+/* sin la barra naranja de desplazamiento en ningun caso */
+.hstrip,.ft,.showcase .sub,.s3d{scrollbar-width:none}
+.hstrip::-webkit-scrollbar,.ft::-webkit-scrollbar,.showcase .sub::-webkit-scrollbar{display:none}

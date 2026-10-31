@@ -244,3 +244,75 @@
     document.body.appendChild(box); document.body.style.overflow = 'hidden';
   }));
 })();
+
+
+/* =====================================================================
+   Franjas con pases automaticos: en lugar de barras de desplazamiento, los
+   elementos se reparten en paginas de tamano fijo que cambian solas con un
+   fundido suave (se detienen al pasar el cursor, al reproducir un video
+   o mientras la franja no esta a la vista).
+   ===================================================================== */
+(() => {
+  const DUR = 5200, mq = matchMedia('(max-width:720px)');
+  document.querySelectorAll('[data-rot]').forEach(box => {
+    const d = box.dataset, mobileOnly = box.hasAttribute('data-mobile-only');
+    const cfg = { rows: +d.rows || 1, cols: +d.cols || 3, colsM: +d.colsM || +d.cols || 3, rowsM: +d.rowsM || +d.rows || 1 };
+    const orig = [...box.childNodes];
+    let stack = null, dots = null, pages = [], cur = 0, hover = false, vis = false, timer = null, x0 = null;
+
+    const playing = () => [...box.querySelectorAll('video')].some(v => !v.paused && !v.hasAttribute('data-teaser'));
+    function go(i) {
+      if (!pages.length) return;
+      cur = (i + pages.length) % pages.length;
+      pages.forEach((p, k) => { p.classList.toggle('on', k === cur); if (k !== cur) p.querySelectorAll('video').forEach(v => { if (!v.hasAttribute('data-teaser')) v.pause(); }); });
+      if (dots) [...dots.children].forEach((b, k) => b.classList.toggle('on', k === cur));
+    }
+    function tick() { if (vis && !hover && !playing() && !document.getElementById('lb')?.classList.contains('on') && !document.querySelector('.s3d-modal')) go(cur + 1); }
+    function teardown() {
+      clearInterval(timer); timer = null;
+      if (stack) { stack.remove(); stack = null; }
+      if (dots) { dots.remove(); dots = null; }
+      orig.forEach(n => { if (n.parentNode !== box) box.appendChild(n); });
+      box.querySelectorAll('.feature').forEach(f => { f.style.gridColumn = f.style.gridRow = ''; });
+      box.classList.remove('rot-on'); pages = [];
+    }
+    function build() {
+      teardown();
+      if (mobileOnly && !mq.matches) return;
+      const mob = mq.matches, cols = mob ? cfg.colsM : cfg.cols, rows = mob ? cfg.rowsM : cfg.rows;
+      const items = orig.filter(n => n.nodeType === 1 && !n.hidden), held = orig.filter(n => n.nodeType !== 1 || n.hidden);
+      if (!items.length) return;
+      const per = cols * rows;
+      const chunks = []; let k = 0;
+      const feat = items[0].classList.contains('feature') && cols >= 2 && rows >= 2;
+      if (feat) {
+        const spanC = cols >= 3 ? 2 : cols, cap = 1 + Math.max(0, (cols - spanC) * rows);
+        items[0].style.gridColumn = 'span ' + spanC; items[0].style.gridRow = 'span ' + rows;
+        chunks.push(items.slice(0, cap)); k = cap;
+      }
+      for (; k < items.length; k += per) chunks.push(items.slice(k, k + per));
+      stack = document.createElement('div'); stack.className = 'rstack';
+      chunks.forEach(c => {
+        const p = document.createElement('div'); p.className = 'rpage';
+        const n = c.length, pc = Math.min(cols, Math.max(1, n > per / 2 || chunks.length === 1 ? cols : Math.ceil(n / rows)));
+        p.style.setProperty('--cols', cols); p.style.setProperty('--rows', rows);
+        c.forEach(el => p.appendChild(el)); stack.appendChild(p); pages.push(p);
+      });
+      box.appendChild(stack); held.forEach(n => box.appendChild(n));
+      box.classList.add('rot-on');
+      if (pages.length > 1) {
+        dots = document.createElement('div'); dots.className = 'rdots'; dots.setAttribute('role', 'tablist');
+        pages.forEach((_, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Página ' + (i + 1)); b.onclick = () => go(i); dots.appendChild(b); });
+        box.after(dots);
+        timer = setInterval(tick, DUR);
+      }
+      go(0);
+    }
+    new IntersectionObserver(es => es.forEach(e => { vis = e.isIntersecting; }), { threshold: .15 }).observe(box);
+    box.addEventListener('mouseenter', () => { hover = true; }); box.addEventListener('mouseleave', () => { hover = false; });
+    box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', e => { if (x0 != null && pages.length > 1 && Math.abs(e.changedTouches[0].clientX - x0) > 45) go(cur + (e.changedTouches[0].clientX < x0 ? 1 : -1)); x0 = null; }, { passive: true });
+    mq.addEventListener('change', build);
+    build();
+  });
+})();
