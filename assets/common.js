@@ -207,3 +207,16 @@
     else if (e.key === 'ArrowLeft') step(-1);
   });
 })();
+
+
+/* tarjetas de video: cargan y se reproducen al tocarlas; solo una a la vez */
+(() => {
+  document.addEventListener('play', e => {
+    const t = e.target; if (!(t instanceof HTMLVideoElement) || t.hasAttribute('data-teaser')) return;
+    document.querySelectorAll('video:not([data-teaser])').forEach(v => { if (v !== t) v.pause(); });
+  }, true);
+  document.querySelectorAll('.vcard.click').forEach(c => c.addEventListener('click', () => {
+    const v = c.querySelector('video'); if (!v) return;
+    c.classList.add('playing'); v.controls = true; v.muted = false; v.play().catch(() => {});
+  }));
+})();
