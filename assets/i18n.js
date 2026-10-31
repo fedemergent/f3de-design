@@ -341,6 +341,8 @@
 "Clases y talleres": "Classes and workshops",
 "Momentos de los cursos y talleres de F3DE Design.": "Moments from F3DE Design courses and workshops.",
 "Ver más →": "See more →",
+"Clientes": "Clients",
+"Hospital Universitario Martin Dockweiler": "Martin Dockweiler University Hospital",
 "Curso de Grasshopper para cabinets paramétricos": "Grasshopper course for parametric cabinets",
 "Taburetes DUO": "DUO stools",
 "Taburetes DUO · producto fabricado": "DUO stools · manufactured product",
