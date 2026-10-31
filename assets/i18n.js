@@ -341,6 +341,7 @@
 "Clases y talleres": "Classes and workshops",
 "Momentos de los cursos y talleres de F3DE Design.": "Moments from F3DE Design courses and workshops.",
 "Ver más →": "See more →",
+"Clientes / Colaboraciones": "Clients / Collaborations",
 "Silla IF-1 en colaboración con Indusfranco": "IF-1 chair in collaboration with Indusfranco",
 "Silla de chapa perforada, fabricada por Indusfranco.": "Perforated sheet chair, manufactured by Indusfranco.",
 "Silla IF-1 en su versión final": "IF-1 chair, final version",
