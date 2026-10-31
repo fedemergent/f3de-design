@@ -650,3 +650,13 @@ nav{order:2}
 /* sin la barra naranja de desplazamiento en ningun caso */
 .hstrip,.ft,.showcase .sub,.s3d{scrollbar-width:none}
 .hstrip::-webkit-scrollbar,.ft::-webkit-scrollbar,.showcase .sub::-webkit-scrollbar{display:none}
+
+
+/* ---- v34: noticias con dos imagenes, botones de cabecera ---- */
+.slide .pimg.duo{gap:10px}
+.slide .pimg.duo img{height:100%;width:auto;max-width:19vw;object-fit:contain}
+.slide .pimg.vid.duo video{height:100%;width:auto;max-width:19vw;object-fit:contain}
+@media(max-width:720px){.slide .pimg.duo img{height:170px;max-width:none;width:auto}.slide .pimg.vid.duo video{height:170px;max-width:none}}
+.hbtns{display:flex;flex-wrap:wrap;gap:10px}
+
+@media(min-width:721px){.slide:has(.pimg.duo) .txt{max-width:44%}}
