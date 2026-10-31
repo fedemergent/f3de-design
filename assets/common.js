@@ -220,3 +220,27 @@
     c.classList.add('playing'); v.controls = true; v.muted = false; v.play().catch(() => {});
   }));
 })();
+
+
+/* modelos Sketchfab: miniatura + visor en pantalla completa */
+(() => {
+  const cards = document.querySelectorAll('.s3d-card'); if (!cards.length) return;
+  cards.forEach(c => fetch('https://api.sketchfab.com/v3/models/' + c.dataset.uid).then(r => r.ok ? r.json() : null).then(j => {
+    const im = j && j.thumbnails && j.thumbnails.images; if (!im || !im.length) return;
+    const t = im.slice().sort((a, b) => a.width - b.width).find(x => x.width >= 400) || im[im.length - 1];
+    c.style.backgroundImage = 'linear-gradient(transparent 45%,rgba(0,0,0,.78)),url("' + t.url + '")';
+    c.classList.add('has-img');
+  }).catch(() => {}));
+  let box = null;
+  const close = () => { if (box) { box.remove(); box = null; document.body.style.overflow = ''; } };
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  cards.forEach(c => c.addEventListener('click', () => {
+    close();
+    box = document.createElement('div'); box.className = 's3d-modal';
+    const title = c.dataset.title;
+    box.innerHTML = '<button type="button" class="s3d-x" aria-label="Cerrar">✕</button><iframe title="' + title.replace(/"/g, '&quot;') + '" allowfullscreen allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/' + c.dataset.uid + '/embed?autostart=1&ui_theme=dark"></iframe>' +
+      '<a class="s3d-l" target="_blank" rel="noopener" href="https://sketchfab.com/3d-models/' + c.dataset.uid + '">' + title.replace(/</g, '&lt;') + ' · Sketchfab ↗</a>';
+    box.addEventListener('click', e => { if (e.target === box || e.target.classList.contains('s3d-x')) close(); });
+    document.body.appendChild(box); document.body.style.overflow = 'hidden';
+  }));
+})();
