@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=36">
+<link rel="stylesheet" href="assets/site.css?v=37">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -46,13 +46,13 @@
     <nav id="menu" aria-label="Principal">
       <ul>
         <li><a class="l" href="index.html#servicios">Servicios</a></li>
-        <li><a class="l" href="index.html#plugins">Plugins</a></li>
-        <li><a class="l" href="index.html#automotriz">Automotriz</a></li>
-        <li><a class="l" href="index.html#productos">Productos</a></li>
-        <li><a class="l" href="index.html#animaciones">Animación 3D</a></li>
+        <li><a class="l" href="index.html#modelos">Modelos 3D</a></li>
         <li><a class="l" href="index.html#prototipado">Prototipado</a></li>
+        <li><a class="l" href="index.html#productos">Productos</a></li>
+        <li><a class="l" href="index.html#automotriz">Automotriz</a></li>
         <li><a class="l" href="index.html#foodtrucks">Food trucks</a></li>
         <li><a class="l" href="index.html#proposito">Diseño social</a></li>
+        <li><a class="l" href="index.html#plugins">Plugins</a></li>
         <li><a class="l" href="index.html#cursos">Cursos</a></li>
         <li><a class="l" href="index.html#sobre-mi">Perfil</a></li>
         <li><a class="l" href="index.html#contacto">Contacto</a></li>
@@ -173,96 +173,39 @@
       <p class="lead">Lo más reciente del estudio, para explorarlo directamente en la página. Arrastra para girar, pellizca o usa la rueda para acercarte.</p>
     </div>
     <div class="mgrid" id="mgrid"></div>
+    <h3 class="sub-h reveal">Más modelos 3D interactivos</h3>
+    <div class="s3d reveal"><button type="button" class="s3d-card" data-uid="2e8339246f2941079dfa7e27353551c7" data-title="JVC NIVICO VIDEOSPHERE"><span class="s3d-b">3D</span><span class="s3d-t">JVC NIVICO VIDEOSPHERE</span></button><button type="button" class="s3d-card" data-uid="107a70cd0305435e8d38c08bcf0a7483" data-title="Mecharm"><span class="s3d-b">3D</span><span class="s3d-t">Mecharm</span></button><button type="button" class="s3d-card" data-uid="342f6c7ad57645c3a4a003a2392fb2a5" data-title="Wiper Motor"><span class="s3d-b">3D</span><span class="s3d-t">Wiper Motor</span></button><button type="button" class="s3d-card" data-uid="650bf6b496a544a2b5a3e2cae732ffbb" data-title="Hospitales Móviles UDABOL - Tesla Cybertruck"><span class="s3d-b">3D</span><span class="s3d-t">Hospitales Móviles UDABOL - Tesla Cybertruck</span></button><button type="button" class="s3d-card" data-uid="44f4c33c6d9140029c27549fc9b59d5e" data-title="MOBI Moped CK1 &amp; Swap Station"><span class="s3d-b">3D</span><span class="s3d-t">MOBI Moped CK1 &amp; Swap Station</span></button></div>
+    <p class="fine s3d-hint">Toca un modelo para verlo en pantalla completa y rotarlo.</p>
+    <p class="s3d-more reveal"><a class="btn" href="https://sketchfab.com/fedemergent" target="_blank" rel="noopener"><svg class="sk-ic" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#1caad9"/><path d="M16 6.5l8.2 4.75v9.5L16 25.5l-8.2-4.75v-9.5z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7.8 11.25L16 16l8.2-4.75M16 16v9.5" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>Ver más en Sketchfab ↗</a></p>
   </div>
 </section>
 
-<!-- ================= PLUGINS ================= -->
-<section id="plugins">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Plugins</p>
-      <h2>Herramientas desarrolladas para Rhino</h2>
-      <p class="lead">Software gratuito para la comunidad, con instalación en un clic y actualizaciones.</p>
-    </div>
-    <article class="panel plug reveal">
-      <div class="shot">
-        <span class="tag ver">v1.1.4</span>
-        <img width="1024" height="1024" src="assets/tatu_dark_rounded_1024.png" alt="Icono de TATU">
-      </div>
-      <div class="body">
-        <h3>TATU</h3>
-        <p class="by">Tutorial Recording for Rhino · por fedemergent</p>
-        <p style="color:#c4c4cb;margin:0">Graba video tutoriales de Rhino con todo incluido: cursor y clics resaltados, tarjetas con el nombre de cada comando, subtítulos, cámara web, voz con IA y un resumen vertical listo para Reels.</p>
-        <ul class="feat">
-          <li>Tarjetas de comandos ES/EN</li><li>Subtítulos y doblaje al inglés</li><li>Resumen vertical «evolución del modelo»</li><li>Recorte y edición básica</li><li>Barra dentro de Rhino 8</li>
-        </ul>
-        <div class="acts">
-          <button class="btn pri" type="button" data-download>⬇ Descargar versión preliminar</button>
-          <a class="btn" href="https://github.com/fedemergent/tatu-rhino" target="_blank" rel="noopener">Ver en GitHub</a>
-        </div>
-        <p class="fine dlcount" style="margin-top:16px" id="dlCount" hidden><b data-count="descargas">—</b> descargas hasta hoy</p>
-        <p class="fine" style="margin-top:6px">Versión preliminar · uso gratuito no comercial · licencia CC BY-NC-ND 4.0 · requiere Windows 10/11 y Rhino 8.</p>
-      </div>
-    </article>
-    <article class="panel plug reveal">
-      <div class="shot tms">
-        <span class="tag ver">WIP 0.3</span>
-        <figure class="cthumb wide" data-label="TMS Library Manager · pantalla de inicio" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-7.jpg" alt="TMS Library Manager · pantalla de inicio" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · selección de rol" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-6.jpg" alt="TMS Library Manager · selección de rol" loading="lazy"><span class="cnt">+5</span></figure>
-        <div hidden><figure class="cthumb wide" data-label="TMS Library Manager · vista Block Designer" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-1.jpg" alt="TMS Library Manager · vista Block Designer" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Drafter" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-2.jpg" alt="TMS Library Manager · vista Drafter" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista QC Manager" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-3.jpg" alt="TMS Library Manager · vista QC Manager" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Team Leader" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-4.jpg" alt="TMS Library Manager · vista Team Leader" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Admin" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-5.jpg" alt="TMS Library Manager · vista Admin" loading="lazy"></figure></div>
-      </div>
-      <div class="body">
-        <h3>TMS Library Manager</h3>
-        <p class="by">Gestor de bibliotecas · desarrollo a medida para The Millwork Studio</p>
-        <p style="color:#c4c4cb;margin:0">Un solo clic para tener el estudio al día: publica desde la PC maestra, sincroniza las bibliotecas de bloques dinámicos y tool palettes en cada equipo e importa el perfil de grupos XPG, con avisos de las últimas actualizaciones del equipo.</p>
-        <ul class="feat">
-          <li>Millwork drafting</li><li>Gestión de bibliotecas</li><li>Sincronización en la nube</li><li>Control de versiones</li>
-        </ul>
-        <p class="fine" style="margin-top:6px">En desarrollo · software interno del estudio, no disponible para descarga.</p>
-      </div>
-    </article>
-    <div class="grid g2" style="margin-top:18px">
-      <article class="panel card soon reveal"><span class="tag" style="margin-bottom:12px">Próximamente</span><h3>TATU para AutoCAD</h3><p>La misma experiencia de grabación de tutoriales dentro de AutoCAD.</p></article>
-      <article class="panel card soon reveal"><span class="tag" style="margin-bottom:12px">Próximamente</span><h3>TATU para SketchUp</h3><p>Grabación y resúmenes verticales también para tus modelos de SketchUp.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= AUTOMOTRIZ ================= -->
-<section id="automotriz">
+<!-- ================= PROTOTIPADO ================= -->
+<section id="prototipado">
   <div class="wrap">
     <div class="reveal sec-head">
       <div>
-        <p class="eyebrow">Diseño automotriz</p>
-        <h2>Moped CK1, Compact SUV y más vehículos</h2>
-        <p class="lead">Del moped eléctrico MOBI CK1, que llegó a producirse, al Compact SUV, el Cybertruck y los hospitales móviles.</p>
+        <p class="eyebrow">Prototipado</p>
+        <h2>Del modelo 3D a la pieza física</h2>
+        <p class="lead">Impresión 3D en resina y filamento, fresado CNC y prototipos funcionales para probar, ajustar y fabricar.</p>
       </div>
-      <a class="btn pri" href="automotriz.html">Ver todos los proyectos →</a>
+      <a class="btn pri" href="prototipado.html">Ver todos los trabajos →</a>
     </div>
     <div class="showcase reveal">
-      <div class="big"><video controls muted loop playsinline preload="none" poster="assets/video/suv-poster.jpg" data-teaser aria-label="Video del proyecto Compact SUV"><source src="assets/video/suv-luppo.mp4" type="video/mp4"></video></div>
+      <div class="big"><video controls muted loop playsinline preload="none" poster="assets/prototipado/cnc-jarron-video.jpg" data-teaser aria-label="Fresado CNC de un jarrón en poliestireno"><source src="assets/prototipado/cnc-jarron-video.mp4" type="video/mp4"></video></div>
       <div class="sub">
-        <div class="vcard click feature" style="--r:1.322"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-panorama.jpg" aria-label="MOBI Moped CK1 · panorámica 360"><source src="assets/automotriz/moto-ck1-panorama.mp4" type="video/mp4"></video></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-mobi.jpg" aria-label="MOBI Moped CK1 · del problema al prototipo"><source src="assets/automotriz/moto-mobi.mp4" type="video/mp4"></video></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-giro.jpg" aria-label="MOBI Moped CK1 · giro de presentación"><source src="assets/automotriz/moto-ck1-giro.mp4" type="video/mp4"></video></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-aluminio.jpg" aria-label="MOBI Moped CK1 · versión aluminio"><source src="assets/automotriz/moto-ck1-aluminio.mp4" type="video/mp4"></video></div>
-        <div class="vcard click" style="--r:1.322"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-negra.jpg" aria-label="MOBI Moped CK1 · versión negra"><source src="assets/automotriz/moto-ck1-negra.mp4" type="video/mp4"></video></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-explotada.jpg" aria-label="MOBI Moped CK1 · vista explosionada"><source src="assets/automotriz/moto-ck1-explotada.mp4" type="video/mp4"></video></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/swapping.jpg" aria-label="MOBI · sistema de intercambio (swapping) · animación"><source src="assets/automotriz/swapping.mp4" type="video/mp4"></video></div>
-        <figure class="frame" style="--r:1.415" data-label="03 · Modelo NURBS 3D" data-group="veh"><img width="1600" height="1131" src="assets/automotriz/03-nurbs.jpg" alt="03 · Modelo NURBS 3D" loading="lazy"></figure>
-        <figure class="frame" style="--r:1.5" data-label="Modelado NURBS en Rhino · superficies maestras" data-group="veh"><img width="1300" height="533" src="assets/automotriz/rhino-wip-1.jpg" alt="Modelado NURBS en Rhino · superficies maestras" loading="lazy"></figure>
-        <figure class="frame" style="--r:1.415" data-label="04 · Renders KeyShot" data-group="veh"><img width="1600" height="1131" src="assets/automotriz/04-renders.jpg" alt="04 · Renders KeyShot" loading="lazy"></figure>
-        <figure class="frame" style="--r:1.5" data-label="Render KeyShot · vista lateral" data-group="veh"><img width="1300" height="535" src="assets/automotriz/render-lateral.jpg" alt="Render KeyShot · vista lateral" loading="lazy"></figure>
-        <figure class="frame" style="--r:1.5" data-label="Cybertruck · modelo 3D" data-group="veh"><img width="1500" height="765" src="assets/automotriz/cybertruck-2.jpg" alt="Cybertruck · modelo 3D" loading="lazy"></figure>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/cyber-dia.jpg" aria-label="Cybertruck · animación de día"><source src="assets/automotriz/cyber-dia.mp4" type="video/mp4"></video></div>
-        <figure class="frame" style="--r:1.5" data-label="Hospital móvil Udabol Teletón · render" data-group="veh"><img width="1500" height="769" src="assets/automotriz/hospital-1.jpg" alt="Hospital móvil Udabol Teletón · render" loading="lazy"></figure>
-        <figure class="frame" style="--r:1.5" data-label="Cybertruck · modelo 3D" data-group="veh"><img width="1500" height="767" src="assets/automotriz/cybertruck-5.jpg" alt="Cybertruck · modelo 3D" loading="lazy"></figure>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/hospital-animacion.jpg" aria-label="Hospital móvil Udabol Teletón · animación"><source src="assets/automotriz/hospital-animacion.mp4" type="video/mp4"></video></div>
-        <figure class="frame" style="--r:1.5" data-label="Hospital móvil Udabol Teletón · render" data-group="veh"><img width="1500" height="767" src="assets/automotriz/hospital-4.jpg" alt="Hospital móvil Udabol Teletón · render" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.333" data-label="Engranajes impresos en distintos colores y acabados" data-group="proto"><img width="1080" height="810" src="assets/prototipado/engranajes-colores.jpg" alt="Engranajes impresos en distintos colores y acabados" loading="lazy"></figure>
+        <div class="vcard" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/prototipado/impresion-resina-2.jpg" data-teaser aria-label="Impresión 3D en resina · piezas en la plataforma"><source src="assets/prototipado/impresion-resina-2.mp4" type="video/mp4"></video></div>
+        <figure class="frame" style="--r:0.75" data-label="Prototipo impreso en 3D (rojo) junto a la pieza original (negra)" data-group="proto"><img width="1050" height="1400" src="assets/prototipado/palanca-1.jpg" alt="Prototipo impreso en 3D (rojo) junto a la pieza original (negra)" loading="lazy"></figure>
+        <figure class="frame" style="--r:0.75" data-label="Fresado CNC de un jarrón en poliestireno" data-group="proto"><img width="1050" height="1400" src="assets/prototipado/cnc-jarron.jpg" alt="Fresado CNC de un jarrón en poliestireno" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.0" data-label="Impresora de resina Phrozen Sonic Mini 4K" data-group="proto"><img width="1400" height="1400" src="assets/prototipado/impresora-resina.jpg" alt="Impresora de resina Phrozen Sonic Mini 4K" loading="lazy"></figure>
+        <figure class="frame" style="--r:0.75" data-label="Pieza en metal junto a su prototipo impreso en 3D" data-group="proto"><img width="1050" height="1400" src="assets/prototipado/pieza-metal-1.jpg" alt="Pieza en metal junto a su prototipo impreso en 3D" loading="lazy"></figure>
+        <div class="vcard" style="--r:0.562"><video muted loop playsinline preload="none" poster="assets/prototipado/cnc-mdx540.jpg" data-teaser aria-label="Fresado CNC con Roland MDX-540"><source src="assets/prototipado/cnc-mdx540.mp4" type="video/mp4"></video></div>
+        <figure class="frame" style="--r:1.333" data-label="Superficie impresa en 3D sobre sus planos con cotas" data-group="proto"><img width="1400" height="1050" src="assets/prototipado/superficie-impresa.jpg" alt="Superficie impresa en 3D sobre sus planos con cotas" loading="lazy"></figure>
+        <figure class="frame" style="--r:0.562" data-label="Anillo impreso en resina, aún con los soportes" data-group="proto"><img width="750" height="1334" src="assets/prototipado/anillo-resina.jpg" alt="Anillo impreso en resina, aún con los soportes" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.0" data-label="Estación de impresión 3D: resina y filamento" data-group="proto"><img width="1400" height="1400" src="assets/prototipado/taller-impresoras.jpg" alt="Estación de impresión 3D: resina y filamento" loading="lazy"></figure>
       </div>
     </div>
-    <h3 class="sub-h reveal">Modelos 3D interactivos</h3>
-    <div class="s3d reveal"><button type="button" class="s3d-card" data-uid="2e8339246f2941079dfa7e27353551c7" data-title="JVC NIVICO VIDEOSPHERE"><span class="s3d-b">3D</span><span class="s3d-t">JVC NIVICO VIDEOSPHERE</span></button><button type="button" class="s3d-card" data-uid="107a70cd0305435e8d38c08bcf0a7483" data-title="Mecharm"><span class="s3d-b">3D</span><span class="s3d-t">Mecharm</span></button><button type="button" class="s3d-card" data-uid="342f6c7ad57645c3a4a003a2392fb2a5" data-title="Wiper Motor"><span class="s3d-b">3D</span><span class="s3d-t">Wiper Motor</span></button><button type="button" class="s3d-card" data-uid="650bf6b496a544a2b5a3e2cae732ffbb" data-title="Hospitales Móviles UDABOL - Tesla Cybertruck"><span class="s3d-b">3D</span><span class="s3d-t">Hospitales Móviles UDABOL - Tesla Cybertruck</span></button><button type="button" class="s3d-card" data-uid="44f4c33c6d9140029c27549fc9b59d5e" data-title="MOBI Moped CK1 &amp; Swap Station"><span class="s3d-b">3D</span><span class="s3d-t">MOBI Moped CK1 &amp; Swap Station</span></button></div>
-    <p class="fine s3d-hint">Toca un modelo para verlo en pantalla completa y rotarlo.</p>
   </div>
 </section>
 
@@ -302,58 +245,41 @@
   </div>
 </section>
 
-<!-- ================= ANIMACIONES ================= -->
-<section id="animaciones">
+<!-- ================= AUTOMOTRIZ ================= -->
+<section id="automotriz">
   <div class="wrap">
     <div class="reveal sec-head">
       <div>
-        <p class="eyebrow">Animación 3D</p>
-        <h2>Recorridos, procesos y renders en movimiento</h2>
-        <p class="lead">Animaciones arquitectónicas, recorridos virtuales y procesos de modelado 3D.</p>
+        <p class="eyebrow">Diseño automotriz</p>
+        <h2>Moped CK1, Compact SUV y más vehículos</h2>
+        <p class="lead">Del moped eléctrico MOBI CK1, que llegó a producirse, al Compact SUV, el Cybertruck y los hospitales móviles.</p>
       </div>
-      <a class="btn pri" href="animaciones.html">Ver todas las animaciones →</a>
-    </div>
-    <div class="showcase wide reveal">
-      <div class="big"><video controls muted loop playsinline preload="none" poster="assets/animaciones/reel-f3de.jpg" data-teaser aria-label="Reel F3DE Design"><source src="assets/animaciones/reel-f3de.mp4" type="video/mp4"></video></div>
-      <div class="sub">
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/animaciones/mansion.jpg" aria-label="Recorrido virtual · mansión"><source src="assets/animaciones/mansion.mp4" type="video/mp4"></video><span class="gcap">Recorrido virtual · mansión</span></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/animaciones/bulevar-plaza.jpg" aria-label="Proyecto Bulevar Plaza · recorrido 3D"><source src="assets/animaciones/bulevar-plaza.mp4" type="video/mp4"></video><span class="gcap">Proyecto Bulevar Plaza · recorrido 3D</span></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/animaciones/stand-mobi.jpg" aria-label="Stand MOBI · animación"><source src="assets/animaciones/stand-mobi.mp4" type="video/mp4"></video><span class="gcap">Stand MOBI · animación</span></div>
-        <div class="vcard click" style="--r:0.562"><video muted loop playsinline preload="none" poster="assets/animaciones/modelado-personaje.jpg" aria-label="Modelado 3D de un personaje · proceso"><source src="assets/animaciones/modelado-personaje.mp4" type="video/mp4"></video><span class="gcap">Modelado 3D de un personaje · proceso</span></div>
-        <div class="vcard click" style="--r:0.799"><video muted loop playsinline preload="none" poster="assets/animaciones/fotos-reel.jpg" aria-label="Reel de renders 2025"><source src="assets/animaciones/fotos-reel.mp4" type="video/mp4"></video><span class="gcap">Reel de renders 2025</span></div>
-        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/animaciones/lego-concepto.jpg" aria-label="Animación de concepto"><source src="assets/animaciones/lego-concepto.mp4" type="video/mp4"></video><span class="gcap">Animación de concepto</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROTOTIPADO ================= -->
-<section id="prototipado">
-  <div class="wrap">
-    <div class="reveal sec-head">
-      <div>
-        <p class="eyebrow">Prototipado</p>
-        <h2>Del modelo 3D a la pieza física</h2>
-        <p class="lead">Impresión 3D en resina y filamento, fresado CNC y prototipos funcionales para probar, ajustar y fabricar.</p>
-      </div>
-      <a class="btn pri" href="prototipado.html">Ver todos los trabajos →</a>
+      <a class="btn pri" href="automotriz.html">Ver todos los proyectos →</a>
     </div>
     <div class="showcase reveal">
-      <div class="big"><video controls muted loop playsinline preload="none" poster="assets/prototipado/cnc-jarron-video.jpg" data-teaser aria-label="Fresado CNC de un jarrón en poliestireno"><source src="assets/prototipado/cnc-jarron-video.mp4" type="video/mp4"></video></div>
+      <div class="big"><video controls muted loop playsinline preload="none" poster="assets/video/suv-poster.jpg" data-teaser aria-label="Video del proyecto Compact SUV"><source src="assets/video/suv-luppo.mp4" type="video/mp4"></video></div>
       <div class="sub">
-        <figure class="frame" style="--r:1.333" data-label="Engranajes impresos en distintos colores y acabados" data-group="proto"><img width="1080" height="810" src="assets/prototipado/engranajes-colores.jpg" alt="Engranajes impresos en distintos colores y acabados" loading="lazy"></figure>
-        <div class="vcard" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/prototipado/impresion-resina-2.jpg" data-teaser aria-label="Impresión 3D en resina · piezas en la plataforma"><source src="assets/prototipado/impresion-resina-2.mp4" type="video/mp4"></video></div>
-        <figure class="frame" style="--r:0.75" data-label="Prototipo impreso en 3D (rojo) junto a la pieza original (negra)" data-group="proto"><img width="1050" height="1400" src="assets/prototipado/palanca-1.jpg" alt="Prototipo impreso en 3D (rojo) junto a la pieza original (negra)" loading="lazy"></figure>
-        <figure class="frame" style="--r:0.75" data-label="Fresado CNC de un jarrón en poliestireno" data-group="proto"><img width="1050" height="1400" src="assets/prototipado/cnc-jarron.jpg" alt="Fresado CNC de un jarrón en poliestireno" loading="lazy"></figure>
-        <figure class="frame" style="--r:1.0" data-label="Impresora de resina Phrozen Sonic Mini 4K" data-group="proto"><img width="1400" height="1400" src="assets/prototipado/impresora-resina.jpg" alt="Impresora de resina Phrozen Sonic Mini 4K" loading="lazy"></figure>
-        <figure class="frame" style="--r:0.75" data-label="Pieza en metal junto a su prototipo impreso en 3D" data-group="proto"><img width="1050" height="1400" src="assets/prototipado/pieza-metal-1.jpg" alt="Pieza en metal junto a su prototipo impreso en 3D" loading="lazy"></figure>
-        <div class="vcard" style="--r:0.562"><video muted loop playsinline preload="none" poster="assets/prototipado/cnc-mdx540.jpg" data-teaser aria-label="Fresado CNC con Roland MDX-540"><source src="assets/prototipado/cnc-mdx540.mp4" type="video/mp4"></video></div>
-        <figure class="frame" style="--r:1.333" data-label="Superficie impresa en 3D sobre sus planos con cotas" data-group="proto"><img width="1400" height="1050" src="assets/prototipado/superficie-impresa.jpg" alt="Superficie impresa en 3D sobre sus planos con cotas" loading="lazy"></figure>
-        <figure class="frame" style="--r:0.562" data-label="Anillo impreso en resina, aún con los soportes" data-group="proto"><img width="750" height="1334" src="assets/prototipado/anillo-resina.jpg" alt="Anillo impreso en resina, aún con los soportes" loading="lazy"></figure>
-        <figure class="frame" style="--r:1.0" data-label="Estación de impresión 3D: resina y filamento" data-group="proto"><img width="1400" height="1400" src="assets/prototipado/taller-impresoras.jpg" alt="Estación de impresión 3D: resina y filamento" loading="lazy"></figure>
+        <div class="vcard click feature" style="--r:1.322"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-panorama.jpg" aria-label="MOBI Moped CK1 · panorámica 360"><source src="assets/automotriz/moto-ck1-panorama.mp4" type="video/mp4"></video></div>
+        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-mobi.jpg" aria-label="MOBI Moped CK1 · del problema al prototipo"><source src="assets/automotriz/moto-mobi.mp4" type="video/mp4"></video></div>
+        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-giro.jpg" aria-label="MOBI Moped CK1 · giro de presentación"><source src="assets/automotriz/moto-ck1-giro.mp4" type="video/mp4"></video></div>
+        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-aluminio.jpg" aria-label="MOBI Moped CK1 · versión aluminio"><source src="assets/automotriz/moto-ck1-aluminio.mp4" type="video/mp4"></video></div>
+        <div class="vcard click" style="--r:1.322"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-negra.jpg" aria-label="MOBI Moped CK1 · versión negra"><source src="assets/automotriz/moto-ck1-negra.mp4" type="video/mp4"></video></div>
+        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/moto-ck1-explotada.jpg" aria-label="MOBI Moped CK1 · vista explosionada"><source src="assets/automotriz/moto-ck1-explotada.mp4" type="video/mp4"></video></div>
+        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/swapping.jpg" aria-label="MOBI · sistema de intercambio (swapping) · animación"><source src="assets/automotriz/swapping.mp4" type="video/mp4"></video></div>
+        <div class="vcard click" style="--r:1.500"><video muted loop playsinline preload="none" poster="assets/automotriz/stand-mobi.jpg" aria-label="Stand MOBI · animación"><source src="assets/automotriz/stand-mobi.mp4" type="video/mp4"></video></div>
+        <figure class="frame" style="--r:1.415" data-label="03 · Modelo NURBS 3D" data-group="veh"><img width="1600" height="1131" src="assets/automotriz/03-nurbs.jpg" alt="03 · Modelo NURBS 3D" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.5" data-label="Modelado NURBS en Rhino · superficies maestras" data-group="veh"><img width="1300" height="533" src="assets/automotriz/rhino-wip-1.jpg" alt="Modelado NURBS en Rhino · superficies maestras" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.415" data-label="04 · Renders KeyShot" data-group="veh"><img width="1600" height="1131" src="assets/automotriz/04-renders.jpg" alt="04 · Renders KeyShot" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.5" data-label="Render KeyShot · vista lateral" data-group="veh"><img width="1300" height="535" src="assets/automotriz/render-lateral.jpg" alt="Render KeyShot · vista lateral" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.5" data-label="Cybertruck · modelo 3D" data-group="veh"><img width="1500" height="765" src="assets/automotriz/cybertruck-2.jpg" alt="Cybertruck · modelo 3D" loading="lazy"></figure>
+        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/cyber-dia.jpg" aria-label="Cybertruck · animación de día"><source src="assets/automotriz/cyber-dia.mp4" type="video/mp4"></video></div>
+        <figure class="frame" style="--r:1.5" data-label="Hospital móvil Udabol Teletón · render" data-group="veh"><img width="1500" height="769" src="assets/automotriz/hospital-1.jpg" alt="Hospital móvil Udabol Teletón · render" loading="lazy"></figure>
+        <figure class="frame" style="--r:1.5" data-label="Cybertruck · modelo 3D" data-group="veh"><img width="1500" height="767" src="assets/automotriz/cybertruck-5.jpg" alt="Cybertruck · modelo 3D" loading="lazy"></figure>
+        <div class="vcard click" style="--r:1.5"><video muted loop playsinline preload="none" poster="assets/automotriz/hospital-animacion.jpg" aria-label="Hospital móvil Udabol Teletón · animación"><source src="assets/automotriz/hospital-animacion.mp4" type="video/mp4"></video></div>
+        <figure class="frame" style="--r:1.5" data-label="Hospital móvil Udabol Teletón · render" data-group="veh"><img width="1500" height="767" src="assets/automotriz/hospital-4.jpg" alt="Hospital móvil Udabol Teletón · render" loading="lazy"></figure>
       </div>
     </div>
-  </div>
+      </div>
 </section>
 
 <!-- ================= FOOD TRUCKS ================= -->
@@ -432,6 +358,42 @@
       </div>
       <img class="psil" width="1600" height="328" src="assets/social/siluetas.webp" alt="Siluetas de personas con distintos medios de movilidad" loading="lazy">
     </div>
+  </div>
+</section>
+
+<!-- ================= PLUGINS ================= -->
+<section id="plugins" class="plugs-s">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Plugins</p>
+      <h2>Herramientas desarrolladas para Rhino</h2>
+    </div>
+    <div class="pstrip reveal">
+      <article class="panel pcard">
+        <img class="pth ti" width="1024" height="1024" src="assets/tatu_dark_rounded_1024.png" alt="Icono de TATU">
+        <div class="pb">
+          <h3>TATU <span class="tag ver">v1.1.4</span></h3>
+          <p class="by">Tutorial Recording for Rhino · por fedemergent</p>
+          <p>Graba video tutoriales de Rhino con comandos en pantalla, subtítulos y voz con IA.</p>
+          <div class="acts2">
+            <button class="btn pri" type="button" data-download>⬇ Descargar versión preliminar</button>
+            <a class="btn" href="https://github.com/fedemergent/tatu-rhino" target="_blank" rel="noopener">Ver en GitHub</a>
+          </div>
+          <p class="fine dlcount" style="margin-top:8px" id="dlCount" hidden><b data-count="descargas">—</b> descargas hasta hoy</p>
+          <p class="fine" style="margin-top:6px">Gratis · uso no comercial · CC BY-NC-ND 4.0 · Windows 10/11 y Rhino 8.</p>
+        </div>
+      </article>
+      <article class="panel pcard">
+        <div class="pth tm"><figure class="cthumb wide" data-label="TMS Library Manager · pantalla de inicio" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-7.jpg" alt="TMS Library Manager · pantalla de inicio" loading="lazy"><span class="cnt">7 pantallas</span></figure><div hidden><figure class="cthumb wide" data-label="TMS Library Manager · selección de rol" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-6.jpg" alt="TMS Library Manager · selección de rol" loading="lazy"><span class="cnt">+5</span></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Block Designer" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-1.jpg" alt="TMS Library Manager · vista Block Designer" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Drafter" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-2.jpg" alt="TMS Library Manager · vista Drafter" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista QC Manager" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-3.jpg" alt="TMS Library Manager · vista QC Manager" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Team Leader" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-4.jpg" alt="TMS Library Manager · vista Team Leader" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Admin" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-5.jpg" alt="TMS Library Manager · vista Admin" loading="lazy"></figure></div></div>
+        <div class="pb">
+          <h3>TMS Library Manager <span class="tag ver">WIP 0.3</span></h3>
+          <p class="by">Gestor de bibliotecas · desarrollo a medida para The Millwork Studio</p>
+          <p>Publica y sincroniza bibliotecas de bloques y tool palettes en todo el estudio.</p>
+          <p class="fine" style="margin-top:12px">En desarrollo · software interno, no disponible para descarga.</p>
+        </div>
+      </article>
+    </div>
+    <p class="fine pnext reveal">Próximamente: TATU para AutoCAD · TATU para SketchUp</p>
   </div>
 </section>
 
@@ -618,10 +580,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=36"></script>
-<script src="assets/leads.js?v=36"></script>
-<script src="assets/counters.js?v=36"></script>
-<script src="assets/common.js?v=36"></script>
+<script src="assets/config.js?v=37"></script>
+<script src="assets/leads.js?v=37"></script>
+<script src="assets/counters.js?v=37"></script>
+<script src="assets/common.js?v=37"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -828,6 +790,6 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=36"></script>
+<script src="assets/i18n.js?v=37"></script>
 </body>
 </html>
