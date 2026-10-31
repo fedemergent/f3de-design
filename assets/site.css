@@ -52,7 +52,7 @@ nav a.l{display:block;white-space:nowrap;padding:10px 6px;font-size:13px;font-we
 nav a.l:hover,nav a.l.on{color:var(--txt);background:rgba(255,255,255,.06)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;color:var(--txt);cursor:pointer}
 .burger span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;transition:transform .25s,opacity .25s}
-@media(max-width:1330px){
+@media(max-width:1100px){
   .burger{display:block}
   nav{position:fixed;top:68px;left:0;right:0;background:rgba(6,6,7,.96);backdrop-filter:blur(16px);padding:10px var(--pad) 22px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s}
   nav.open{transform:none}
@@ -381,7 +381,7 @@ footer .wrap{align-items:center}
 .lang button[aria-pressed=true]{background:var(--acc);color:#120600}
 .lang button:not([aria-pressed=true]):hover{color:var(--txt)}
 nav{order:2}
-@media(max-width:1330px){.lang{order:2;margin-left:auto;margin-right:10px}.burger{order:3}}
+@media(max-width:1100px){.lang{order:2;margin-left:auto;margin-right:10px}.burger{order:3}}
 
 
 /* ---- intro: la luz solo parpadea cuando el cursor pasa por la franja (ver script de la pagina) ---- */
@@ -674,3 +674,24 @@ nav{order:2}
 .slide:has(.pimg.duo) .txt{max-width:44%}
 .ilogo{display:block;background:#fff;border-radius:10px;padding:8px 12px;height:54px;width:auto;margin:12px 0 4px}
 @media(max-width:720px){.slide .pimg.duo img,.slide .pimg.duo video{width:auto;height:170px;aspect-ratio:3/4}.slide:has(.pimg.duo) .txt{max-width:none}}
+
+
+/* ---- v36: menu con grupos desplegables ---- */
+nav ul{gap:6px}
+nav a.l,nav a.lp{display:block;white-space:nowrap;padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-radius:999px;transition:color .2s,background .2s}
+nav a.lp:hover,nav li.has-sub.on>a.lp,nav li.has-sub:focus-within>a.lp{color:var(--txt);background:rgba(255,255,255,.06)}
+nav a.lp::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 3px 8px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(45deg)}
+@media(min-width:1101px){
+  nav li.has-sub{position:relative}
+  nav .sub-menu{position:absolute;top:100%;left:0;min-width:230px;margin:0;padding:8px;gap:2px;flex-direction:column;background:rgba(10,10,12,.97);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 40px -10px rgba(0,0,0,.7);opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility 0s linear .2s}
+  nav li.has-sub:hover>.sub-menu,nav li.has-sub:focus-within>.sub-menu{opacity:1;visibility:visible;transform:none;transition:opacity .2s,transform .2s}
+  nav li.has-sub::before{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+  nav .sub-menu a.l{padding:10px 14px;border-radius:10px;font-size:13.5px}
+}
+@media(max-width:1100px){
+  nav a.lp{padding:14px 10px 6px;font-size:16px;color:var(--txt);border-radius:0}
+  nav a.lp::after{display:none}
+  nav .sub-menu{padding:0 0 6px 16px;margin:0}
+  nav .sub-menu a.l{padding:10px 10px;font-size:14.5px;border-bottom:0}
+}
+@media(max-width:1100px){nav{max-height:calc(100vh - 68px);max-height:calc(100dvh - 68px);overflow-y:auto}nav a.l{padding:11px 10px}nav a.lp{padding:12px 10px 4px}}

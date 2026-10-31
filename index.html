@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=49">
+<link rel="stylesheet" href="assets/site.css?v=51">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -45,17 +45,27 @@
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <nav id="menu" aria-label="Principal">
       <ul>
-        <li><a class="l" href="index.html#servicios">Servicios</a></li>
-        <li><a class="l" href="index.html#modelos">Modelos 3D</a></li>
-        <li><a class="l" href="index.html#prototipado">Prototipado</a></li>
-        <li><a class="l" href="index.html#productos">Productos</a></li>
-        <li><a class="l" href="index.html#automotriz">Automotriz</a></li>
-        <li><a class="l" href="index.html#foodtrucks">Food trucks</a></li>
-        <li><a class="l" href="index.html#proposito">Diseño social</a></li>
-        <li><a class="l" href="index.html#plugins">Plugins</a></li>
-        <li><a class="l" href="index.html#cursos">Cursos</a></li>
-        <li><a class="l" href="index.html#sobre-mi">Perfil</a></li>
-        <li><a class="l" href="index.html#contacto">Contacto</a></li>
+        <li><a class="l" href="#servicios">Servicios</a></li>
+        <li class="has-sub"><a class="lp" href="#modelos">Diseño industrial</a>
+          <ul class="sub-menu">
+            <li><a class="l" href="#modelos">Modelos 3D</a></li>
+            <li><a class="l" href="#prototipado">Prototipos</a></li>
+            <li><a class="l" href="#productos">Productos manufacturados</a></li>
+          </ul></li>
+        <li class="has-sub"><a class="lp" href="#automotriz">Automotriz</a>
+          <ul class="sub-menu">
+            <li><a class="l" href="#automotriz">Vehículos y movilidad</a></li>
+            <li><a class="l" href="#foodtrucks">Food trucks</a></li>
+          </ul></li>
+        <li><a class="l" href="#proposito">Diseño social</a></li>
+        <li class="has-sub"><a class="lp" href="#cursos">Rhino</a>
+          <ul class="sub-menu">
+            <li><a class="l" href="#plugins">Plugins</a></li>
+            <li><a class="l" href="#tutoriales">Tutoriales</a></li>
+            <li><a class="l" href="#cursos">Cursos y capacitación</a></li>
+          </ul></li>
+        <li><a class="l" href="#sobre-mi">Perfil</a></li>
+        <li><a class="l" href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -371,7 +381,6 @@
         </div>
       </article>
     </div>
-    <p class="fine pnext reveal">Próximamente: TATU para AutoCAD · TATU para SketchUp</p>
   </div>
 </section>
 
@@ -565,10 +574,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=49"></script>
-<script src="assets/leads.js?v=49"></script>
-<script src="assets/counters.js?v=49"></script>
-<script src="assets/common.js?v=49"></script>
+<script src="assets/config.js?v=51"></script>
+<script src="assets/leads.js?v=51"></script>
+<script src="assets/counters.js?v=51"></script>
+<script src="assets/common.js?v=51"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -775,6 +784,6 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=49"></script>
+<script src="assets/i18n.js?v=51"></script>
 </body>
 </html>

@@ -167,6 +167,7 @@
     nav.classList.toggle('solid', scrollY > 30);
     let cur = 0; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
     links.forEach((a, i) => a.classList.toggle('on', i === cur && scrollY > 200));
+    menu.querySelectorAll('li.has-sub').forEach(li => li.classList.toggle('on', !!li.querySelector('a.l.on')));
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
   burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); });
