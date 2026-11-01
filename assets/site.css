@@ -1,6 +1,6 @@
 :root{
   --bg:#060607; --panel:rgba(12,12,15,.74); --panel2:rgba(20,20,25,.8); --line:rgba(255,255,255,.09);
-  --txt:#f1f0ee; --mut:#a2a2ab; --acc:#ff4a14; --acc2:#ff8a5c; --glow:rgba(255,74,20,.35);
+  --txt:#f1f0ee; --mut:#a2a2ab; --acc:#ff4a14; --acc2:#ffbb77; --glow:rgba(255,74,20,.35);
   --disp:"Michroma","Eurostile","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,sans-serif;
   --r:18px; --pad:clamp(16px,4vw,40px); --max:1180px;
 }
