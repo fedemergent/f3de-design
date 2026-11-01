@@ -815,6 +815,12 @@
 "boceto marcador": "marker sketch",
 "boceto de cuaderno": "notebook sketch",
 "lámina de presentación": "presentation board"
+"TATU 1.2": "TATU 1.2",
+"Nueva versión": "New version",
+"TATU ahora incluye un editor de videos": "TATU now includes a video editor",
+"Carga un video ya exportado, separa imagen y audio (español e inglés), recorta, mueve tramos, acelera ×2, ×5 o ×10 y expórtalo otra vez.": "Load an already-exported video, split picture and audio (Spanish and English), trim, move clips, speed up ×2, ×5 or ×10 and export it again.",
+"Graba video tutoriales de Rhino con comandos en pantalla, subtítulos y voz con IA, y ahora incluye un editor de videos.": "Record Rhino video tutorials with on-screen commands, captions and AI voice, and now with a built-in video editor.",
+"TATU para Rhino · v1.2.0": "TATU for Rhino · v1.2.0",
 };
   var lang = 'es';
   try { var q = /[?&]lang=(es|en)/.exec(location.search); lang = q ? q[1] : (localStorage.getItem('f3de-lang') || ((navigator.language || 'es').slice(0, 2) === 'es' ? 'es' : 'en')); } catch (e) {}
