@@ -1,3 +1,7 @@
+/*BG-CONFIG*/
+const BG = { opacity: 1, speed: 1, drift: 0.38, pulse: 0.45, wander: 0.13, cursor: 1.2, response: 0.65, fade: 2.4, interval_min: 6, interval_max: 10, round: 1, wobble: 1.6, size: 0.55, cell: 88 };
+/*END-BG-CONFIG*/
+
 /* =====================================================================
    Campo de celdas Voronoi (fondo), con comportamiento de moho mucilaginoso:
    las celdas derivan muy despacio y se hinchan y se encienden de forma
@@ -9,8 +13,8 @@
   // Si el sistema pide menos movimiento, el fondo no se apaga: se mueve a menor velocidad. Quien quiera pararlo del todo usa el botón del pie.
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let off = false; try { off = localStorage.getItem('f3de-motion') === 'off'; } catch (e) {}
-  const speed = calm ? .6 : 1;
-  const ACC = [255, 74, 20];
+  const speed = (calm ? .6 : 1) * BG.speed;
+  const ACC = [255,74,20];
   const F = { dim: .62, target: .62, t: 2.2, grow: 0, ripples: [], beacons: [], next: 1.6, px: 0, py: 0, tx: 0, ty: 0, act: 0, seen: -9 };
   let W, H, DPR, S = [], amp, G, gcols, grows, grid = [];
   const A = [], B = [];
@@ -20,11 +24,11 @@
   function init() {
     W = innerWidth; H = innerHeight; DPR = Math.min(devicePixelRatio || 1, 1.5);
     cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    const cols = Math.max(8, Math.min(22, Math.round(W / 88))), cw = W / cols, rows = Math.max(5, Math.round(H / cw)), ch = H / rows, r = rng(7);
+    const cols = Math.max(8, Math.min(22, Math.round(W / BG.cell))), cw = W / cols, rows = Math.max(5, Math.round(H / cw)), ch = H / rows, r = rng(7);
     S = [];
     for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++)
       S.push({ bx: (i + .5 + (r() - .5) * .9) * cw, by: (j + .5 + (r() - .5) * .9) * ch, a: .03 + r() * .06, b: .03 + r() * .06, p: r() * 6.28, q: r() * 6.28, z: r() * 6.28, sz: .7 + r() * .3, inf: 0, x: 0, y: 0, poly: null, cx: 0, cy: 0 });
-    amp = Math.min(cw, ch) * .38; G = Math.max(cw, ch); gcols = Math.ceil(W / G) + 1; grows = Math.ceil(H / G) + 1;
+    amp = Math.min(cw, ch) * BG.drift; G = Math.max(cw, ch); gcols = Math.ceil(W / G) + 1; grows = Math.ceil(H / G) + 1;
     grid = Array.from({ length: gcols * grows }, () => []);
     F.px = F.tx = W / 2; F.py = F.ty = H / 2; F.cells = S;
   }
@@ -79,39 +83,46 @@
 
   function draw(t, dt) {
     ctx.clearRect(0, 0, W, H);
-    const R = .15 * W + 60, Rp = Math.max(.15 * W, 190), dim = F.dim, grow = ease(F.grow);
+    const R = .15 * W + 60, Rp = Math.max(.15 * W, 190), dim = F.dim * BG.opacity, grow = ease(F.grow);
     F.beacons = F.beacons.filter(b => t - b.t0 < b.life);
     F.ripples = F.ripples.filter(r => t - r.t0 < r.life);
     ctx.lineJoin = 'round';
     // dos atractores errantes muy lentos (siempre presentes, su fuerza respira)
-    const wand = [[W * (.5 + .36 * Math.sin(.07 * t)), H * (.5 + .32 * Math.sin(.11 * t + 1)), .13 + .08 * Math.sin(.22 * t)],
-                  [W * (.5 + .3 * Math.sin(.05 * t + 2.3)), H * (.5 + .34 * Math.cos(.09 * t)), .13 + .08 * Math.sin(.19 * t + 2)]];
-    const kUp = 1 - Math.exp(-dt / .65), kDn = 1 - Math.exp(-dt / 2.4);   // llegar despacio, irse más despacio aún
+    const wand = [[W * (.5 + .36 * Math.sin(.07 * t)), H * (.5 + .32 * Math.sin(.11 * t + 1)), BG.wander * (1 + .615 * Math.sin(.22 * t))],
+                  [W * (.5 + .3 * Math.sin(.05 * t + 2.3)), H * (.5 + .34 * Math.cos(.09 * t)), BG.wander * (1 + .615 * Math.sin(.19 * t + 2))]];
+    const kUp = 1 - Math.exp(-dt / BG.response), kDn = 1 - Math.exp(-dt / BG.fade);   // llegar despacio, irse más despacio aún
     for (const s of S) {
       if (!s.poly) continue;
       let target = 0;
       for (const [ax, ay, w] of wand) target += w * Math.exp(-((Math.hypot(s.cx - ax, s.cy - ay) / R) ** 2));
       for (const b of F.beacons) {
         const age = t - b.t0, env = bell(age / b.life), d = Math.hypot(s.cx - b.x, s.cy - b.y);
-        target += .45 * env * Math.exp(-((d / (R * .8)) ** 2));
+        target += BG.pulse * env * Math.exp(-((d / (R * .8)) ** 2));
         const ring = (age * .06 * W + 20), wd = .1 * W + 40;                  // ola ancha y lenta alrededor del punto
-        target += .2 * env * Math.exp(-(((d - ring) / wd) ** 2));
+        target += BG.pulse * .44 * env * Math.exp(-(((d - ring) / wd) ** 2));
       }
       for (const r of F.ripples) { const age = t - r.t0, d = Math.hypot(s.cx - r.x, s.cy - r.y); target += r.k * (1 - age / r.life) * Math.exp(-(((d - age * .1 * W) / (.12 * W)) ** 2)); }
-      if (F.act > .01) target += 1.2 * F.act * Math.exp(-((Math.hypot(s.cx - F.px, s.cy - F.py) / Rp) ** 2));   // cursor / dedo: campo leve
+      if (F.act > .01) target += BG.cursor * F.act * Math.exp(-((Math.hypot(s.cx - F.px, s.cy - F.py) / Rp) ** 2));   // cursor / dedo: campo leve
       target = Math.min(target, 1.1);
       s.inf += (target - s.inf) * (target > s.inf ? kUp : kDn);
       const i1 = Math.pow(Math.min(s.inf, 1), 1.4);
-      const sc = (.3 + .55 * i1 * s.sz + .015 * Math.sin(.5 * t + s.z)) * grow;
+      const sc = (.3 + BG.size * i1 * s.sz + .015 * Math.sin(.5 * t + s.z)) * grow;
       if (sc < .02) continue;
       const P = s.poly, n = P.length / 2, pts = new Array(P.length);
       for (let k = 0; k < n; k++) {      // contorno que se ondula muy despacio, como una membrana
-        pts[2 * k] = s.cx + (P[2 * k] - s.cx) * sc + 1.6 * Math.sin(.45 * t + k * 1.9 + s.z);
-        pts[2 * k + 1] = s.cy + (P[2 * k + 1] - s.cy) * sc + 1.6 * Math.cos(.4 * t + k * 2.3 + s.z);
+        pts[2 * k] = s.cx + (P[2 * k] - s.cx) * sc + BG.wobble * Math.sin(.45 * t + k * 1.9 + s.z);
+        pts[2 * k + 1] = s.cy + (P[2 * k + 1] - s.cy) * sc + BG.wobble * Math.cos(.4 * t + k * 2.3 + s.z);
       }
       ctx.beginPath();
-      ctx.moveTo((pts[2 * n - 2] + pts[0]) / 2, (pts[2 * n - 1] + pts[1]) / 2);
-      for (let k = 0; k < n; k++) { const k2 = (k + 1) % n; ctx.quadraticCurveTo(pts[2 * k], pts[2 * k + 1], (pts[2 * k] + pts[2 * k2]) / 2, (pts[2 * k + 1] + pts[2 * k2 + 1]) / 2); }
+      const rr = Math.max(0, Math.min(1, BG.round));      // 1 = esquinas totalmente redondeadas, 0 = poligono recto
+      const mx = (a, b) => (pts[2 * a] + pts[2 * b]) / 2, my = (a, b) => (pts[2 * a + 1] + pts[2 * b + 1]) / 2;
+      const lp = (v, m, i) => v + (m - v) * rr;
+      { const k0 = n - 1, k1 = 0; ctx.moveTo(lp(pts[2 * k0], mx(k0, k1), 0), lp(pts[2 * k0 + 1], my(k0, k1), 0)); ctx.moveTo(lp(pts[2 * k0], mx(k0, k1), 0), lp(pts[2 * k0 + 1], my(k0, k1), 0)); }
+      for (let k = 0; k < n; k++) {
+        const pk = (k + n - 1) % n, nk = (k + 1) % n, vx = pts[2 * k], vy = pts[2 * k + 1];
+        ctx.lineTo(lp(vx, mx(pk, k)), lp(vy, my(pk, k)));
+        ctx.quadraticCurveTo(vx, vy, lp(vx, mx(k, nk)), lp(vy, my(k, nk)));
+      }
       ctx.closePath();
       ctx.fillStyle = `rgba(${ACC[0]},${ACC[1]},${ACC[2]},${(.025 + .15 * i1) * dim})`; ctx.fill();
       ctx.strokeStyle = `rgba(255,${Math.round(90 + 70 * i1)},${Math.round(50 + 60 * i1)},${(.08 + .28 * i1) * dim})`;
@@ -131,7 +142,7 @@
     F.dim += (F.target - F.dim) * (1 - Math.exp(-dt * 1.2));
     const k = 1 - Math.exp(-rdt * 7); F.px += (F.tx - F.px) * k; F.py += (F.ty - F.py) * k;
     { const on = F.t - F.seen < 2.4; F.act += ((on ? 1 : 0) - F.act) * (1 - Math.exp(-rdt * (on ? 6 : 1.1))); }
-    if (F.t > F.next) { spawn(); F.next = F.t + 6 + Math.random() * 4; }
+    if (F.t > F.next) { spawn(); F.next = F.t + BG.interval_min + Math.random() * Math.max(0, BG.interval_max - BG.interval_min); }
     bacc += rdt; if (bacc > 1 / 24) { build(F.t); bacc = 0; }
     draw(F.t, dt);
     raf = requestAnimationFrame(frame);
@@ -317,3 +328,12 @@
     build();
   });
 })();
+
+
+/* fragmento de video de muestra: segundo de inicio y fin elegidos desde el gestor */
+document.querySelectorAll('video[data-start],video[data-end]').forEach(v => {
+  const st = +v.dataset.start || 0, en = +v.dataset.end || 0;
+  const seek = () => { try { v.currentTime = st; } catch (e) {} };
+  v.addEventListener('loadedmetadata', seek);
+  v.addEventListener('timeupdate', () => { if (en && v.currentTime >= en) seek(); });
+});
