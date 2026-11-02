@@ -821,6 +821,20 @@
 "Carga un video ya exportado, separa imagen y audio (español e inglés), recorta, mueve tramos, acelera ×2, ×5 o ×10 y expórtalo otra vez.": "Load an already-exported video, split picture and audio (Spanish and English), trim, move clips, speed up ×2, ×5 or ×10 and export it again.",
 "Graba video tutoriales de Rhino con comandos en pantalla, subtítulos y voz con IA, y ahora incluye un editor de videos.": "Record Rhino video tutorials with on-screen commands, captions and AI voice, and now with a built-in video editor.",
 "TATU para Rhino · v1.2.0": "TATU for Rhino · v1.2.0",
+"Lanzamiento": "Launch",
+"Disponible para descargar": "Available to download",
+"Lanzamiento de TATU: graba, edita y dobla tus tutoriales de Rhino": "TATU launch: record, edit and dub your Rhino tutorials",
+"Plugin gratuito para Rhino 8: graba con comandos a la vista, mejora tu voz, genera subtítulos y voces IA en español e inglés, y edita todo en un editor de video integrado.": "Free plugin for Rhino 8: record with commands on screen, improve your voice, generate subtitles and AI voices in Spanish and English, and edit it all in a built-in video editor.",
+"Graba video tutoriales de Rhino con comandos en pantalla, subtítulos y voz con IA, y edítalos sin salir del programa.": "Record Rhino video tutorials with on-screen commands, subtitles and AI voice, and edit them without leaving the program.",
+"TATU para Rhino · v1.2.1": "TATU for Rhino · v1.2.1",
+"Graba la pantalla de Rhino con el cursor resaltado, los clics y los comandos a la vista.": "Records your Rhino screen with a highlighted cursor, clicks and commands on screen.",
+"Mejora tu voz: reduce el ruido de fondo y nivela el volumen, con tres intensidades.": "Improves your voice: reduces background noise and levels the volume, with three strengths.",
+"Subtítulos automáticos en español e inglés, con un glosario de cerca de 1000 términos de Rhino, diseño y manufactura.": "Automatic subtitles in Spanish and English, with a glossary of nearly 1,000 Rhino, design and manufacturing terms.",
+"Voz con IA en español e inglés, sincronizada con tu voz y respetando tus pausas. La traducción es local y gratuita.": "AI voice in Spanish and English, synced to your voice and respecting your pauses. Translation runs locally and is free.",
+"Editor de video integrado: ondas de audio, zoom hasta el milisegundo, cortar, mover, dejar silencios, acelerar ×2, ×5 o ×10 y deshacer/rehacer.": "Built-in video editor: audio waveforms, zoom down to the millisecond, cut, move, leave silences, speed up ×2, ×5 or ×10 and undo/redo.",
+"Mezclador de audio con volumen por pista, solo/silencio y vista previa en tiempo real.": "Audio mixer with per-track volume, solo/mute and a real-time preview.",
+"Voz en off: graba tu narración sobre un video ya hecho y genera de nuevo traducción, subtítulos y voces IA al exportar.": "Voice-over: record your narration over an existing video and regenerate translation, subtitles and AI voices on export.",
+"Resumen vertical automático para Reels y Shorts.": "Automatic vertical summary for Reels and Shorts.",
 };
   var lang = 'es';
   try { var q = /[?&]lang=(es|en)/.exec(location.search); lang = q ? q[1] : (localStorage.getItem('f3de-lang') || ((navigator.language || 'es').slice(0, 2) === 'es' ? 'es' : 'en')); } catch (e) {}
