@@ -375,7 +375,7 @@
       <article class="panel pcard">
         <img class="pth ti" width="1024" height="1024" src="assets/tatu_dark_rounded_1024.png" alt="Icono de TATU">
         <div class="pb">
-          <h3>TATU <span class="tag ver">v1.2.1</span></h3>
+          <h3>TATU <span class="tag ver">v1.2.2</span></h3>
           <p class="by">Tutorial Recording for Rhino · por fedemergent</p>
           <p>Graba video tutoriales de Rhino con comandos en pantalla, subtítulos y voz con IA, y edítalos sin salir del programa.</p>
           <ul class="specs">
@@ -388,6 +388,12 @@
             <li>Voz en off: graba tu narración sobre un video ya hecho y genera de nuevo traducción, subtítulos y voces IA al exportar.</li>
             <li>Resumen vertical automático para Reels y Shorts.</li>
           </ul>
+          <div class="tgame" id="tatuGame" tabindex="0" role="group" aria-label="Juego del tatú">
+            <div class="tg-top"><b>Mientras lees: ayuda al tatú a llegar a la meta</b><span class="tg-score">✔ <i data-ok>0</i> &nbsp; ✖ <i data-hit>0</i></span></div>
+            <canvas aria-hidden="true"></canvas>
+            <div class="tg-bot"><button type="button" data-jump>↑ Saltar</button><button type="button" data-roll>↓ Rodar</button><span class="tg-help">También con las flechas ↑ ↓ del teclado, con el cursor sobre el juego.</span></div>
+            <button type="button" class="tg-over" hidden>Toca para jugar</button>
+          </div>
           <div class="acts2">
             <button class="btn pri" type="button" data-download>⬇ Descargar versión preliminar</button>
             <a class="btn" href="https://github.com/fedemergent/tatu-rhino" target="_blank" rel="noopener">Ver en GitHub</a>
@@ -585,7 +591,7 @@
     <button class="x" type="button" data-close aria-label="Cerrar">×</button>
     <div id="dlForm">
       <p class="eyebrow">Descarga preliminar</p>
-      <h3 id="dlT">TATU para Rhino · v1.2.1</h3>
+      <h3 id="dlT">TATU para Rhino · v1.2.2</h3>
       <p class="lead">Ingresa tu correo para descargar el instalador (Windows, <span id="dlSize"></span>). Recibirás un aviso cuando haya nuevas versiones.</p>
       <form id="dlF" novalidate>
         <input type="email" id="dlMail" placeholder="tu@correo.com" autocomplete="email" aria-label="Correo electrónico" required>
@@ -821,5 +827,6 @@
 </script>
 <script src="assets/i18n.js?v=59"></script>
 <script src="assets/franjas.js?v=59"></script>
+<script src="assets/tatu-game.js?v=1" defer></script>
 </body>
 </html>

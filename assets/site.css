@@ -697,3 +697,19 @@ nav a.lp::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 
   nav .sub-menu a.l{padding:10px 10px;font-size:14.5px;border-bottom:0}
 }
 @media(max-width:1100px){nav{max-height:calc(100vh - 68px);max-height:calc(100dvh - 68px);overflow-y:auto}nav a.l{padding:11px 10px}nav a.lp{padding:12px 10px 4px}}
+
+/* juego del tatú (ficha de TATU) */
+.tgame{position:relative;margin:4px 0 16px;padding:10px 12px 10px;border:1px solid rgba(255,255,255,.09);border-radius:12px;background:rgba(255,255,255,.03);outline:none}
+.tgame:focus-visible{border-color:var(--acc)}
+.tgame .tg-top{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12.5px;color:#c4c4cb;margin-bottom:4px}
+.tgame .tg-top b{font-weight:600;color:#f4f5f9}
+.tgame .tg-score{font:600 12.5px var(--disp,system-ui);color:#f4f5f9;white-space:nowrap}
+.tgame .tg-score i{font-style:normal}
+.tgame canvas{display:block;width:100%;height:150px;touch-action:manipulation;cursor:pointer}
+.tgame .tg-bot{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:6px}
+.tgame .tg-bot button{font:600 12.5px var(--disp,system-ui);color:#f4f5f9;background:#1d1f29;border:1px solid #2b2e3c;border-radius:8px;padding:7px 12px;cursor:pointer}
+.tgame .tg-bot button:hover{border-color:var(--acc)}
+.tgame .tg-help{font-size:11.5px;color:#80808a}
+.tgame .tg-over{position:absolute;inset:0;border:0;border-radius:12px;background:rgba(9,9,12,.72);color:#f4f5f9;font:600 14px var(--disp,system-ui);cursor:pointer}
+.tgame .tg-over[hidden]{display:none}
+@media(max-width:480px){.tgame .tg-help{display:none}}
