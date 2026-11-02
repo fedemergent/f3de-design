@@ -6,7 +6,7 @@ window.F3DE_CONFIG = {
   LEADS_KIND: 'apps-script',
   LEADS_URL: 'https://script.google.com/macros/s/AKfycbxUoX9cOmPkdzTTx0MgYR09AHHLkTKODN9Qw47elkn1lu0SCnOBCXQIPvJOS-YNw7fk/exec',
   // Instalador de TATU (archivo adjunto a un release de GitHub).
-  TATU_VERSION: '1.2.2',
-  TATU_URL: 'https://github.com/fedemergent/tatu-rhino/releases/download/v1.2.2/TATU_Setup.exe',
+  TATU_VERSION: '1.2.3',
+  TATU_URL: 'https://github.com/fedemergent/tatu-rhino/releases/download/v1.2.3/TATU_Setup.exe',
   TATU_SIZE: '≈ 114 MB'
 };
