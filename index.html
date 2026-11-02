@@ -17,8 +17,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=59">
-<link rel="stylesheet" href="assets/franjas.css?v=59">
+<link rel="stylesheet" href="assets/site.css?v=60">
+<link rel="stylesheet" href="assets/franjas.css?v=60">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -377,23 +377,17 @@
         <div class="pb">
           <h3>TATU <span class="tag ver">v1.2.2</span></h3>
           <p class="by">Tutorial Recording for Rhino · por fedemergent</p>
-          <p>Graba video tutoriales de Rhino con comandos en pantalla, subtítulos y voz con IA, y edítalos sin salir del programa.</p>
+          <p>TATU es un plugin para Rhino que graba video tutoriales de tu pantalla y los deja listos para publicar. Funciona de forma independiente o desde la propia interfaz de Rhino.</p>
+          <img class="tatu-mock" src="assets/tatu-en-rhino.svg" width="640" height="400" loading="lazy" alt="Ilustración: TATU grabando un tutorial dentro de Rhino, con los comandos en pantalla y su ventana de opciones">
           <ul class="specs">
-            <li>Graba la pantalla de Rhino con el cursor resaltado, los clics y los comandos a la vista.</li>
-            <li>Mejora tu voz: reduce el ruido de fondo y nivela el volumen, con tres intensidades.</li>
-            <li>Subtítulos automáticos en español e inglés, con un glosario de cerca de 1000 términos de Rhino, diseño y manufactura.</li>
-            <li>Voz con IA en español e inglés, sincronizada con tu voz y respetando tus pausas. La traducción es local y gratuita.</li>
-            <li>Editor de video integrado: ondas de audio, zoom hasta el milisegundo, cortar, mover, dejar silencios, acelerar ×2, ×5 o ×10 y deshacer/rehacer.</li>
-            <li>Mezclador de audio con volumen por pista, solo/silencio y vista previa en tiempo real.</li>
-            <li>Voz en off: graba tu narración sobre un video ya hecho y genera de nuevo traducción, subtítulos y voces IA al exportar.</li>
-            <li>Resumen vertical automático para Reels y Shorts.</li>
+            <li>Graba la pantalla en video o en modo tutorial desde Rhino: muestra los comandos con sus iconos ampliados y resalta el cursor y los clics.</li>
+            <li>Voces con IA en español e inglés, sincronizadas con tu voz y respetando tus pausas.</li>
+            <li>Traducción automática español ↔ inglés y subtítulos en ambos idiomas, con un glosario de cerca de 1000 términos de Rhino, diseño y manufactura.</li>
+            <li>Mejora de audio: reduce el ruido de fondo y nivela el volumen de tu voz.</li>
+            <li>Editor de video incorporado e intuitivo para pulir la producción final: ondas de audio, zoom al milisegundo, cortes, mezclador con vista previa en tiempo real y voz en off regrabable.</li>
+            <li>Resumen vertical para Reels y Shorts: toma capturas automáticas y arma el video corto por ti.</li>
+            <li>Exporta el video final con una pista de audio por idioma y los subtítulos en archivos .srt.</li>
           </ul>
-          <div class="tgame" id="tatuGame" tabindex="0" role="group" aria-label="Juego del tatú">
-            <div class="tg-top"><b>Mientras lees: ayuda al tatú a llegar a la meta</b><span class="tg-score">✔ <i data-ok>0</i> &nbsp; ✖ <i data-hit>0</i></span></div>
-            <canvas aria-hidden="true"></canvas>
-            <div class="tg-bot"><button type="button" data-jump>↑ Saltar</button><button type="button" data-roll>↓ Rodar</button><span class="tg-help">También con las flechas ↑ ↓ del teclado, con el cursor sobre el juego.</span></div>
-            <button type="button" class="tg-over" hidden>Toca para jugar</button>
-          </div>
           <div class="acts2">
             <button class="btn pri" type="button" data-download>⬇ Descargar versión preliminar</button>
             <a class="btn" href="https://github.com/fedemergent/tatu-rhino" target="_blank" rel="noopener">Ver en GitHub</a>
@@ -411,6 +405,21 @@
           <p class="fine" style="margin-top:12px">En desarrollo · software interno, no disponible para descarga.</p>
         </div>
       </article>
+    </div>
+    <div class="tgame tgame-wide reveal" id="tatuGame" role="group" aria-label="Juego del tatú">
+      <div class="tg-hud">
+        <span class="tg-lives" aria-label="Intentos"><i class="tg-star">★</i><i class="tg-star">★</i><i class="tg-star">★</i></span>
+        <span class="tg-hits"><span class="tg-pips" aria-hidden="true"><i class="tg-pip"></i><i class="tg-pip"></i><i class="tg-pip"></i><i class="tg-pip"></i><i class="tg-pip"></i></span><b data-hp>5</b> <span>golpes</span></span>
+        <span class="tg-cap">Un descanso mientras lees: ayuda al tatú a cruzar la página</span>
+        <span class="tg-ok">✔ <b data-ok>0</b></span>
+      </div>
+      <div class="tg-stage">
+        <canvas aria-hidden="true"></canvas>
+        <div class="tg-msg" hidden><b data-msg></b><span data-sub></span><button type="button" data-again></button></div>
+        <button type="button" class="tg-start" hidden>Toca para jugar</button>
+      </div>
+      <div class="tg-touch"><button type="button" data-jump>↑ Saltar</button><button type="button" data-roll>↓ Rodar</button></div>
+      <p class="tg-help">W o ↑ para saltar · S o ↓ para rodar en bola. Las flechas funcionan con el cursor sobre el juego.</p>
     </div>
   </div>
 </section>
@@ -513,7 +522,7 @@
     <div class="certs reveal">
       <h3>Credenciales destacadas</h3>
       <div class="cgrid three" data-rot data-mobile-only data-rows="1" data-cols="3" data-cols-m="2">
-<figure><div class="frame" data-label="Workshop Grasshopper (24 h) · McNeel Latin America · 2010" data-group="feat"><img width="1500" height="1100" src="assets/certs/grasshopper-mcneel-2010.jpg?v=59" alt="Workshop Grasshopper (24 h)" loading="lazy"></div><span class="cap">Workshop Grasshopper (24 h)<small>McNeel Latin America · 2010</small></span></figure>
+<figure><div class="frame" data-label="Workshop Grasshopper (24 h) · McNeel Latin America · 2010" data-group="feat"><img width="1500" height="1100" src="assets/certs/grasshopper-mcneel-2010.jpg?v=60" alt="Workshop Grasshopper (24 h)" loading="lazy"></div><span class="cap">Workshop Grasshopper (24 h)<small>McNeel Latin America · 2010</small></span></figure>
 <figure><div class="frame" data-label="Algomad 2014 · Taller de Fabricación digital · Facultad de Arquitectura, UMSA · 2014" data-group="feat"><img width="853" height="639" src="assets/certs/algomad-2014.jpg" alt="Algomad 2014 · Taller de Fabricación digital" loading="lazy"></div><span class="cap">Algomad 2014 · Taller de Fabricación digital<small>Facultad de Arquitectura, UMSA · 2014</small></span></figure>
 <figure><div class="frame" data-label="Certificado de docencia · Joyas con Rhinoceros · Arcana Academia Gráfica · 2025" data-group="feat"><img width="1500" height="1061" src="assets/certs/arcana-docencia-2025.jpg" alt="Certificado de docencia · Joyas con Rhinoceros" loading="lazy"></div><span class="cap">Certificado de docencia · Joyas con Rhinoceros<small>Arcana Academia Gráfica · 2025</small></span></figure>
       </div>
@@ -615,10 +624,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=59"></script>
-<script src="assets/leads.js?v=59"></script>
-<script src="assets/counters.js?v=59"></script>
-<script src="assets/common.js?v=59"></script>
+<script src="assets/config.js?v=60"></script>
+<script src="assets/leads.js?v=60"></script>
+<script src="assets/counters.js?v=60"></script>
+<script src="assets/common.js?v=60"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -825,8 +834,8 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=59"></script>
-<script src="assets/franjas.js?v=59"></script>
-<script src="assets/tatu-game.js?v=1" defer></script>
+<script src="assets/i18n.js?v=60"></script>
+<script src="assets/franjas.js?v=60"></script>
+<script src="assets/tatu-game.js?v=2" defer></script>
 </body>
 </html>
