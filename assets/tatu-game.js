@@ -93,7 +93,7 @@
   });
   box.addEventListener('mouseenter', function () { hover = true; });
   box.addEventListener('mouseleave', function () { hover = false; });
-  cv.addEventListener('pointerdown', function (e) { e.preventDefault(); act(jump); });
+  cv.addEventListener('pointerdown', function (e) { if (e.pointerType === 'touch') return; e.preventDefault(); act(jump); });   // con el dedo se desplaza la pagina: se salta con los botones
   box.querySelector('[data-jump]').addEventListener('click', function () { act(jump); });
   box.querySelector('[data-roll]').addEventListener('click', function () { act(roll); });
   msgB.addEventListener('click', function () { act(function () {}); });

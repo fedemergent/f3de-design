@@ -725,5 +725,8 @@ nav a.lp::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 
 .tgame .tg-start[hidden]{display:none}
 .tgame .tg-touch{display:none;gap:8px;margin-top:8px}
 .tgame .tg-touch button{flex:1;font:600 14px var(--disp,system-ui);color:#f4f5f9;background:#1d1f29;border:1px solid #2b2e3c;border-radius:10px;padding:12px}
-.tgame .tg-help{margin:6px 0 0;font-size:11.5px;color:#80808a}
+.tgame .tg-help{margin:4px 0 0;font-size:10px;letter-spacing:.04em;color:#6c6f7d;text-align:right}
+.tgame,.tgame button{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.tgame .tg-touch button{touch-action:manipulation}
 @media(hover:none) and (pointer:coarse){.tgame .tg-touch{display:flex}.tgame .tg-help{display:none}}
+@media(max-width:560px){.tgame{padding:10px 10px}.tgame .tg-hud{gap:8px 14px}.tgame .tg-cap{display:none}.tgame canvas{height:150px}}
