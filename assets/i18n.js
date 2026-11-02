@@ -828,7 +828,7 @@
 "Graba video tutoriales de Rhino con comandos en pantalla, subtítulos y voz con IA, y edítalos sin salir del programa.": "Record Rhino video tutorials with on-screen commands, subtitles and AI voice, and edit them without leaving the program.",
 "TATU para Rhino · v1.2.1": "TATU for Rhino · v1.2.1",
 "TATU para Rhino · v1.2.2": "TATU for Rhino · v1.2.2",
-"TATU para Rhino · v1.2.3": "TATU for Rhino · v1.2.3",
+"TATU para Rhino · v1.2.4": "TATU for Rhino · v1.2.4",
 "Un diseñador usando TATU dentro de Rhino: la ventana de TATU y el editor de video con la mezcla de audio": "A designer using TATU inside Rhino: the TATU window and the video editor with the audio mixer",
 "W saltar · S rodar": "W jump · S roll",
 "Graba la pantalla en video o en modo tutorial desde Rhino: muestra los comandos con sus iconos ampliados y resalta el cursor y los clics.": "Records your screen as video, or in tutorial mode from inside Rhino: shows the commands with enlarged icons and highlights the cursor and clicks.",
