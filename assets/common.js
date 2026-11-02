@@ -1,5 +1,5 @@
 /*BG-CONFIG*/
-const BG = { opacity: 1, speed: 1, drift: 0.38, pulse: 0.45, wander: 0.13, cursor: 1.2, response: 0.65, fade: 2.4, interval_min: 6, interval_max: 10, round: 0.0315985, wobble: 1.6, size: 0.55, cell: 88 };
+const BG = { opacity: 0.895105, speed: 1, drift: 0.34, pulse: 0.45, wander: 0.13, cursor: 1.2, response: 0.65, fade: 2.4, interval_min: 6, interval_max: 10, round: 0.0315985, wobble: 1.6, size: 0.55, cell: 88 };
 /*END-BG-CONFIG*/
 
 /* =====================================================================
