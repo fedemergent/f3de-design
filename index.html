@@ -17,8 +17,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=61">
-<link rel="stylesheet" href="assets/franjas.css?v=61">
+<link rel="stylesheet" href="assets/site.css?v=62">
+<link rel="stylesheet" href="assets/franjas.css?v=62">
 </head>
 <body class="intro">
 <canvas id="bg" aria-hidden="true"></canvas>
@@ -372,13 +372,14 @@
       <h2>Herramientas desarrolladas para Rhino y AutoCAD</h2>
     </div>
     <div class="pstrip reveal">
-      <article class="panel pcard">
+      <article class="panel pcard" data-fx="tatu">
+        <canvas class="vor" aria-hidden="true"></canvas>
         <img class="pth ti" width="1024" height="1024" src="assets/tatu_red_rounded_1024.png" alt="Icono de TATU">
         <div class="pb">
           <h3>TATU <span class="tag ver">v1.2.2</span></h3>
           <p class="by">Tutorial Recording for Rhino · por fedemergent</p>
           <p>TATU es un plugin para Rhino que graba video tutoriales de tu pantalla y los deja listos para publicar. Funciona de forma independiente o desde la propia interfaz de Rhino.</p>
-          <img class="tatu-mock" src="assets/tatu-en-rhino.svg" width="640" height="400" loading="lazy" alt="Ilustración: TATU grabando un tutorial dentro de Rhino, con los comandos en pantalla y su ventana de opciones">
+          <picture><source srcset="assets/tatu-en-rhino.webp" type="image/webp"><img class="tatu-mock" src="assets/tatu-en-rhino.jpg" width="1200" height="800" loading="lazy" alt="Un diseñador usando TATU dentro de Rhino: la ventana de TATU y el editor de video con la mezcla de audio"></picture>
           <ul class="specs">
             <li>Graba la pantalla en video o en modo tutorial desde Rhino: muestra los comandos con sus iconos ampliados y resalta el cursor y los clics.</li>
             <li>Voces con IA en español e inglés, sincronizadas con tu voz y respetando tus pausas.</li>
@@ -396,9 +397,10 @@
           <p class="fine" style="margin-top:6px">Gratis · uso no comercial · CC BY-NC-ND 4.0 · Windows 10/11 y Rhino 8.</p>
         </div>
       </article>
-      <article class="panel pcard">
+      <article class="panel pcard" data-fx="tms">
         <div class="pth tm"><figure class="cthumb wide" data-label="TMS Library Manager · pantalla de inicio" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-7.jpg" alt="TMS Library Manager · pantalla de inicio" loading="lazy"><span class="cnt">7 pantallas</span></figure><div hidden><figure class="cthumb wide" data-label="TMS Library Manager · selección de rol" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-6.jpg" alt="TMS Library Manager · selección de rol" loading="lazy"><span class="cnt">+5</span></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Block Designer" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-1.jpg" alt="TMS Library Manager · vista Block Designer" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Drafter" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-2.jpg" alt="TMS Library Manager · vista Drafter" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista QC Manager" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-3.jpg" alt="TMS Library Manager · vista QC Manager" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Team Leader" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-4.jpg" alt="TMS Library Manager · vista Team Leader" loading="lazy"></figure><figure class="cthumb wide" data-label="TMS Library Manager · vista Admin" data-group="tms"><img width="1600" height="900" src="assets/plugins/tms-5.jpg" alt="TMS Library Manager · vista Admin" loading="lazy"></figure></div></div>
         <div class="pb">
+          <span class="tms-ico" aria-hidden="true"><img src="assets/plugins/tms-icon.png" width="256" height="256" alt=""></span>
           <h3>TMS Library Manager <span class="tag ver">WIP 0.3</span></h3>
           <p class="by">Gestor de bibliotecas · desarrollo a medida para The Millwork Studio</p>
           <p>Publica y sincroniza bibliotecas de bloques y tool palettes en todo el estudio.</p>
@@ -522,7 +524,7 @@
     <div class="certs reveal">
       <h3>Credenciales destacadas</h3>
       <div class="cgrid three" data-rot data-mobile-only data-rows="1" data-cols="3" data-cols-m="2">
-<figure><div class="frame" data-label="Workshop Grasshopper (24 h) · McNeel Latin America · 2010" data-group="feat"><img width="1500" height="1100" src="assets/certs/grasshopper-mcneel-2010.jpg?v=61" alt="Workshop Grasshopper (24 h)" loading="lazy"></div><span class="cap">Workshop Grasshopper (24 h)<small>McNeel Latin America · 2010</small></span></figure>
+<figure><div class="frame" data-label="Workshop Grasshopper (24 h) · McNeel Latin America · 2010" data-group="feat"><img width="1500" height="1100" src="assets/certs/grasshopper-mcneel-2010.jpg?v=62" alt="Workshop Grasshopper (24 h)" loading="lazy"></div><span class="cap">Workshop Grasshopper (24 h)<small>McNeel Latin America · 2010</small></span></figure>
 <figure><div class="frame" data-label="Algomad 2014 · Taller de Fabricación digital · Facultad de Arquitectura, UMSA · 2014" data-group="feat"><img width="853" height="639" src="assets/certs/algomad-2014.jpg" alt="Algomad 2014 · Taller de Fabricación digital" loading="lazy"></div><span class="cap">Algomad 2014 · Taller de Fabricación digital<small>Facultad de Arquitectura, UMSA · 2014</small></span></figure>
 <figure><div class="frame" data-label="Certificado de docencia · Joyas con Rhinoceros · Arcana Academia Gráfica · 2025" data-group="feat"><img width="1500" height="1061" src="assets/certs/arcana-docencia-2025.jpg" alt="Certificado de docencia · Joyas con Rhinoceros" loading="lazy"></div><span class="cap">Certificado de docencia · Joyas con Rhinoceros<small>Arcana Academia Gráfica · 2025</small></span></figure>
       </div>
@@ -624,10 +626,10 @@
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada"></div>
 
-<script src="assets/config.js?v=61"></script>
-<script src="assets/leads.js?v=61"></script>
-<script src="assets/counters.js?v=61"></script>
-<script src="assets/common.js?v=61"></script>
+<script src="assets/config.js?v=62"></script>
+<script src="assets/leads.js?v=62"></script>
+<script src="assets/counters.js?v=62"></script>
+<script src="assets/common.js?v=62"></script>
 <script>
 /* ============================ intro ============================ */
 (() => {
@@ -834,8 +836,9 @@
   }));
 })();
 </script>
-<script src="assets/i18n.js?v=61"></script>
-<script src="assets/franjas.js?v=61"></script>
+<script src="assets/i18n.js?v=62"></script>
+<script src="assets/franjas.js?v=62"></script>
 <script src="assets/tatu-game.js?v=3" defer></script>
+<script src="assets/plugin-fx.js?v=1" defer></script>
 </body>
 </html>
