@@ -753,6 +753,8 @@ nav a.lp::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 
 .pcard details.tech{margin:14px 0 4px;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:10px 14px}
 .pcard details.tech summary{cursor:pointer;font-weight:600}
 .pcard details.tech[open] summary{margin-bottom:8px}
+.giscus,.giscus-frame{width:100%}
+.giscus-frame{border:none;min-height:150px}
 
 @media(min-width:721px){.slide:has(.pimg.land) .txt{max-width:46% !important}}
 

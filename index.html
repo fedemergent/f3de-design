@@ -445,6 +445,11 @@
             <a class="btn" data-href-es="assets/plugins/jaguar/JAGUAR-Manual.pdf" data-href-en="assets/plugins/jaguar/JAGUAR-Manual-EN.pdf" href="assets/plugins/jaguar/JAGUAR-Manual.pdf" target="_blank" rel="noopener">📄 Manual PDF</a>
           </div>
           <p class="fine" style="margin-top:6px">Gratis para uso no comercial · Licencia CC BY-NC-SA 4.0 (atribución al autor, sin uso comercial y compartir igual) · Windows 10/11 y Rhino 8. Rhinoceros® y Rhino® son marcas registradas de Robert McNeel &amp; Associates; SAE es marca de SAE International y se menciona solo para identificar normas.</p>
+          <details class="tech forum" id="jforum">
+            <summary>💬 Foro de usuarios y soporte</summary>
+            <p class="fine" style="margin:10px 0">Comenta dudas, errores o ideas para JAGUAR; te respondo desde aquí. Se necesita una cuenta gratuita de GitHub para comentar — los comentarios quedan públicos como <a href="https://github.com/fedemergent/jaguar-rhino/discussions" target="_blank" rel="noopener">Discussions del repositorio</a>.</p>
+            <div class="giscus"></div>
+          </details>
         </div>
       </article>
       <article class="panel pcard" data-fx="tms">
@@ -847,6 +852,29 @@
     window.sendLead({ email: v, tipo: PRODS[prod].tipo, version: PRODS[prod].v });
     try { localStorage.setItem('f3de-dl', v); } catch (err) {}
     showDone(); startDownload();
+  });
+
+  // Foro de JAGUAR (Giscus / GitHub Discussions): se carga solo al abrir el desplegable, y solo una vez
+  const jforum = document.getElementById('jforum');
+  if (jforum) jforum.addEventListener('toggle', () => {
+    if (!jforum.open || jforum.dataset.loaded) return;
+    jforum.dataset.loaded = '1';
+    const s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.setAttribute('data-repo', 'fedemergent/jaguar-rhino');
+    s.setAttribute('data-repo-id', 'R_kgDOVnn5cw');
+    s.setAttribute('data-category', 'General');
+    s.setAttribute('data-category-id', 'DIC_kwDOVnn5c84DKvYK');
+    s.setAttribute('data-mapping', 'specific');
+    s.setAttribute('data-term', 'JAGUAR - foro de usuarios');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'top');
+    s.setAttribute('data-theme', 'dark_dimmed');
+    s.setAttribute('data-lang', document.documentElement.lang === 'en' ? 'en' : 'es');
+    s.crossOrigin = 'anonymous'; s.async = true;
+    jforum.querySelector('.giscus').appendChild(s);
   });
 
   // YouTube: el video solo se carga al pulsar (la página no contacta a YouTube antes)
