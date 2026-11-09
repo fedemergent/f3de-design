@@ -221,6 +221,7 @@
 "Reproducir el tutorial de JAGUAR": "Play the JAGUAR tutorial",
 "Tutorial de JAGUAR for Rhino": "JAGUAR for Rhino tutorial",
 "▶ Tutorial de JAGUAR": "▶ JAGUAR tutorial",
+"📄 Manual PDF": "📄 PDF manual (Spanish)",
 "Tutorial de introducción: recorrido por todas las funciones del plugin.": "Introductory tutorial: a walkthrough of all the plugin's features.",
 "Juicy Salif modelado en Rhino": "Juicy Salif modeled in Rhino",
 "Modelando el Juicy Salif en Rhino": "Modeling the Juicy Salif in Rhino",
