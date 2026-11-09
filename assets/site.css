@@ -90,6 +90,10 @@ nav a.l:hover,nav a.l.on{color:var(--txt);background:rgba(255,255,255,.06)}
   .slide .pimg img{height:170px;width:auto;max-width:none}
   .slide .pimg.land img{height:auto;width:210px}
   .slide .pimg.sq img{height:auto;width:110px}
+  /* insignia suelta (p.ej. ART): más chica y con hueco reservado arriba del texto para que no se superpongan */
+  .slide .pimg:not(.plug):not(.duo):not(.vid):not(.land):not(.sq){height:96px}
+  .slide .pimg:not(.plug):not(.duo):not(.vid):not(.land):not(.sq) img{height:96px}
+  .slide .pimg:not(.plug):not(.duo):not(.vid):not(.land):not(.sq) ~ .txt{padding-top:112px}
 }
 .slide .num{position:absolute;right:26px;top:6px;font:400 clamp(90px,16vw,190px)/1 var(--disp);font-style:italic;color:rgba(255,255,255,.05);z-index:-1}
 .slide .txt{padding:clamp(22px,4vw,44px);max-width:640px}
