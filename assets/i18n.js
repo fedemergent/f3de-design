@@ -221,7 +221,7 @@
 "Reproducir el tutorial de JAGUAR": "Play the JAGUAR tutorial",
 "Tutorial de JAGUAR for Rhino": "JAGUAR for Rhino tutorial",
 "▶ Tutorial de JAGUAR": "▶ JAGUAR tutorial",
-"📄 Manual PDF": "📄 PDF manual (Spanish)",
+"📄 Manual PDF": "📄 PDF manual",
 "Tutorial de introducción: recorrido por todas las funciones del plugin.": "Introductory tutorial: a walkthrough of all the plugin's features.",
 "Juicy Salif modelado en Rhino": "Juicy Salif modeled in Rhino",
 "Modelando el Juicy Salif en Rhino": "Modeling the Juicy Salif in Rhino",
@@ -1001,6 +1001,9 @@
     document.querySelectorAll('[data-vid-es]').forEach(function (e) {
       var id = lang === 'en' ? e.getAttribute('data-vid-en') : e.getAttribute('data-vid-es');
       if (e.tagName === 'A') e.setAttribute('href', 'https://youtu.be/' + id); else e.setAttribute('data-yt', id);
+    });
+    document.querySelectorAll('[data-href-es]').forEach(function (e) {
+      e.setAttribute('href', lang === 'en' ? e.getAttribute('data-href-en') : e.getAttribute('data-href-es'));
     });
     if (window.__syncMotionBtn) window.__syncMotionBtn();
   }
