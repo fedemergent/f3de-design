@@ -231,6 +231,7 @@
 "📄 Manual PDF": "📄 PDF manual",
 "💬 Foro de usuarios y soporte": "💬 User forum and support",
 "Comenta dudas, errores o ideas para JAGUAR; te respondo desde aquí. Se necesita una cuenta gratuita de GitHub para comentar — los comentarios quedan públicos como": "Post questions, bugs or ideas for JAGUAR; I'll reply right here. You need a free GitHub account to comment — comments are public, as","Discussions del repositorio": "the repository's Discussions",
+"Comenta dudas, errores o ideas para TATU; te respondo desde aquí. Se necesita una cuenta gratuita de GitHub para comentar — los comentarios quedan públicos como": "Post questions, bugs or ideas for TATU; I'll reply right here. You need a free GitHub account to comment — comments are public, as",
 "Tutorial de introducción: recorrido por todas las funciones del plugin.": "Introductory tutorial: a walkthrough of all the plugin's features.",
 "Juicy Salif modelado en Rhino": "Juicy Salif modeled in Rhino",
 "Modelando el Juicy Salif en Rhino": "Modeling the Juicy Salif in Rhino",
