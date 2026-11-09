@@ -8,5 +8,9 @@ window.F3DE_CONFIG = {
   // Instalador de TATU (archivo adjunto a un release de GitHub).
   TATU_VERSION: '1.2.4',
   TATU_URL: 'https://github.com/fedemergent/tatu-rhino/releases/download/v1.2.4/TATU_Setup.exe',
-  TATU_SIZE: '≈ 114 MB'
+  TATU_SIZE: '≈ 114 MB',
+  // Instalador de JAGUAR (zip adjunto a un release de GitHub).
+  JAGUAR_VERSION: '1.0.0',
+  JAGUAR_URL: 'https://github.com/fedemergent/jaguar-rhino/releases/download/v1.0.0/JAGUAR-Installer.zip',
+  JAGUAR_SIZE: '≈ 0,7 MB'
 };

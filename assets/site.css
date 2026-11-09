@@ -747,3 +747,9 @@ nav a.lp::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 
 @keyframes tmsShine{0%,52%{transform:translateX(-130%)}82%,100%{transform:translateX(130%)}}
 @keyframes tmsRefl{from{transform:translateX(-35%)}to{transform:translateX(35%)}}
 @keyframes tatuGlow{0%,100%{filter:drop-shadow(0 6px 14px rgba(229,57,53,.2))}50%{filter:drop-shadow(0 6px 30px rgba(229,57,53,.65))}}
+
+/* ficha de JAGUAR: subtítulos y ficha técnica desplegable */
+.pcard h4{margin:18px 0 6px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.pcard details.tech{margin:14px 0 4px;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:10px 14px}
+.pcard details.tech summary{cursor:pointer;font-weight:600}
+.pcard details.tech[open] summary{margin-bottom:8px}
