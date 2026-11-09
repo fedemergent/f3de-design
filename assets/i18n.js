@@ -1,6 +1,13 @@
 /* Idioma ES/EN: el HTML está en español; al elegir inglés se reemplazan los textos con este diccionario. */
 (function () {
   var EN = {
+"Certificación": "Certification",
+"Instructor autorizado de Rhino · 2026": "Authorized Rhino Trainer · 2026",
+"Certificación como Authorized Rhino Trainer, renovada para Rhino 8": "Authorized Rhino Trainer certification, renewed for Rhino 8",
+"McNeel Miami aprobó nuevamente mi solicitud: sigo siendo Entrenador Autorizado de Rhino (ART), ahora actualizado para Rhino 8 en adelante. Lo celebramos con el correo de Jackie Nasser y algunos ejercicios del curso: una carrocería de auto y dos anillos.": "McNeel Miami has approved my application again: I remain an Authorized Rhino Trainer (ART), now updated for Rhino 8 onwards. We celebrate with Jackie Nasser's email and a few course exercises: a car body and two rings.",
+"Ver los certificados →": "See the certificates →",
+"Correo de McNeel Miami que aprueba la solicitud de Entrenador Autorizado de Rhino (ART)": "Email from McNeel Miami approving the Authorized Rhino Trainer (ART) application",
+"Ejercicios del curso: carrocería de auto y dos anillos modelados en Rhino 8": "Course exercises: a car body and two rings modelled in Rhino 8",
 "JAGUAR: ergonomía automotriz con bípedos virtuales para Rhino": "JAGUAR: automotive ergonomics with virtual bipeds for Rhino",
 "Plugin gratuito para Rhino 8: inserta maniquíes SAE con percentiles de todo el mundo, analiza posturas y cargas, suma ocupantes y mide el ángulo de visión del parabrisas.": "Free plugin for Rhino 8: insert SAE mannequins with percentiles from around the world, analyse postures and loads, add occupants and measure the windshield vision angle.",
 "JAGUAR es un plugin de diseño automotriz para Rhino 8: inserta bípedos (maniquíes) virtuales en tu escena y te permite analizar su biomecánica y sus posturas al volante o sobre una moto, usando percentiles de población de todo el mundo y posturas preconfiguradas, basado en la normativa del maniquí SAE J826 (95.º percentil) y otras normas técnicas.": "JAGUAR is an automotive design plugin for Rhino 8: it inserts virtual bipeds (mannequins) into your scene and lets you analyse their biomechanics and postures at the wheel or on a motorcycle, using population percentiles from around the world and preset postures, based on the SAE J826 mannequin standard (95th percentile) and other technical standards.",
