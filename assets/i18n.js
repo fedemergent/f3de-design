@@ -998,6 +998,10 @@
   function apply() {
     document.documentElement.lang = lang; node(document.body); metas();
     document.querySelectorAll('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+    document.querySelectorAll('[data-vid-es]').forEach(function (e) {
+      var id = lang === 'en' ? e.getAttribute('data-vid-en') : e.getAttribute('data-vid-es');
+      if (e.tagName === 'A') e.setAttribute('href', 'https://youtu.be/' + id); else e.setAttribute('data-yt', id);
+    });
     if (window.__syncMotionBtn) window.__syncMotionBtn();
   }
   window.setLang = function (l) {
